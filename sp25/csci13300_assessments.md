@@ -1,7 +1,7 @@
 ---
 title: CSCI 13300 SP 2025
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp25/csci13300.html)"
-date: "Last updated: 2025-02-14"
+date: "Last updated: 2025-02-21"
 css: "../style.css"
 toc: false
 ---
@@ -20,3 +20,6 @@ toc: false
 - Unit 4
   - Due date: 2025-03-01
   - Link: [Unit 4](unit_assessments/unit4_assessment.html)
+- Unit 5
+  - Due date: 2025-03-08
+  - Link: [Unit 5](unit_assessments/unit5_assessment.html)
