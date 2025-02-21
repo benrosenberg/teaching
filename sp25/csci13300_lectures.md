@@ -1,7 +1,7 @@
 ---
 title: CSCI 13300 SP 2025
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp25/csci13300.html)"
-date: "Last updated: 2025-02-15"
+date: "Last updated: 2025-02-21"
 css: "../style.css"
 ---
 
@@ -179,7 +179,7 @@ Information:
 5. Discuss assignment 4 - available today
 6. Discuss grading - assignment 1 to be graded Sunday
 7. No more additional tasks, work on HW instead
-8. Begin unit #3
+8. Begin unit #4
 9. Note: ignore problem #1 in the Apply what you know section, we already did it
 
 ### Resources
@@ -216,3 +216,26 @@ Information:
 - The solutions for the "Apply what you learned" section of class are on the [Unit 4 solutions page](unit_solutions/unit4_solution.html) (also linked above). The key for the Unit 3 solutions is `hummingbird`.
 - I have posted the fourth assignment on the course site. You can access it from the course site homepage, or go directly here: [Assignment 4](unit_assessments/unit4_assessment.html)
 - Office hours are tomorrow (Sunday) from 1 PM to 2 PM. See the Brightspace page for the Zoom link.
+
+## Lecture 5
+
+### Agenda
+
+1. Agenda
+2. Attendance (checked at 30 minutes into lecture)
+3. Discuss assignment 3
+   - Reminder: due midnight tonight
+   - Submission method: copy code into text box, please indent code!
+   - Answer any questions on assignment 3 and assignment 4
+4. Discuss assignment 5 - available today
+5. Begin unit #5
+
+### Resources
+
+Unit 5 resources:
+
+- [Learn something new](csci13300_units/5_Learn.pdf) [PDF]
+- [Learn something new (macOS/Linux version)](csci13300_units/5_Learn_UNIX.pdf) [PDF]
+- [Apply what you learned](csci13300_units/5_Apply.pdf) [PDF]
+- [pap.txt](csci13300_units/pap.txt)
+- [Solutions](unit_solutions/unit5_solution.html)
