@@ -1,7 +1,7 @@
 ---
 title: CSCI 13300 SP 2025
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp25/csci13300.html)"
-date: "Last updated: 2025-02-24"
+date: "Last updated: 2025-02-28"
 css: "../style.css"
 ---
 
@@ -262,3 +262,25 @@ Information:
 
 - The solutions for the "Apply what you learned" section of class are on the [Unit 5 solutions page](unit_solutions/unit5_solution.html) (also linked above). The key for the Unit 5 solutions is `dromedary`.
 - I have posted the fifth assignment on the course site. You can access it from the course site homepage, or go directly here: [Assignment 5](unit_assessments/unit5_assessment.html)
+
+## Lecture 6
+
+### Agenda
+
+1. Agenda
+2. Attendance (checked at 30 minutes into lecture)
+3. Discuss assignment 4
+   - Reminder: due midnight tonight
+   - Submission method: copy code into text box, please indent code!
+   - Answer any questions on assignment 4 and assignment 5
+4. Discuss assignment 6 - available today
+5. Begin unit #6
+
+### Resources
+
+Unit 6 resources:
+
+- [Learn something new](csci13300_units/6_learn.pdf) [PDF]
+- [Apply what you learned](csci13300_units/6_apply.pdf) [PDF]
+- [pap.txt](csci13300_units/pap.txt)
+- [Solutions](unit_solutions/unit6_solution.html)
