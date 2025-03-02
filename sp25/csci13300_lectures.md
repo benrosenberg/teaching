@@ -1,7 +1,7 @@
 ---
 title: CSCI 13300 SP 2025
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp25/csci13300.html)"
-date: "Last updated: 2025-02-28"
+date: "Last updated: 2025-03-01"
 css: "../style.css"
 ---
 
@@ -284,3 +284,21 @@ Unit 6 resources:
 - [Apply what you learned](csci13300_units/6_apply.pdf) [PDF]
 - [pap.txt](csci13300_units/pap.txt)
 - [Solutions](unit_solutions/unit6_solution.html)
+
+### Post-lecture notes
+
+Topics covered:
+
+- How webpages are delivered by a browser over the internet
+  - Covered briefly: HTML, servers, DNS, browser devtools
+- Slicing - specifying a step, e.g. `mylist[::2]`
+- Using (`file = open(filename) ... file.close()` instead of `with open(filename) as file: ...`)
+- List comprehension
+- Reading files from the internet with `urllib.request`
+- Storing Python objects for later use with `shelve`
+
+Information:
+
+- The solutions for the "Apply what you learned" section of class are on the [Unit 6 solutions page](unit_solutions/unit6_solution.html) (also linked above). The key for the Unit 6 solutions is `armadillo`.
+- I have posted the sixth assignment on the course site. You can access it from the course site homepage, or go directly here: [Assignment 6](unit_assessments/unit6_assessment.html)
+
