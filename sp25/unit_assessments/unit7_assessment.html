@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Go to homepage" />
+  <title>CSCI 13300 SP 2025</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+   var mathElements = document.getElementsByClassName("math");
+   var macros = [];
+   for (var i = 0; i < mathElements.length; i++) {
+    var texText = mathElements[i].firstChild;
+    if (mathElements[i].tagName == "SPAN") {
+     katex.render(texText.data, mathElements[i], {
+      displayMode: mathElements[i].classList.contains('display'),
+      throwOnError: false,
+      macros: macros,
+      fleqn: false
+     });
+  }}});
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">CSCI 13300 SP 2025</h1>
+<p class="author"><a href="https://benrosenberg.info/teaching/sp25/csci13300.html">Go to homepage</a></p>
+<p class="date">Last updated: 2025-03-07</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#unit-7-assessment">Unit 7 Assessment</a>
+<ul>
+<li><a href="#due-date-and-submission">Due date and submission</a></li>
+<li><a href="#data">Data</a></li>
+</ul></li>
+<li><a href="#instructions">Instructions</a>
+<ul>
+<li><a href="#background">Background</a></li>
+<li><a href="#task">Task</a>
+<ul>
+<li><a href="#step-by-step">Step by step</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#notes">Notes</a></li>
+</ul>
+</nav>
+<h1 id="unit-7-assessment">Unit 7 Assessment</h1>
+<h2 id="due-date-and-submission">Due date and submission</h2>
+<p>This assignment is due <strong>March 22nd</strong> at 11:59 PM. Submit your solution on BrightSpace, under the “Unit 7” assignment.</p>
+<p><strong>Please copy your code into the text box, making sure to indent it properly with whitespace so that it appears the same as in IDLE or wherever you wrote the code. This will make it easier for me to grade.</strong></p>
+<p>You can submit multiple times. I will only grade your last submission.</p>
+<h2 id="data">Data</h2>
+<p>This assignment uses a text file <code>poly.txt</code>, which you can open by clicking here: <a href="poly.txt"><code>poly.txt</code></a></p>
+<h1 id="instructions">Instructions</h1>
+<h2 id="background">Background</h2>
+<figure>
+<img src="cubic_polynomial.png" alt="A graph of a cubic polynomial" /><figcaption aria-hidden="true">A graph of a cubic polynomial</figcaption>
+</figure>
+<p>A <strong>cubic polynomial</strong> is a function of <span class="math inline">x</span> of the form <span class="math inline">Ax3 + Bx^2 + Cx + D</span>, where parameters <span class="math inline">A</span>, <span class="math inline">B</span>, <span class="math inline">C</span>, and <span class="math inline">D</span> are real numbers. Consider three concrete examples: <span class="math display">\begin{gathered}
+P_1(x) = x^3 - x^2 + 4x - 30 \\
+P_2(x) = x^3 + 0.5 x^2 + x - 6 \\
+P_3(x) = 3x^3 + 13.6x^2 + 13.2x + 37.8
+\end{gathered}</span></p>
+<p>A <strong>root</strong> of a cubic polynomial <span class="math inline">P(x)</span> is a value <span class="math inline">r</span> such that <span class="math inline">P(r) = 0</span>. The intuitive description of a root <span class="math inline">r</span> is that <span class="math inline">P(x)</span> hits the <span class="math inline">x</span>-axis at <span class="math inline">x = r</span>. There may be multiple roots, because <span class="math inline">P(x)</span> may pass through (or touch) the <span class="math inline">x</span>-axis multiple times (see the provided graph of a cubic polynomial).</p>
+<p>For example, <span class="math inline">r = 3</span> is a root of <span class="math inline">P_1</span> as defined above, because <span class="math inline">P_1(3) = 3^3 - 3^3 + 4 \cdot 3 - 30 = 27 - 9 + 12 - 30 = 0</span>:</p>
+<figure>
+<img src="cubic_polynomial_root.png" alt="A graph indicating the root r=3 of P_1" /><figcaption aria-hidden="true">A graph indicating the root <span class="math inline">r=3</span> of <span class="math inline">P_1</span></figcaption>
+</figure>
+<p>In Python, a polynomial can be implemented as a function. The three examples above can be written as follows:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> P1(x):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x<span class="op">*</span>x<span class="op">*</span>x <span class="op">-</span> x<span class="op">*</span>x <span class="op">+</span> <span class="dv">4</span><span class="op">*</span>x <span class="op">-</span> <span class="dv">30</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> P2(x):</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x<span class="op">*</span>x<span class="op">*</span>x <span class="op">+</span> <span class="fl">0.5</span><span class="op">*</span>x<span class="op">*</span>x <span class="op">+</span> x <span class="op">-</span> <span class="dv">6</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> P3(x):</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">3</span><span class="op">*</span>x<span class="op">*</span>x<span class="op">*</span>x <span class="op">+</span> <span class="fl">13.6</span><span class="op">*</span>x<span class="op">*</span>x <span class="op">+</span> <span class="fl">13.2</span><span class="op">*</span>x <span class="op">+</span> <span class="fl">37.8</span></span></code></pre></div>
+<blockquote>
+<p><strong>Note</strong>: Roots of polynomials can be found using the function <code>goalSeek</code> (discussed in class), if you supply the tested polynomial function as the <code>function</code> parameter, set the target parameter equal to zero, and start with a good <code>lowLimit</code> and <code>highLimit</code> interval enclosing the root.</p>
+<p><strong>More important note</strong>: The function <code>goalSeek</code> requires that the tested function <code>f</code> have the property that <code>f(lowLimit)</code> <span class="math inline">\leq</span> <code>f(target)</code> <span class="math inline">\leq</span> <code>f(highLimit)</code>. (We saw that there was an issue with <code>goalSeek</code> on question #4 in class when this condition did not hold.) All polynomials provided for this task will satisfy this requirement.</p>
+</blockquote>
+<p>For this task, you are provided with the file <code>poly.txt</code> containing coefficients of 25 polynomials. The first few lines of the file look like this:</p>
+<pre class="plaintext"><code># A     B       C       D       Lo      Hi       Formula
+3       -1.8    -7.6    -20.8   -4.28   11.88    3 x^3 - 1.8 x^2 - 7.6 x - 20.8
+2       5       14      24      -6.57   0.73     2 x^3 + 5 x^2 + 14 x + 24
+2.7     7.59    9.49    3.85    -1.86   5.85     2.7 x^3 + 7.59 x^2 + 9.49 x + 3.85
+1       0       -8      -32     0.44    10.58    x^3 - 8 x - 32</code></pre>
+<p>The first line is a header, which you will have to skip when reading the file. (You can just check whether the line has a <code>#</code> at the start.) Each of the following lines starts with four coefficients <span class="math inline">A</span>, <span class="math inline">B</span>, <span class="math inline">C</span>, and <span class="math inline">D</span>, uniquely determining a polynomial <span class="math display">Ax^3 + Bx^2 + Cx + D.</span></p>
+<p>The coefficients are followed by the suggested values for the limits <code>Lo</code> and <code>Hi</code> on the search range. Each provided polynomial is guaranteed to have exactly one root in the interval <code>Lo</code> <span class="math inline">\leq x \leq</span> <code>Hi</code>. We will use <code>goalSeek</code> to find this root for each of the provided polynomials.</p>
+<p>The last column of the file contains a conventional representation of the polynomial, which you can paste into <a href="https://www.wolframalpha.com/">WolframAlpha</a> to confirm that your program correctly finds the roots. For example, here is the <a href="https://www.wolframalpha.com/input/?i=3+x%5E3+-1.8+x%5E2-7.6+x-+20.8">response</a> for the first polynomial in the file, which says that the real root is equal to <code>2.6</code>.</p>
+<h2 id="task">Task</h2>
+<p>In this task, we are going to write a program that finds the roots of cubic polynomials listed in the file <a href="poly.txt"><code>poly.txt</code></a> using <code>goalSeek</code> function.</p>
+<h3 id="step-by-step">Step by step</h3>
+<ol type="1">
+<li>Use <code>goalSeek</code> function to find the roots of the polynomials <span class="math inline">P_1</span>, <span class="math inline">P_2</span>, and <span class="math inline">P_3</span> listed in the introduction. The expected answers are <code>3</code>, <code>1.5</code>, and <code>-4.2</code> respectively. Choose the limits to contain the roots you are looking for (<code>-5</code> and <code>5</code> would suffice for these three polynomials). Confirm that your program is finding correct roots.</li>
+<li>Read the file <a href="poly.txt"><code>poly.txt</code></a>. Discard any line that starts with a <code>#</code> symbol (thus skipping the header). For each non-header line, split it and use the function <code>float</code> to extract <span class="math inline">A</span>, <span class="math inline">B</span>, <span class="math inline">C</span>, <span class="math inline">D</span>, <code>Lo</code>, and <code>Hi</code>. Print them out to confirm that your program correctly extracts these numbers.
+<ul>
+<li>Note: You can use operator <code>!=</code> to check that two values are not equal. For example, the condition <code>line[0] != '#'</code> evaluates to <code>True</code> if the first character in line is not equal to <code>#</code>.</li>
+</ul></li>
+<li>Write a function <code>makePoly</code> that can generate a Python function representation of a cubic polynomial from its coefficients <span class="math inline">A</span>, <span class="math inline">B</span>, <span class="math inline">C</span>, and <span class="math inline">D</span>. For example, the polynomial function <span class="math inline">P_1</span> we used earlier could be created with the generator function as seen below:</li>
+</ol>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># original function P1</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> P1(x):</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x<span class="op">*</span>x<span class="op">*</span>x <span class="op">-</span> x<span class="op">*</span>x <span class="op">+</span> <span class="dv">4</span><span class="op">*</span>x <span class="op">-</span> <span class="dv">30</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># function P1 created using the makePoly function</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>P1 <span class="op">=</span> makePoly(<span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">4</span>, <span class="op">-</span><span class="dv">30</span>)</span></code></pre></div>
+<ol start="4" type="1">
+<li>For each polynomial you read from the file, use <code>makePoly</code> to generate its Python function representation.
+<ul>
+<li>Run <code>goalSeek</code> on this function with given <code>Lo</code> and <code>Hi</code> limits to find the root. You can use <a href="https://www.wolframalpha.com/">WolframAlpha</a> to check that the roots are correct.</li>
+<li>After that, for each polynomial, print out its coefficients <span class="math inline">A</span>, <span class="math inline">B</span>, <span class="math inline">C</span>, and <span class="math inline">D</span> followed by the root your found. Format the output nicely making sure the columns line up (we also added <code>-&gt;</code> to clearly separate the root from the coefficients):</li>
+</ul>
+<pre class="plaintext"><code> 3.00    -1.80    -7.60   -20.80  -&gt;      2.60
+ 2.00     5.00    14.00    24.00  -&gt;     -2.00
+ 2.70     7.59     9.49     3.85  -&gt;     -0.70
+ 1.00     0.00    -8.00   -32.00  -&gt;      4.00
+ 1.80    -9.94   -29.38   -20.28  -&gt;      7.80
+ 1.00    13.40    24.80    22.80  -&gt;    -11.40
+ 2.10   -18.64    -8.44   -17.86  -&gt;      9.40
+ 1.00    19.20    46.45    31.35  -&gt;    -16.50
+ 3.00   -23.60    -1.20   -57.40  -&gt;      8.20
+ 3.00   -54.70   -87.50  -238.80  -&gt;     19.90
+ 2.50   -16.30   -31.24   -26.24  -&gt;      8.20
+ 0.70    12.78    10.74     5.22  -&gt;    -17.40
+ 3.00   -15.90   -16.90   -12.60  -&gt;      6.30
+ 0.90     6.46    17.64    48.60  -&gt;     -5.40
+ 0.90    -0.18   -25.18   -51.46  -&gt;      6.20
+ 2.00    -5.00     7.00   -30.00  -&gt;      3.00
+ 2.40   -13.12   -10.76   -74.80  -&gt;      6.80
+ 2.00    18.20    23.20    56.70  -&gt;     -8.10
+ 2.80    41.86    71.38    88.44  -&gt;    -13.20
+ 2.00     6.20    11.00     4.80  -&gt;     -0.60
+ 0.80    -2.46     2.96   -61.36  -&gt;      5.20
+ 1.00    10.00    32.00    77.00  -&gt;     -7.00
+ 1.00    -4.00    -3.00   -10.00  -&gt;      5.00
+ 2.00     3.80     7.60    -0.80  -&gt;      0.10
+ 2.00     5.60     6.90     3.90  -&gt;     -1.30</code></pre></li>
+</ol>
+<h1 id="notes">Notes</h1>
+<ul>
+<li>If the roots you compute look similar but slightly different, choose a smaller <code>maxError</code>.</li>
+</ul>
+<p>You should be able to do all of the tasks with only the Python topics we covered in class so far.</p>
+<p>If you want to use more complex functionality than what we discussed in class, the Python documentation may be helpful: <a href="https://docs.python.org/3.10/">Python 3.10 documentation</a></p>
+</body>
+</html>

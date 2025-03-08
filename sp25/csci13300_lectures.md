@@ -1,7 +1,7 @@
 ---
 title: CSCI 13300 SP 2025
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp25/csci13300.html)"
-date: "Last updated: 2025-03-01"
+date: "Last updated: 2025-03-07"
 css: "../style.css"
 ---
 
@@ -301,4 +301,27 @@ Information:
 
 - The solutions for the "Apply what you learned" section of class are on the [Unit 6 solutions page](unit_solutions/unit6_solution.html) (also linked above). The key for the Unit 6 solutions is `armadillo`.
 - I have posted the sixth assignment on the course site. You can access it from the course site homepage, or go directly here: [Assignment 6](unit_assessments/unit6_assessment.html)
+
+## Lecture 7
+
+### Agenda
+
+1. Agenda
+2. Attendance (checked at 30 minutes into lecture)
+3. Mid-semester survey released on Brightspace
+4. Discuss assignment 4
+   - Reminder: due midnight tonight
+   - Submission method: copy code into text box, please indent code!
+   - Answer any questions on assignment 5 and assignment 6
+5. Discuss assignment 7 - available today
+6. Begin unit #7
+
+### Resources
+
+Unit 7 resources:
+
+- [Learn something new](csci13300_units/7_Learn.pdf) [PDF]
+- [Apply what you learned](csci13300_units/7_Apply.pdf) [PDF]
+- [Solutions](unit_solutions/unit7_solution.html)
+
 
