@@ -309,7 +309,7 @@ Information:
 1. Agenda
 2. Attendance (checked at 30 minutes into lecture)
 3. Mid-semester survey released on Brightspace
-4. Discuss assignment 4
+4. Discuss assignment 5
    - Reminder: due midnight tonight
    - Submission method: copy code into text box, please indent code!
    - Answer any questions on assignment 5 and assignment 6
