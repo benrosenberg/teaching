@@ -1,7 +1,7 @@
 ---
 title: CSCI 13300 SP 2025
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp25/csci13300.html)"
-date: "Last updated: 2025-03-07"
+date: "Last updated: 2025-03-08"
 css: "../style.css"
 ---
 
@@ -324,4 +324,18 @@ Unit 7 resources:
 - [Apply what you learned](csci13300_units/7_Apply.pdf) [PDF]
 - [Solutions](unit_solutions/unit7_solution.html)
 
+### Post-lecture notes
+
+Topics covered:
+
+- Binary search with the `goalSeek` function
+- Defining a function that returns another function (question 2 in the "Apply what you learned" section)
+- String formatting using `.format(...)`
+- Printing using the keyword arguments `sep=` and `end=`
+
+Information:
+
+- The mid-semester survey is available on Brightspace. I have fixed a setting, so it should now be accessible to everyone. Please fill it out!
+- The solutions for the "Apply what you learned" section of class are on the [Unit 7 solutions page](unit_solutions/unit7_solution.html) (also linked above). The key for the Unit 7 solutions is `crocodile`.
+- I have posted the seventh assignment on the course site. You can access it from the course site homepage, or go directly here: [Assignment 7](unit_assessments/unit7_assessment.html)
 
