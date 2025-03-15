@@ -1,7 +1,7 @@
 ---
 title: CSCI 13300 SP 2025
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp25/csci13300.html)"
-date: "Last updated: 2025-03-08"
+date: "Last updated: 2025-03-14"
 css: "../style.css"
 ---
 
@@ -338,4 +338,33 @@ Information:
 - The mid-semester survey is available on Brightspace. I have fixed a setting, so it should now be accessible to everyone. Please fill it out!
 - The solutions for the "Apply what you learned" section of class are on the [Unit 7 solutions page](unit_solutions/unit7_solution.html) (also linked above). The key for the Unit 7 solutions is `crocodile`.
 - I have posted the seventh assignment on the course site. You can access it from the course site homepage, or go directly here: [Assignment 7](unit_assessments/unit7_assessment.html)
+
+## Lecture 8
+
+### Agenda
+
+1. Agenda
+2. Attendance (checked at 30 minutes into lecture)
+3. Discuss mid-semester survey results
+   - Extra lectures:
+     - How computers work
+     - Intro to data structures and algorithms
+     - How programming languages work
+   - Per feedback, will try to spend more time on lecture than on in-class exercises, and spend more time explaining concepts
+4. Discuss assignment 6
+   - Reminder: due midnight tonight
+   - Submission method: copy code into text box, please indent code!
+   - Answer any questions on assignment 6 and assignment 7
+5. Discuss assignment 8 - available today
+6. Begin unit #8
+
+### Resources
+
+Unit 7 resources:
+
+- [Learn something new](csci13300_units/8_Learn.pdf) [PDF]
+- [Apply what you learned](csci13300_units/8_Apply.pdf) [PDF]
+- [Solutions](unit_solutions/unit8_solution.html)
+- [Full game for Unit 8](csci13300_units/unit8_game.py)
+
 
