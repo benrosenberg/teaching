@@ -1,7 +1,7 @@
 ---
 title: CSCI 13300 SP 2025
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp25/csci13300.html)"
-date: "Last updated: 2025-03-14"
+date: "Last updated: 2025-03-21"
 css: "../style.css"
 ---
 
@@ -360,11 +360,45 @@ Information:
 
 ### Resources
 
-Unit 7 resources:
+Unit 8 resources:
 
 - [Learn something new](csci13300_units/8_Learn.pdf) [PDF]
 - [Apply what you learned](csci13300_units/8_Apply.pdf) [PDF]
 - [Solutions](unit_solutions/unit8_solution.html)
 - [Full game for Unit 8](csci13300_units/unit8_game.py)
 
+### Post-lecture notes
 
+Topics covered:
+
+- Creating GUIs (graphical user interfaces) with Tkinter
+  - The entire lecture was spent on this topic. If you didn't make it to lecture, please review the above PDFs of lecture materials and make sure you do the exercises. You will be using Tkinter to do the Unit 8 assessment, and per the "minimum credit" rule discussed in class, you need to at least draw a window and have some related content appear to get any credit for the assessment.
+
+Information:
+
+- The solutions for the "Apply what you learned" section of class are on the [Unit 8 solutions page](unit_solutions/unit8_solution.html) (also linked above). The key for the Unit 8 solutions is `groundhog`.
+- I have posted the eighth assignment on the course site. You can access it from the course site homepage, or go directly here: [Assignment 8](unit_assessments/unit8_assessment.html)
+
+## Lecture 9
+
+### Agenda
+
+1. Agenda
+2. Attendance (checked at 30 minutes into lecture)
+4. Discuss assignment 7
+   - Reminder: due midnight tonight
+   - Submission method: copy code into text box, please indent code!
+   - Answer any questions on assignment 7 and assignment 8
+5. I am going to deviate from the provided materials going forward because I want to lecture on things that will be more entertaining and less difficult
+   - Lecture 9 will cover turtle graphics
+   - We will be doing everything from the "Lecture and exercises" PDF linked below - the exercises are interspersed throughout the lecture, rather than being provided separately. This should make for a more fluid classroom experience
+   - I won't provide solutions to the exercises, as we will be going through them together in class
+   - Assignment 9 will be available tonight - the material it contains will depend on what we cover in class
+6. Begin unit #9
+
+### Resources
+
+Unit 9 resources:
+
+- [Lecture and exercises](csci13300_units/9_Learn.pdf) [PDF]
+- [Python `turtle` documentation](https://docs.python.org/3/library/turtle.html)
