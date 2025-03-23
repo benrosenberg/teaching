@@ -1,7 +1,7 @@
 ---
 title: CSCI 13300 SP 2025
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp25/csci13300.html)"
-date: "Last updated: 2025-03-21"
+date: "Last updated: 2025-03-22"
 css: "../style.css"
 ---
 
@@ -402,3 +402,18 @@ Unit 9 resources:
 
 - [Lecture and exercises](csci13300_units/9_Learn.pdf) [PDF]
 - [Python `turtle` documentation](https://docs.python.org/3/library/turtle.html)
+
+### Post-lecture notes
+
+Topics covered:
+
+- Python's `turtle` module
+- Recursion review with fractals
+- Floating point error
+- How computers display and process color
+- Brief introduction to regular expressions with the `re` Python module
+
+Information:
+
+- There are no solutions provided for Unit 9 - we went through the first 5 exercises in class, which should be more than sufficient to prepare you for the assignment.
+- I have posted the ninth assignment on the course site. You can access it from the course site homepage, or go directly here: [Assignment 9](unit_assessments/unit9_assessment.html)
