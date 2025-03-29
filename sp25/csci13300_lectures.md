@@ -424,7 +424,7 @@ Information:
 
 1. Agenda
 2. Attendance (checked at 30 minutes into lecture)
-3. Lecture topic for today: Pygame (backup lecture in case we can't install Pygame: How Computers Work)
+3. Lecture topic for today: Pygame
 4. Discuss assignment 8
    - Reminder: due midnight tonight
    - Submission method: copy code into text box, please indent code!
@@ -444,5 +444,3 @@ Unit 10 resources:
   - [Example 6 (Chess UI, requires `chess` module)](csci13300_units/10_ex6.py)
     - [pieces.zip - image files for Chess UI](csci13300_units/pieces.zip)
 - [Pygame documentation](https://www.pygame.org/docs/)
-
-Backup lecture in case we can't install Pygame: [How Computers Work](csci13300_units/how computers work presentation/how_computers_work.html/index.html)
