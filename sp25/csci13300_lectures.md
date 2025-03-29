@@ -1,7 +1,7 @@
 ---
 title: CSCI 13300 SP 2025
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp25/csci13300.html)"
-date: "Last updated: 2025-03-22"
+date: "Last updated: 2025-03-28"
 css: "../style.css"
 ---
 
@@ -417,3 +417,32 @@ Information:
 
 - There are no solutions provided for Unit 9 - we went through the first 5 exercises in class, which should be more than sufficient to prepare you for the assignment.
 - I have posted the ninth assignment on the course site. You can access it from the course site homepage, or go directly here: [Assignment 9](unit_assessments/unit9_assessment.html)
+
+## Lecture 10
+
+### Agenda
+
+1. Agenda
+2. Attendance (checked at 30 minutes into lecture)
+3. Lecture topic for today: Pygame (backup lecture in case we can't install Pygame: How Computers Work)
+4. Discuss assignment 8
+   - Reminder: due midnight tonight
+   - Submission method: copy code into text box, please indent code!
+   - Answer any questions on assignment 8 and assignment 9   
+5. Begin unit #10
+
+### Resources
+
+Unit 10 resources:
+
+- Examples (Python files, require `pygame` module to run):
+  - [Example 1 (Basic window)](csci13300_units/10_ex1.py)
+  - [Example 2 (Basic movement)](csci13300_units/10_ex2.py)
+  - [Example 3 (Pong)](csci13300_units/10_ex3.py)
+  - [Example 4 (Chrome dino clone)](csci13300_units/10_ex4.py)
+  - [Example 5 (Snake)](csci13300_units/10_ex5.py)
+  - [Example 6 (Chess UI, requires `chess` module)](csci13300_units/10_ex6.py)
+    - [pieces.zip - image files for Chess UI](csci13300_units/pieces.zip)
+- [Pygame documentation](https://www.pygame.org/docs/)
+
+Backup lecture in case we can't install Pygame: [How Computers Work](csci13300_units/how computers work presentation/how_computers_work.html/index.html)
