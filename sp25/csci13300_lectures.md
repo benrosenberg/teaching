@@ -429,11 +429,11 @@ Information:
    - Reminder: due midnight tonight
    - Submission method: copy code into text box, please indent code!
    - Answer any questions on assignment 8 and assignment 9   
-5. Begin unit #10
+5. Begin lecture #10
 
 ### Resources
 
-Unit 10 resources:
+Lecture 10 resources:
 
 - Examples (Python files, require `pygame` module to run):
   - [Example 1 (Basic window)](csci13300_units/10_ex1.py)
