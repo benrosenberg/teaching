@@ -17,7 +17,7 @@ You can submit multiple times. I will only grade your last submission.
 
 ## Data
 
-I have slightly modified the code for the Snake game to make it easier for you to do the assignment. If you had previously downloaded the game code, please replace it with the new version that I have uploaded (same link as before): [New version of Snake code](csci13300_units/10_ex5.py)
+I have slightly modified the code for the Snake game to make it easier for you to do the assignment. If you had previously downloaded the game code, please replace it with the new version that I have uploaded (same link as before): [New version of Snake code](../csci13300_units/10_ex5.py)
 
 ## Task
 
@@ -25,7 +25,7 @@ Recall that in the original version of Snake that we saw in class, the game ende
 
 ![In the version from class, hitting this wall currently means game over](snake_wall_collision_game_over.png)
 
-Modify the [code for the Snake game we saw in class](csci13300_units/10_ex5.py) to make the snake come out on the opposite side of the screen instead of colliding with a wall:
+Modify the [code for the Snake game we saw in class](../csci13300_units/10_ex5.py) to make the snake come out on the opposite side of the screen instead of colliding with a wall:
 
 ![Notice how the snake emerges from the opposite side of the screen](snake_window_wrap.mp4)
 
