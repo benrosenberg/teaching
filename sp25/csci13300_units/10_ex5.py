@@ -1,5 +1,6 @@
 import pygame
 import random
+import sys
 
 pygame.init()
 screen_width, screen_height = 600, 600
@@ -10,9 +11,9 @@ clock = pygame.time.Clock()
 font = pygame.font.Font(None, 24)
 
 # create snake
-snake = [(300, 300)]
+snake = [[300, 300]]
 direction = (0, -20)  # direction - initially upwards
-food = (random.randrange(0, screen_width, 20), random.randrange(0, screen_height, 20))
+food = [random.randrange(0, screen_width, 20), random.randrange(0, screen_height, 20)]
 
 running = True
 while running:
@@ -30,15 +31,15 @@ while running:
                 direction = (20, 0)
 
     # move snake
-    new_head = (snake[0][0] + direction[0], snake[0][1] + direction[1])
+    new_head = [snake[0][0] + direction[0], snake[0][1] + direction[1]]
     snake.insert(0, new_head)
 
     # check food collision
     if snake[0] == food:
-        food = (
+        food = [
             random.randrange(0, screen_width, 20),
             random.randrange(0, screen_height, 20),
-        )
+        ]
     else:
         snake.pop()
 
@@ -72,3 +73,6 @@ while running:
 print("Game over!")
 print("Game stats:")
 print("Length:", len(snake))
+
+pygame.quit()
+sys.exit(0)

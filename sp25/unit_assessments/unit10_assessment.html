@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Go to homepage" />
+  <title>CSCI 13300 SP 2025</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="../../style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">CSCI 13300 SP 2025</h1>
+<p class="author"><a href="https://benrosenberg.info/teaching/sp25/csci13300.html">Go to homepage</a></p>
+<p class="date">Last updated: 2025-03-29</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#unit-10-assessment">Unit 10 Assessment</a>
+<ul>
+<li><a href="#due-date-and-submission">Due date and submission</a></li>
+<li><a href="#data">Data</a></li>
+<li><a href="#task">Task</a></li>
+<li><a href="#step-by-step">Step by step</a></li>
+</ul></li>
+<li><a href="#notes">Notes</a></li>
+</ul>
+</nav>
+<h1 id="unit-10-assessment">Unit 10 Assessment</h1>
+<h2 id="due-date-and-submission">Due date and submission</h2>
+<p>This assignment is due <strong>April 12th</strong> at 11:59 PM. Submit your solution on Brightspace, under the “Unit 10” assignment.</p>
+<p><strong>Please copy your code into the text box, making sure to indent it properly with whitespace so that it appears the same as in IDLE or wherever you wrote the code. This will make it easier for me to grade.</strong></p>
+<p>You can submit multiple times. I will only grade your last submission.</p>
+<h2 id="data">Data</h2>
+<p>I have slightly modified the code for the Snake game to make it easier for you to do the assignment. If you had previously downloaded the game code, please replace it with the new version that I have uploaded (same link as before): <a href="csci13300_units/10_ex5.py">New version of Snake code</a></p>
+<h2 id="task">Task</h2>
+<p>Recall that in the original version of Snake that we saw in class, the game ended if the snake collided with a wall:</p>
+<figure>
+<img src="snake_wall_collision_game_over.png" alt="In the version from class, hitting this wall currently means game over" /><figcaption aria-hidden="true">In the version from class, hitting this wall currently means game over</figcaption>
+</figure>
+<p>Modify the <a href="csci13300_units/10_ex5.py">code for the Snake game we saw in class</a> to make the snake come out on the opposite side of the screen instead of colliding with a wall:</p>
+<figure>
+<video src="snake_window_wrap.mp4" controls=""><a href="snake_window_wrap.mp4">Notice how the snake emerges from the opposite side of the screen</a></video><figcaption aria-hidden="true">Notice how the snake emerges from the opposite side of the screen</figcaption>
+</figure>
+<h2 id="step-by-step">Step by step</h2>
+<ol type="1">
+<li>Remove the lines of code that are used to detect wall collisions and that end the game when they occur.</li>
+<li>Add lines of code that detect the following cases (should just be four separate if-statements):
+<ul>
+<li>The snake head is above the top edge of the screen</li>
+<li>The snake head is below the bottom edge of the screen</li>
+<li>The snake head is to the left of the left edge of the screen</li>
+<li>The snake head is to the right of the right edge of the screen</li>
+</ul></li>
+<li>Fill out the body of each of the if-statements with code to correct for the snake head’s current position. If the snake head is out of bounds on the bottom, set its y-position to the top; if it’s out of bounds on the left, set its x-position to the right, etc.
+<ul>
+<li>Remember that you can access the snake’s head with <code>snake[0]</code>.</li>
+<li>You should be able to just modify the position directly by using, e.g., <code>snake[0][0] = 0</code> to set the x-position of the snake’s head to 0.</li>
+</ul></li>
+</ol>
+<h1 id="notes">Notes</h1>
+<p>You should be able to do all of the tasks with only the Python topics we covered in class so far.</p>
+<p>If you want to use more complex functionality than what we discussed in class, the Python documentation may be helpful: <a href="https://docs.python.org/3.10/">Python 3.10 documentation</a></p>
+<p>Additionally, the Pygame documentation may be helpful: <a href="https://www.pygame.org/docs/">Pygame documentation</a></p>
+</body>
+</html>
