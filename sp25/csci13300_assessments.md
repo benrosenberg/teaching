@@ -35,3 +35,6 @@ toc: false
 - Unit 9
   - Due date: 2025-04-05
   - Link: [Unit 9](unit_assessments/unit9_assessment.html)
+- Unit 10
+  - Due date: 2025-04-12
+  - Link: [Unit 10](unit_assessments/unit10_assessment.html)
