@@ -1,7 +1,7 @@
 ---
 title: CSCI 13300 SP 2025
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp25/csci13300.html)"
-date: "Last updated: 2025-03-22"
+date: "Last updated: 2025-03-29"
 css: "../style.css"
 toc: false
 ---
