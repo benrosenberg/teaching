@@ -1,7 +1,7 @@
 ---
 title: CSCI 13300 SP 2025
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp25/csci13300.html)"
-date: "Last updated: 2025-03-28"
+date: "Last updated: 2025-04-04"
 css: "../style.css"
 ---
 
@@ -444,3 +444,60 @@ Lecture 10 resources:
   - [Example 6 (Chess UI, requires `chess` module)](csci13300_units/10_ex6.py)
     - [pieces.zip - image files for Chess UI](csci13300_units/pieces.zip)
 - [Pygame documentation](https://www.pygame.org/docs/)
+
+### Post-lecture notes
+
+Topics covered:
+
+- Pygame. We went through the above examples and discussed how they work.
+
+Information:
+
+- I have posted the tenth assignment on the course site. You can access it from the course site homepage, or go directly here: [Assignment 10](unit_assessments/unit10_assessment.html)
+
+## Lecture 11
+
+### Agenda
+
+1. Agenda
+2. Attendance (checked at 30 minutes into lecture)
+3. Lecture topic for today: Brief intro to data science tools with pandas and matplotlib
+4. Discuss assignment 9
+   - Reminder: due midnight tonight
+   - Submission method: copy code into text box, please indent code!
+   - Answer any questions on assignment 9 and assignment 10
+5. Begin lecture #11
+
+### Installation instructions
+
+To install pandas and matplotlib, run the following commands in the VSCode shell (one at a time, to verify each works in order):
+
+> `python -m pip install pandas`
+> 
+> `python -m pip install matplotlib`
+
+To install Jupyter and the IPython kernel, run the following command in the VSCode shell:
+
+> `python -m pip install jupyter`
+
+### Resources
+
+Lecture 11 resources:
+
+- Hidden image datasets (`plt.plot`):
+  - [Coordinates 1](csci13300_units/coordinates_1.txt)
+  - [Coordinates 2](csci13300_units/coordinates_2.txt)
+  - [Coordinates 3](csci13300_units/coordinates_3.txt)
+- Regression datasets (`np.polyfit`):
+  - [Regression coordinates 1](csci13300_units/regression_coordinates_1.txt)
+  - [Regression coordinates 2](csci13300_units/regression_coordinates_2.txt)
+  - [Regression coordinates 3](csci13300_units/regression_coordinates_3.txt)
+- Real example datasets - Spotify listens:
+  - [Spotify listens (Person 1)](csci13300_units/spotify_listen_data/person_1.json)
+  - [Spotify listens (Person 2)](csci13300_units/spotify_listen_data/person_2.json)
+  - [Spotify listens (Person 3)](csci13300_units/spotify_listen_data/person_3.json)
+  - [Helper functions for use with Spotify data analysis](csci13300_units/spotify_helper_functions.py)
+- Real example datasets - stock prices:
+  - [Apple (AAPL) stock prices, last 5 years](csci13300_units/AAPL_5Y.csv)
+  - [GameStop (GME) stock prices, last 5 years](csci13300_units/GME_5Y.csv)
+
