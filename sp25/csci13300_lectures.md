@@ -1,7 +1,7 @@
 ---
 title: CSCI 13300 SP 2025
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp25/csci13300.html)"
-date: "Last updated: 2025-04-04"
+date: "Last updated: 2025-04-05"
 css: "../style.css"
 ---
 
@@ -501,3 +501,15 @@ Lecture 11 resources:
   - [Apple (AAPL) stock prices, last 5 years](csci13300_units/AAPL_5Y.csv)
   - [GameStop (GME) stock prices, last 5 years](csci13300_units/GME_5Y.csv)
 
+### Post-lecture notes
+
+Topics covered:
+
+- Reading data from CSV and JSON formats, and manipulating data, using `pandas`
+- Plotting data with matplotlib
+
+Information:
+
+- I have exported the notebook we made in class to a webpage, which you can view here: [Lecture 11 Notebook](csci13300_units/lec11.html)
+- I have posted the eleventh (and last) assignment on the course site. You can access it from the course site homepage, or go directly here: [Assignment 11](unit_assessments/unit11_assessment.html)
+- As a reminder, we don't have class (or office hours) next week or the week after. Lecture 12 will be on 4/26.
