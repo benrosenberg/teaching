@@ -1,7 +1,7 @@
 ---
 title: CSCI 13300 SP 2025
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp25/csci13300.html)"
-date: "Last updated: 2025-04-05"
+date: "Last updated: 2025-04-26"
 css: "../style.css"
 ---
 
@@ -513,3 +513,21 @@ Information:
 - I have exported the notebook we made in class to a webpage, which you can view here: [Lecture 11 Notebook](csci13300_units/lec11.html)
 - I have posted the eleventh (and last) assignment on the course site. You can access it from the course site homepage, or go directly here: [Assignment 11](unit_assessments/unit11_assessment.html)
 - As a reminder, we don't have class (or office hours) next week or the week after. Lecture 12 will be on 4/26.
+
+## Lecture 12
+
+### Agenda
+
+1. Agenda
+2. Attendance (checked at 30 minutes into lecture)
+3. Lecture topic for today: How computers work
+4. Discuss assignment 11
+   - Reminder: due midnight tonight
+   - Submission method: copy code into text box, please indent code!
+   - Answer any questions on assignment 11
+5. Reminder: last office hours tomorrow
+6. Begin lecture #11
+
+### Resources
+
+Lecture slides: [How computers work](csci13300_units/how%20computers%20work%20presentation/how_computers_work.html/index.html)
