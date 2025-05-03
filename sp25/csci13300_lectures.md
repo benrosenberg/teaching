@@ -1,7 +1,7 @@
 ---
 title: CSCI 13300 SP 2025
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp25/csci13300.html)"
-date: "Last updated: 2025-04-26"
+date: "Last updated: 2025-05-02"
 css: "../style.css"
 ---
 
@@ -526,8 +526,22 @@ Information:
    - Submission method: copy code into text box, please indent code!
    - Answer any questions on assignment 11
 5. Reminder: last office hours tomorrow
-6. Begin lecture #11
+6. Begin lecture #12
 
 ### Resources
 
 Lecture slides: [How computers work](csci13300_units/how%20computers%20work%20presentation/how_computers_work.html/index.html)
+
+## Lecture 13
+
+### Agenda
+
+1. Agenda
+2. Attendance (checked at 30 minutes into lecture)
+3. Lecture topic for today: Intro to data structures and algorithms (DSA)
+4. Discuss missing and late assignments, and grading
+5. Begin lecture #13
+
+### Resources
+
+Lecture slides: [Intro to data structures and algorithms (DSA)](csci13300_units/intro_to_dsa.html/index.html)
