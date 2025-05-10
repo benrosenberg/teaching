@@ -1,7 +1,7 @@
 ---
 title: CSCI 13300 SP 2025
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp25/csci13300.html)"
-date: "Last updated: 2025-05-02"
+date: "Last updated: 2025-05-09"
 css: "../style.css"
 ---
 
@@ -545,3 +545,29 @@ Lecture slides: [How computers work](csci13300_units/how%20computers%20work%20pr
 ### Resources
 
 Lecture slides: [Intro to data structures and algorithms (DSA)](csci13300_units/intro_to_dsa.html/index.html)
+
+## Lecture 14
+
+### Agenda
+
+1. Agenda
+2. Attendance (checked at 30 minutes into lecture)
+3. Reminder: this is the last lecture!
+4. Lecture topic for today: How programming languages work
+5. Reminder on grading: final deadline for all homework submissions is tonight (5/10) at 11:59 PM. Any submissions after that deadline will receive a zero
+6. Begin lecture #14
+
+### Resources
+
+Lecture slides: [How programming languages work](csci13300_units/how_prog_lang_work.html/index.html)
+
+Files for the calculator interpreter:
+
+- [ast_types.py](csci13300_units/how_prog_lang_work.html/calculator_interpreter/ast_types.py)
+- [calctest.py](csci13300_units/how_prog_lang_work.html/calculator_interpreter/calctest.txt)
+- [calctest_long.py](csci13300_units/how_prog_lang_work.html/calculator_interpreter/calctest_long.txt)
+- [interpreter.py](csci13300_units/how_prog_lang_work.html/calculator_interpreter/interpreter.py)
+- [lexer.py](csci13300_units/how_prog_lang_work.html/calculator_interpreter/lexer.py)
+- [main.py](csci13300_units/how_prog_lang_work.html/calculator_interpreter/main.py)
+- [parser.py](csci13300_units/how_prog_lang_work.html/calculator_interpreter/parser.py)
+- [test.py](csci13300_units/how_prog_lang_work.html/calculator_interpreter/test.py)
