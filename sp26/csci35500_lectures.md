@@ -1,7 +1,7 @@
 ---
 title: CSCI 35500 SP 2026
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp26/csci35500.html)"
-date: "Last updated: 2025-12-27"
+date: "Last updated: 2026-01-20"
 css: "../style.css"
 ---
 
@@ -11,4 +11,7 @@ css: "../style.css"
 
 ### Agenda
 
-TBD
+- Course intro
+- Syllabus review
+- Office hours policy
+
