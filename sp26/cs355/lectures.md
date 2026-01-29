@@ -1,25 +1,13 @@
 ---
 title: CSCI 35500 SP 2026
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp26/cs355/index.html)"
-date: "Last updated: 2026-01-27"
+date: "Last updated: 2026-01-28"
 css: "../../style.css"
 ---
 
-# Lecture notes
+# Lecture notes and materials
 
-## Lecture 1
-
-### Agenda
-
-- Course intro
-- Syllabus review
-- Office hours policy
-
-<!--
-
-### Resources
-
-- [Lecture slides](slides/01_intro.pdf) [PDF]
-- [Syllabus](syllabus.pdf) [PDF]
-
--->
+| Lec # |  Date   |         Topic         |                        Slides                         |
+|:-----:|:-------:|:---------------------:|:-----------------------------------------------------:|
+|   1   | 1/28/26 | Course intro/syllabus |      [Lecture slides](slides/01_intro.pdf) [PDF]      |
+|   2   | 2/02/26 | Linear algebra review | <!-- [Lecture slides](slides/02_linalg.pdf) [PDF] --> |
