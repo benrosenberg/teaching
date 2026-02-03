@@ -15,6 +15,22 @@
     ul.task-list{list-style: none;}
   </style>
   <link rel="stylesheet" href="../../style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+   var mathElements = document.getElementsByClassName("math");
+   var macros = [];
+   for (var i = 0; i < mathElements.length; i++) {
+    var texText = mathElements[i].firstChild;
+    if (mathElements[i].tagName == "SPAN") {
+     katex.render(texText.data, mathElements[i], {
+      displayMode: mathElements[i].classList.contains('display'),
+      throwOnError: false,
+      macros: macros,
+      fleqn: false
+     });
+  }}});
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -23,9 +39,38 @@
 <header id="title-block-header">
 <h1 class="title">CSCI 35500 SP 2026</h1>
 <p class="author"><a href="https://benrosenberg.info/teaching/sp26/cs355/index.html">Go to homepage</a></p>
-<p class="date">Last updated: 2026-01-27</p>
+<p class="date">Last updated: 2026-02-02</p>
 </header>
 <h1 id="homeworks">Homeworks</h1>
-<p>TBD</p>
+<p>Homework instructions/advice:</p>
+<ul>
+<li><strong>Problems will be posted here periodically, until the homework is due.</strong> What is posted here is not necessarily the full homework assigment.</li>
+<li><strong>Show your work</strong> for all homework problems. Check your work with WolframAlpha, ChatGPT, your calculator, Python, MATLAB, or whatever other resource you want to use.</li>
+<li>All questions on the homework are weighted equally.</li>
+<li>If you wait until the full homework is due to start, you may have more difficulty completing it on time.</li>
+<li>If you have questions on the homework, please ask them in class.</li>
+</ul>
+<hr />
+<h2 id="hw-1-due-date-tbd">HW 1 (due date TBD)</h2>
+<h3 id="linear-algebra-review">Linear algebra review</h3>
+<h4 id="problem-1">Problem 1</h4>
+<p>Define <span class="math inline">A</span> and <span class="math inline">b</span> as follows: <span class="math display">A = \begin{bmatrix}
+3 &amp; 7 &amp; 6 \\ 4 &amp; 1 &amp; 4 \\ 3 &amp; 8 &amp; 7
+\end{bmatrix}, b = \begin{bmatrix}
+2 \\ 4 \\ 6
+\end{bmatrix}</span></p>
+<p>Solve the matrix-vector equation <span class="math inline">Ax = b</span> using row-reduction, where <span class="math inline">A</span> and <span class="math inline">b</span> are defined below. You should get integer results.</p>
+<h4 id="problem-2">Problem 2</h4>
+<p>Define <span class="math inline">A</span> as follows: <span class="math display">A = \begin{bmatrix} 1 &amp; 4 &amp; 1 \\ 7 &amp; 5 &amp; 7 \\ 8 &amp; 4 &amp; 8 \end{bmatrix}</span></p>
+<p>Show that <span class="math inline">A</span> is not invertible, and give a nontrivial solution to <span class="math inline">Ax = 0</span>.</p>
+<h4 id="problem-3">Problem 3</h4>
+<p>Define <span class="math inline">A</span> as follows: <span class="math display">A = \begin{bmatrix} 1 &amp; 4 \\ 7 &amp; 5 \end{bmatrix}</span></p>
+<p>Find <span class="math inline">AA^\intercal</span>.</p>
+<h4 id="problem-4">Problem 4</h4>
+<p>Give a counterexample that shows matrix multiplication is not commutative for <span class="math inline">2\times 2</span> matrices.</p>
+<h4 id="problem-5">Problem 5</h4>
+<p>Show that <span class="math inline">I_2A = A</span> for all matrices <span class="math inline">A</span> with dimension <span class="math inline">2\times 2</span>.</p>
+<p>More problems will be added…</p>
+<hr />
 </body>
 </html>
