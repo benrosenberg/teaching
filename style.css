@@ -24,3 +24,29 @@ th {
 tr:nth-child(even) {
     background-color: #eee;
 }
+
+hr {
+    border: 0;
+    border-top: 2px solid #000;
+    text-align: center;
+    overflow: visible;
+    margin: 4rem auto;
+    width: 50%;
+}
+
+/* Container for the display math */
+.katex-display {
+    display: block !important;
+    /* Overrides flex */
+    text-align: left !important;
+    margin: 1em 0 !important;
+    padding-left: 1rem;
+    /* Optional: adds a small indent */
+}
+
+/* Ensures the math content within the container follows the alignment */
+.katex-display>.katex {
+    text-align: left !important;
+    white-space: normal !important;
+    display: inline-block !important;
+}
