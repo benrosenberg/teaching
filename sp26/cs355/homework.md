@@ -15,6 +15,7 @@ Homework instructions/advice:
 - All questions on the homework are weighted equally.
 - If you wait until the full homework is due to start, you may have more difficulty completing it on time.
 - If you have questions on the homework, please ask them in class.
+- If you think we didn't cover something in class, feel free to look it up, or ask a question in class.
 
 ---
 
@@ -31,7 +32,7 @@ $$A = \begin{bmatrix}
 2 \\ 4 \\ 6
 \end{bmatrix}$$
 
-Solve the matrix-vector equation $Ax = b$ using row-reduction, where $A$ and $b$ are defined below. You should get integer results.
+Solve the matrix-vector equation $Ax = b$ using row-reduction. You should get integer results.
 
 #### Problem 2
 
