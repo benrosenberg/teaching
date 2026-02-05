@@ -39,8 +39,20 @@
 <header id="title-block-header">
 <h1 class="title">CSCI 35500 SP 2026</h1>
 <p class="author"><a href="https://benrosenberg.info/teaching/sp26/cs355/index.html">Go to homepage</a></p>
-<p class="date">Last updated: 2026-02-02</p>
+<p class="date">Last updated: 2026-02-05</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#homeworks">Homeworks</a>
+<ul>
+<li><a href="#hw-1-due-date-tbd">HW 1 (due date TBD)</a>
+<ul>
+<li><a href="#linear-algebra-review">Linear algebra review</a></li>
+<li><a href="#linear-programming-basics">Linear programming basics</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="homeworks">Homeworks</h1>
 <p>Homework instructions/advice:</p>
 <ul>
@@ -71,6 +83,54 @@
 <p>Give a counterexample that shows matrix multiplication is not commutative for <span class="math inline">2\times 2</span> matrices.</p>
 <h4 id="problem-5">Problem 5</h4>
 <p>Show that <span class="math inline">I_2A = A</span> for all matrices <span class="math inline">A</span> with dimension <span class="math inline">2\times 2</span>.</p>
+<h3 id="linear-programming-basics">Linear programming basics</h3>
+<h4 id="problem-7">Problem 7</h4>
+<p>A small bakery makes two types of muffins: blueberry and chocolate chip. Each blueberry muffin requires 0.5 cups of flour and 0.25 cups of sugar. Each chocolate chip muffin requires 0.5 cups of flour and 0.5 cups of sugar. The bakery has 20 cups of flour and 15 cups of sugar available each day. The profit from each blueberry muffin is $2, and the profit from each chocolate chip muffin is $3. The bakery wants to maximize its daily profit.</p>
+<p>You will create and solve a linear program that models the above scenario:</p>
+<ul>
+<li>Define the decision variables you will use in your LP model, and state what they represent. (You should have two decision variables.)</li>
+<li>List the constraints in your LP model in terms of the decision variables you created.</li>
+<li>State the objective function of your LP model in terms of the decision variables.</li>
+<li>Convert the LP to canonical form (if necessary), and state the contents of <span class="math inline">A</span>, <span class="math inline">c</span>, and <span class="math inline">b</span>, as they correspond respectively to the matrix and vectors in the canonical <span class="math inline">\max c^\intercal x</span> s.t. <span class="math inline">Ax\leq b</span>, <span class="math inline">x\geq 0</span> format.</li>
+<li>Graph the feasible region of your LP model (since you should have 2 decision variables, you should be able to graph this in 2 dimensions) and determine the solution.</li>
+</ul>
+<h4 id="problem-8">Problem 8</h4>
+<p>Note: this problem is a little more complex than the above problem, but is still possible to model using 3 decision variables (for the obvious quantities).</p>
+<p>A furniture company produces three types of chairs: basic, deluxe, and executive. The production of each chair requires different amounts of wood, labor, and fabric. The company wants to maximize its profit given its limited daily resources.</p>
+<p>The company’s goal is to maximize profit. The profit for each chair type, along with its material cost, is as follows:</p>
+<ul>
+<li>Basic chair: $100
+<ul>
+<li>Wood cost: 3 units</li>
+<li>Labor cost: 2 units</li>
+<li>Fabric cost: 2 units</li>
+</ul></li>
+<li>Deluxe chair: $150
+<ul>
+<li>Wood cost: 5 units</li>
+<li>Labor cost: 3 units</li>
+<li>Fabric cost: 6 units</li>
+</ul></li>
+<li>Executive chair: $250
+<ul>
+<li>Wood cost: 4 units</li>
+<li>Labor cost: 5 units</li>
+<li>Fabric cost: 8 units</li>
+</ul></li>
+</ul>
+<p>The company has these additional constraints:</p>
+<ul>
+<li>The amount of wood used must be less than or equal to the amount of fabric used.</li>
+<li>The total number of labor used cannot exceed 20 units.</li>
+<li>Any unused labor (under the 20-unit limit) costs the company $20 per unit, due to the additional upkeep on the company ping-pong tables that the employees use when not working.</li>
+</ul>
+<p>You will create (but not solve) a linear program that models the above problem:</p>
+<ul>
+<li>Define the decision variables you will use in your LP model, and state what they represent. (You should have three decision variables.)</li>
+<li>List the constraints in your LP model in terms of the decision variables you created.</li>
+<li>State the objective function of your LP model in terms of the decision variables.</li>
+<li>Convert the LP to canonical form (if necessary), and state the contents of <span class="math inline">A</span>, <span class="math inline">c</span>, and <span class="math inline">b</span>, as they correspond respectively to the matrix and vectors in the canonical <span class="math inline">\max c^\intercal x</span> s.t. <span class="math inline">Ax\leq b</span>, <span class="math inline">x\geq 0</span> format.</li>
+</ul>
 <p>More problems will be added…</p>
 <hr />
 </body>
