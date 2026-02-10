@@ -1,7 +1,7 @@
 ---
 title: CSCI 35500 SP 2026
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp26/cs355/index.html)"
-date: "Last updated: 2026-02-05"
+date: "Last updated: 2026-02-09"
 css: "../../style.css"
 toc: true
 ---
@@ -103,6 +103,20 @@ You will create (but not solve) a linear program that models the above problem:
 - List the constraints in your LP model in terms of the decision variables you created.
 - State the objective function of your LP model in terms of the decision variables.
 - Convert the LP to canonical form (if necessary), and state the contents of $A$, $c$, and $b$, as they correspond respectively to the matrix and vectors in the canonical $\max c^\intercal x$ s.t. $Ax\leq b$, $x\geq 0$ format.
+
+### Linear programming geometry
+
+#### Problem 9
+
+Give an example for each of the following types of linear programs:
+
+- An unbounded LP with 4 decision variables
+- An infeasible LP with 3 decision variables
+- An LP with one decision variable that is unbounded in one direction, but still has an optimal solution because our objective points the opposite way
+
+#### Problem 10
+
+In class, we saw that the intersection of convex sets was convex. Is the union of convex sets convex? If so, explain. If not, provide a counterexample.
 
 More problems will be added...
 
