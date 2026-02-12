@@ -1,7 +1,7 @@
 ---
 title: CSCI 35500 SP 2026
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp26/cs355/index.html)"
-date: "Last updated: 2026-02-09"
+date: "Last updated: 2026-02-12"
 css: "../../style.css"
 toc: true
 ---
@@ -117,6 +117,58 @@ Give an example for each of the following types of linear programs:
 #### Problem 10
 
 In class, we saw that the intersection of convex sets was convex. Is the union of convex sets convex? If so, explain. If not, provide a counterexample.
+
+### LP solving and big-O notation
+
+#### Problem 11
+
+Determine the big-O time complexity of the function `f` in the below piece of code, in terms of the length of the array `A`.
+
+```python
+def f(A, target):
+    # A is a sorted list of integers
+    lo = 0
+    hi = len(A) - 1
+    while lo <= hi:
+        mid = (hi + lo) // 2
+        m = A[mid]
+        if m == target:
+            return mid
+        elif m < target:
+            lo = mid + 1
+        else:
+            hi = mid - 1
+    return -1 
+```
+
+#### Problem 12
+
+Determine the big-O time complexity of the function `g` in the below piece of code, in terms of `n`.
+
+```python
+def g(n):
+    x = 0
+    i = 0
+    j = 1
+    while i < n:
+        x += 1
+        i += j
+        j += 1
+    return x
+```
+
+#### Problem 13
+
+State the time complexities for each of the following operations, in big-O notation. (Disregard amortized vs. non-amortized time.)
+
+- Checking whether an integer is in a hashset
+- Finding an item in an unsorted list
+- Finding an item in a sorted list (as in Problem 11)
+- Sorting a list with merge sort
+
+#### Problem 14
+
+What does it mean for something to run in polynomial time? Why is it important?
 
 More problems will be added...
 
