@@ -1,7 +1,7 @@
 ---
 title: CSCI 35500 SP 2026
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp26/cs355/index.html)"
-date: "Last updated: 2026-02-09"
+date: "Last updated: 2026-02-12"
 css: "../../style.css"
 toc: false
 ---
@@ -14,4 +14,5 @@ toc: false
 |   2   | 2/2/26  |    Linear algebra review    |                                                           [Lecture slides](slides/02_linalg.pdf) [PDF]                                                           |
 |   3   | 2/4/26  | Intro to linear programming | [Handout](handouts/lp_word_problems.pdf) [PDF], [Lecture slides](slides/03_lpintro.pdf) [PDF], [Lecture slides (modified)](slides/03_lpintro_modified.pdf) [PDF] |
 |   4   | 2/9/26  | Linear programming geometry |                                         [Lecture slides](slides/04_lpgeometry.pdf) [PDF], [GILP pages](gilp/index.html)                                          |
-|   5   | 2/11/26 |   Solving linear programs   |                                                     <!-- [Lecture slides](slides/05_lpsolving.pdf) [PDF] -->                                                     |
+|   5   | 2/11/26 |   Solving linear programs   |                                                         [Lecture slides](slides/05_lpsolving.pdf) [PDF]                                                          |
+|   6   | 2/18/26 |   Graph problems with LP    |                                                      <!-- [Lecture slides](slides/06_lpgraphs.pdf)[PDF] -->                                                      |
