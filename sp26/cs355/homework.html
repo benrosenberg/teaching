@@ -102,18 +102,19 @@
 <header id="title-block-header">
 <h1 class="title">CSCI 35500 SP 2026</h1>
 <p class="author"><a href="https://benrosenberg.info/teaching/sp26/cs355/index.html">Go to homepage</a></p>
-<p class="date">Last updated: 2026-02-12</p>
+<p class="date">Last updated: 2026-02-18</p>
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
 <li><a href="#homeworks">Homeworks</a>
 <ul>
-<li><a href="#hw-1-due-date-tbd">HW 1 (due date TBD)</a>
+<li><a href="#hw-1-due-3426-at-1159-pm-on-brightspace">HW 1 (due 3/4/26 at 11:59 PM on Brightspace)</a>
 <ul>
 <li><a href="#linear-algebra-review">Linear algebra review</a></li>
 <li><a href="#linear-programming-basics">Linear programming basics</a></li>
 <li><a href="#linear-programming-geometry">Linear programming geometry</a></li>
 <li><a href="#lp-solving-and-big-o-notation">LP solving and big-O notation</a></li>
+<li><a href="#discrete-math-review-and-modeling-max-flow-as-an-lp">Discrete math review and modeling max flow as an LP</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -129,7 +130,7 @@
 <li>If you think we didn’t cover something in class, feel free to look it up, or ask a question in class.</li>
 </ul>
 <hr />
-<h2 id="hw-1-due-date-tbd">HW 1 (due date TBD)</h2>
+<h2 id="hw-1-due-3426-at-1159-pm-on-brightspace">HW 1 (due 3/4/26 at 11:59 PM on Brightspace)</h2>
 <h3 id="linear-algebra-review">Linear algebra review</h3>
 <h4 id="problem-1">Problem 1</h4>
 <p>Define <span class="math inline">A</span> and <span class="math inline">b</span> as follows: <span class="math display">A = \begin{bmatrix}
@@ -244,6 +245,26 @@
 </ul>
 <h4 id="problem-14">Problem 14</h4>
 <p>What does it mean for something to run in polynomial time? Why is it important?</p>
+<h3 id="discrete-math-review-and-modeling-max-flow-as-an-lp">Discrete math review and modeling max flow as an LP</h3>
+<h4 id="problem-15">Problem 15</h4>
+<p>Evaluate this expression:</p>
+<p><span class="math display">\sum x \quad \forall x, 0\leq x\leq 100, x\equiv 0 \bmod 6</span></p>
+<h4 id="problem-16">Problem 16</h4>
+<p>Evaluate this expression:</p>
+<p><span class="math display">\prod_{i=1}^5 i^2</span></p>
+<h4 id="problem-17">Problem 17</h4>
+<p>Formalize as a linear constraint each of the following statements, given a graph <span class="math inline">G = (V,E)</span> and cost function <span class="math inline">C: E\to \mathbb N</span>.</p>
+<p>Use the “<span class="math inline">\forall</span>” and “<span class="math inline">\sum</span>” notation we covered in class, and use a decision variable <span class="math inline">x_{i,j}</span> to denote the flow from vertex <span class="math inline">i</span> to vertex <span class="math inline">j</span>.</p>
+<p>Note that <span class="math inline">C</span> is <em>cost</em>, not capacity. To determine the cost of an edge <span class="math inline">(i,j)\in E</span> in an LP solution, you must multiply the cost of the edge <span class="math inline">C((i,j))</span> by the amount of flow through <span class="math inline">(i,j)</span>, given by <span class="math inline">x_{i,j}</span>.</p>
+<p>Constraints to model:</p>
+<ul>
+<li>The flow of every edge is at least 1.</li>
+<li>The cost of the flow on each path of length 2 in the graph is at most 5.
+<ul>
+<li>Note: a path of length <span class="math inline">n</span> is an <span class="math inline">n</span>-tuple of vertices <span class="math inline">(v_1, v_2, \dots, v_n)</span>, where <span class="math inline">\{(v_1, v_2), (v_2, v_3), \dots, (v_{n-1}, v_n)\}\subseteq E</span>.</li>
+</ul></li>
+<li>The amount of flow going into each vertex is twice the amount of flow leaving that vertex.</li>
+</ul>
 <p>More problems will be added…</p>
 <hr />
 </body>

@@ -1,7 +1,7 @@
 ---
 title: CSCI 35500 SP 2026
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp26/cs355/index.html)"
-date: "Last updated: 2026-02-12"
+date: "Last updated: 2026-02-18"
 css: "../../style.css"
 toc: true
 ---
@@ -19,7 +19,7 @@ Homework instructions/advice:
 
 ---
 
-## HW 1 (due date TBD)
+## HW 1 (due 3/4/26 at 11:59 PM on Brightspace)
 
 ### Linear algebra review
 
@@ -169,6 +169,36 @@ State the time complexities for each of the following operations, in big-O notat
 #### Problem 14
 
 What does it mean for something to run in polynomial time? Why is it important?
+
+### Discrete math review and modeling max flow as an LP
+
+#### Problem 15
+
+Evaluate this expression:
+
+$$\sum x \quad \forall x, 0\leq x\leq 100, x\equiv 0 \bmod 6$$
+
+#### Problem 16
+
+Evaluate this expression:
+
+$$\prod_{i=1}^5 i^2$$
+
+#### Problem 17
+
+Formalize as a linear constraint each of the following statements, given a graph $G = (V,E)$ and cost function $C: E\to \mathbb N$.
+
+Use the "$\forall$" and "$\sum$" notation we covered in class, and use a decision variable $x_{i,j}$ to denote the flow from vertex $i$ to vertex $j$.
+
+Note that $C$ is *cost*, not capacity. To determine the cost of an edge $(i,j)\in E$ in an LP solution, you must multiply the cost of the edge $C((i,j))$ by the amount of flow through $(i,j)$, given by $x_{i,j}$.
+
+Constraints to model:
+
+- The flow of every edge is at least 1.
+- The cost of the flow on each path of length 2 in the graph is at most 5.
+  - Note: a path of length $n$ is an $n$-tuple of vertices $(v_1, v_2, \dots, v_n)$, where $\{(v_1, v_2), (v_2, v_3), \dots, (v_{n-1}, v_n)\}\subseteq E$.
+- The amount of flow going into each vertex is twice the amount of flow leaving that vertex.
+
 
 More problems will be added...
 

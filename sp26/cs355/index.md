@@ -1,7 +1,7 @@
 ---
 title: CSCI 35500 SP 2026
 author: Course homepage
-date: "Last updated: 2026-01-27"
+date: "Last updated: 2026-02-18"
 css: "../../style.css"
 ---
 
@@ -53,6 +53,7 @@ Relevant dates:
 - 2026-01-26: Class canceled due to inclement weather
 - 2026-01-28: First day of class for CSCI 35500
 - 2026-02-16: No class
+- **2026-03-11: Midterm exam**
 - 2026-04-01: No class (spring break)
 - 2026-04-06: No class (spring break)
 - 2026-04-08: No class (spring break)
