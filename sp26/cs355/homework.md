@@ -1,7 +1,7 @@
 ---
 title: CSCI 35500 SP 2026
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp26/cs355/index.html)"
-date: "Last updated: 2026-02-18"
+date: "Last updated: 2026-02-22"
 css: "../../style.css"
 toc: true
 ---
@@ -199,7 +199,46 @@ Constraints to model:
   - Note: a path of length $n$ is an $n$-tuple of vertices $(v_1, v_2, \dots, v_n)$, where $\{(v_1, v_2), (v_2, v_3), \dots, (v_{n-1}, v_n)\}\subseteq E$.
 - The amount of flow going into each vertex is twice the amount of flow leaving that vertex.
 
+#### Problem 18
 
-More problems will be added...
+Suppose you are given a graph $G = (V,E)$ and vertices $s,t\in V$, and you are asked to model the maximum flow problem for $G$. However, you are also given a new type of vertex called a **combiner**, which requires two units of input flow for each unit of output flow, as seen in the below examples. A combiner can have any number of inputs or outputs, but the totals have to have a 2:1 ratio.
+
+![Combiner example (1)](images/combiner_1.png){width=350px}
+
+![Combiner example (2)](images/combiner_2.png){width=350px}
+
+Combiners are also vertices, in the set $C\subset V$.
+
+**LP Model**: Describe how you will model max flow on $G$ as an LP with this modification:
+
+1. What are your decision variables?
+2. What are your constraints?
+3. What will the objective function be?
+
+**Integrality**: In class, we saw that for max flow, if all capacities were integer then all flows would be integer in the solution to the LP. Does that hold for this formulation? If so, explain why. If not, provide a counterexample.
+
+### LP modeling capabilities
+
+#### Problem 19
+
+For each of the following constraints on the decision variable $x$, state whether they can or cannot be modeled by a linear program:
+
+1. $x$ is an integer.
+2. The values $x$ can take on are within the range $[3, 7]$.
+3. The values $x$ can take on are within the range $(3, 7)$.
+4. The values $x$ can take on are in the set $\{0.5, 1.2\}$.
+
+#### Problem 20
+
+For each of the following constraints on the decision variable $x$, state whether they can or cannot be modeled by a linear program:
+
+1. Either $x \leq 1$ or $x \geq 3$.
+2. The absolute value of $x$, $|x|$, is greater than or equal to 3.
+3. The absolute value of $x$, $|x|$, is less than or equal to 1.
+4. $x^2 \leq 5$
+5. $\sqrt x \leq 9$
+6. $x + x/2 + x/4 + x/8 + x/16 \leq 2x$
+
+**END OF HW 1**
 
 ---
