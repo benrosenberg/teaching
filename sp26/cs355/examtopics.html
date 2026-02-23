@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Go to homepage" />
+  <title>CSCI 35500 SP 2026</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+   var mathElements = document.getElementsByClassName("math");
+   var macros = [];
+   for (var i = 0; i < mathElements.length; i++) {
+    var texText = mathElements[i].firstChild;
+    if (mathElements[i].tagName == "SPAN") {
+     katex.render(texText.data, mathElements[i], {
+      displayMode: mathElements[i].classList.contains('display'),
+      throwOnError: false,
+      macros: macros,
+      fleqn: false
+     });
+  }}});
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">CSCI 35500 SP 2026</h1>
+<p class="author"><a href="https://benrosenberg.info/teaching/sp26/cs355/index.html">Go to homepage</a></p>
+<p class="date">Last updated: 2026-02-22</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#midterm-exam-topics">Midterm exam topics</a>
+<ul>
+<li><a href="#linear-algebra-review">Linear algebra review</a></li>
+<li><a href="#linear-programming-theory">Linear programming theory</a></li>
+<li><a href="#lp-modeling">LP modeling</a></li>
+<li><a href="#lp-integrality">LP integrality</a></li>
+<li><a href="#runtime-complexity-analysis">Runtime complexity analysis</a></li>
+</ul></li>
+</ul>
+</nav>
+<p>Here are lists of topics to study for the exams.</p>
+<h1 id="midterm-exam-topics">Midterm exam topics</h1>
+<h2 id="linear-algebra-review">Linear algebra review</h2>
+<ul>
+<li>Matrix multiplication</li>
+<li>Matrix inverse</li>
+<li>Solving <span class="math inline">Ax = b</span> for <span class="math inline">x</span></li>
+<li>Linear independence/invertibility for matrices</li>
+</ul>
+<h2 id="linear-programming-theory">Linear programming theory</h2>
+<ul>
+<li>Knowing how many optimal solutions an LP can have</li>
+<li>Geometric interpretation of an LP’s objective function</li>
+<li>Identifying whether a shape/set is convex or not</li>
+<li>Knowing runtime guarantees for LP solving</li>
+<li>Knowing why the feasible region of an LP is always convex</li>
+</ul>
+<h2 id="lp-modeling">LP modeling</h2>
+<ul>
+<li>Knowing whether a constraint is modelable in a linear program</li>
+<li>Sketching feasible regions for an LP and determining whether it is feasible, infeasible, or unbounded, based on the feasible region and the objective function direction</li>
+<li>Being able to understand how the LP model of a problem we have seen in class, such as max flow, will be modified by the introduction of new elements (see HW 1 problem 18)</li>
+</ul>
+<h2 id="lp-integrality">LP integrality</h2>
+<ul>
+<li>Knowing whether it is sufficient to have all integer <span class="math inline">A, b, c</span> to have a guarantee of obtaining an all-integer optimal solution for an LP</li>
+<li>Understanding whether modifications to an existing problem preserve integrality (see HW 1 problem 18)</li>
+</ul>
+<h2 id="runtime-complexity-analysis">Runtime complexity analysis</h2>
+<ul>
+<li>Being able to determine big-O time complexity for a Python function</li>
+</ul>
+<hr />
+<p>Final exam topics will be posted later.</p>
+</body>
+</html>

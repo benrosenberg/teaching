@@ -1,7 +1,7 @@
 ---
 title: CSCI 35500 SP 2026
 author: Course homepage
-date: "Last updated: 2026-02-18"
+date: "Last updated: 2026-02-22"
 css: "../../style.css"
 ---
 
@@ -11,6 +11,7 @@ css: "../../style.css"
 - [Lecture notes and materials](lectures.html)
 - [Homework assignments](homework.html)
 - [Projects](projects.html)
+- [Exam topics](examtopics.html)
 
 # Course information
 
