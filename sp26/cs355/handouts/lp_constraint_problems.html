@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Go to homepage" />
+  <title>CSCI 35500 SP 2026</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../../../style.css" />
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">CSCI 35500 SP 2026</h1>
+<p class="author"><a
+href="https://benrosenberg.info/teaching/sp26/cs355/index.html">Go to
+homepage</a></p>
+<p class="date">Last updated: 2026-02-25</p>
+</header>
+<nav id="TOC" role="doc-toc">
+
+</nav>
+<h1 id="lp-constraint-formulation-problems">LP constraint formulation
+problems</h1>
+<h2 id="q1-constraint-linearity">Q1: Constraint linearity</h2>
+<p>For each constraint, state whether or not it can be modeled in an
+LP.</p>
+<ol type="1">
+<li><span class="math inline">3x + 2y \leq 10</span></li>
+<li><span class="math inline">x^2 + y^2 = 1</span></li>
+<li><span class="math inline">xy \leq 5</span></li>
+<li><span class="math inline">\frac{x}{y} = 2</span></li>
+<li><span class="math inline">\sqrt{x} \leq 4</span></li>
+<li><span class="math inline">x = 10</span></li>
+<li><span class="math inline">\max(x,y) \leq 10</span></li>
+<li><span class="math inline">\max(x,y) \geq 10</span></li>
+<li><span class="math inline">\min(x,y) \geq 10</span></li>
+<li><span class="math inline">\min(x,y) \leq 10</span></li>
+<li><span class="math inline">\sin(x) = 0.5</span></li>
+<li><span class="math inline">x + y \neq 5</span></li>
+<li><span class="math inline">x &gt; 3</span></li>
+<li><span class="math inline">x &lt; 3 + 4y</span></li>
+<li><span class="math inline">x = y</span></li>
+</ol>
+<h2 id="q2-constraint-modeling">Q2: Constraint modeling</h2>
+<h3 id="simple-constraint-modeling">Simple constraint modeling</h3>
+<p>Model each statement as a linear constraint, or explain why it is not
+possible.</p>
+<ol type="1">
+<li>We must either produce at least 100 units of Product A, or we
+produce nothing at all.</li>
+<li>The total cost of labor and materials cannot exceed $5,000.</li>
+<li>For every unit of iron ore used, we must use at least 2 units of
+copper ore.</li>
+<li>If we decide to use Machine A, we incur a fixed setup cost of $500
+regardless of how many units we make.</li>
+<li>If we choose Project A, then we cannot choose Project B.</li>
+</ol>
+<h3 id="synthetic-decision-variables">Synthetic decision variables</h3>
+<p>The net balance in an account cannot be negative, but we need to
+represent a negative balance. Use 2 decision variables to simulate this
+possibility.</p>
+</body>
+</html>
