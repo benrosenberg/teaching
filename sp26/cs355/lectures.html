@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
@@ -7,34 +7,44 @@
   <meta name="author" content="Go to homepage" />
   <title>CSCI 35500 SP 2026</title>
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="../../style.css" />
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
 </head>
 <body>
 <header id="title-block-header">
 <h1 class="title">CSCI 35500 SP 2026</h1>
-<p class="author"><a href="https://benrosenberg.info/teaching/sp26/cs355/index.html">Go to homepage</a></p>
-<p class="date">Last updated: 2026-02-23</p>
+<p class="author"><a
+href="https://benrosenberg.info/teaching/sp26/cs355/index.html">Go to
+homepage</a></p>
+<p class="date">Last updated: 2026-02-25</p>
 </header>
 <h1 id="lecture-notes-and-materials">Lecture notes and materials</h1>
 <table>
 <colgroup>
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 15%" />
-<col style="width: 76%" />
+<col style="width: 3%" />
+<col style="width: 3%" />
+<col style="width: 14%" />
+<col style="width: 78%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th style="text-align: center;">Class #</th>
 <th style="text-align: center;">Date</th>
 <th style="text-align: center;">Topic</th>
@@ -42,73 +52,86 @@
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">1/28/26</td>
 <td style="text-align: center;">Course intro/syllabus</td>
-<td style="text-align: center;"><a href="slides/01_intro.pdf">Lecture slides</a> [PDF]</td>
+<td style="text-align: center;"><a href="slides/01_intro.pdf">Lecture
+slides</a> [PDF]</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: center;">2/2/26</td>
 <td style="text-align: center;">Linear algebra review</td>
-<td style="text-align: center;"><a href="slides/02_linalg.pdf">Lecture slides</a> [PDF]</td>
+<td style="text-align: center;"><a href="slides/02_linalg.pdf">Lecture
+slides</a> [PDF]</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: center;">3</td>
 <td style="text-align: center;">2/4/26</td>
 <td style="text-align: center;">Intro to linear programming</td>
-<td style="text-align: center;"><a href="handouts/lp_word_problems.pdf">Handout</a> [PDF], <a href="slides/03_lpintro.pdf">Lecture slides</a> [PDF], <a href="slides/03_lpintro_modified.pdf">Lecture slides (modified)</a> [PDF]</td>
+<td style="text-align: center;"><a
+href="handouts/lp_word_problems.pdf">Handout</a> [PDF], <a
+href="slides/03_lpintro.pdf">Lecture slides</a> [PDF], <a
+href="slides/03_lpintro_modified.pdf">Lecture slides (modified)</a>
+[PDF]</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: center;">4</td>
 <td style="text-align: center;">2/9/26</td>
 <td style="text-align: center;">Linear programming geometry</td>
-<td style="text-align: center;"><a href="slides/04_lpgeometry.pdf">Lecture slides</a> [PDF], <a href="gilp/index.html">GILP pages</a></td>
+<td style="text-align: center;"><a
+href="slides/04_lpgeometry.pdf">Lecture slides</a> [PDF], <a
+href="gilp/index.html">GILP pages</a></td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: center;">5</td>
 <td style="text-align: center;">2/11/26</td>
 <td style="text-align: center;">Solving linear programs</td>
-<td style="text-align: center;"><a href="slides/05_lpsolving.pdf">Lecture slides</a> [PDF]</td>
+<td style="text-align: center;"><a
+href="slides/05_lpsolving.pdf">Lecture slides</a> [PDF]</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: center;">6</td>
 <td style="text-align: center;">2/18/26</td>
 <td style="text-align: center;">Graph problems with LP</td>
-<td style="text-align: center;"><a href="slides/06_lpgraphs.pdf">Lecture slides</a> [PDF]</td>
+<td style="text-align: center;"><a href="slides/06_lpgraphs.pdf">Lecture
+slides</a> [PDF]</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: center;">7</td>
 <td style="text-align: center;">2/23/26</td>
 <td style="text-align: center;">Graph problems with LP</td>
-<td style="text-align: center;">(same slides as above, but annotated) <a href="slides/06_lpgraphs_modified.pdf">Lecture slides</a> [PDF]</td>
+<td style="text-align: center;">(same slides as above, but annotated) <a
+href="slides/06_lpgraphs_modified.pdf">Lecture slides</a> [PDF]</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: center;">8</td>
 <td style="text-align: center;">2/25/26</td>
 <td style="text-align: center;">LP modeling tricks</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;"><a href="slides/09_lptricks.pdf">Lecture
+slides</a> [PDF], <a href="handouts/lp_constraint_problems.html">LP
+constraint problems</a></td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: center;">9</td>
 <td style="text-align: center;">3/2/26</td>
 <td style="text-align: center;">OR-Tools (part 1)</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: center;">10</td>
 <td style="text-align: center;">3/4/26</td>
 <td style="text-align: center;">OR-Tools (part 2) &amp; LP project</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: center;">11</td>
 <td style="text-align: center;">3/9/26</td>
 <td style="text-align: center;">Midterm review</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: center;">12</td>
 <td style="text-align: center;">3/11/26</td>
 <td style="text-align: center;"><strong>Midterm exam</strong></td>
