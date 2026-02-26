@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Go to homepage" />
+  <title>CSCI 35500 SP 2026</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="../../../style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+   var mathElements = document.getElementsByClassName("math");
+   var macros = [];
+   for (var i = 0; i < mathElements.length; i++) {
+    var texText = mathElements[i].firstChild;
+    if (mathElements[i].tagName == "SPAN") {
+     katex.render(texText.data, mathElements[i], {
+      displayMode: mathElements[i].classList.contains('display'),
+      throwOnError: false,
+      macros: macros,
+      fleqn: false
+     });
+  }}});
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">CSCI 35500 SP 2026</h1>
+<p class="author"><a href="https://benrosenberg.info/teaching/sp26/cs355/index.html">Go to homepage</a></p>
+<p class="date">Last updated: 2026-02-26</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#constraints-min-and-max">Constraints: <span class="math inline">min</span> and <span class="math inline">max</span></a>
+<ul>
+<li><a href="#maxxy-leq-10"><span class="math inline">\max(x,y) \leq 10</span></a></li>
+<li><a href="#maxxy-geq-10"><span class="math inline">\max(x,y) \geq 10</span></a></li>
+<li><a href="#minxy-geq-10"><span class="math inline">\min(x,y) \geq 10</span></a></li>
+<li><a href="#minxy-leq-10"><span class="math inline">\min(x,y) \leq 10</span></a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="constraints-min-and-max">Constraints: <span class="math inline">min</span> and <span class="math inline">max</span></h1>
+<p>Let’s look at these constraints with <span class="math inline">\min</span> and <span class="math inline">\max</span> (from here: <a href="./lp_constraint_problems.html">LP constraint problems</a>) and determine which are modelable in an LP and which are not.</p>
+<ol type="1">
+<li><span class="math inline">\max(x,y) \leq 10</span></li>
+<li><span class="math inline">\max(x,y) \geq 10</span></li>
+<li><span class="math inline">\min(x,y) \geq 10</span></li>
+<li><span class="math inline">\min(x,y) \leq 10</span></li>
+</ol>
+<p>The questions we need to answer for each of these types of constraint questions are:</p>
+<ul>
+<li>Is the constraint linear (does it create straight lines)?
+<ul>
+<li>Curved lines like those given by <span class="math inline">x^2</span> or <span class="math inline">\sqrt x</span> are not modelable.</li>
+<li>A sometimes useful heuristic for this question: if you see two decision variables multiplied together, it’s not linear.</li>
+<li>Another useful heuristic: an expression is linear if we can represent it as the dot product <span class="math inline">c^\intercal \vec x</span>, where <span class="math inline">c</span> is a vector of constants and <span class="math inline">\vec x</span> is the vector of our decision variables.
+<ul>
+<li>In other words, an expression is linear if it can be written <span class="math inline">c_1 x_1 + c_2 x_2 + \cdots + c_n x_n</span>. (It doesn’t need to include all decision variables - any <span class="math inline">c_i</span> can be any real number, including 0.)</li>
+</ul></li>
+</ul></li>
+<li>Is the inequality one of <span class="math inline">\leq</span>, <span class="math inline">\geq</span>, or <span class="math inline">=</span>?
+<ul>
+<li>We can’t model <span class="math inline">\neq</span> or strict inequalities like <span class="math inline">&lt;</span> or <span class="math inline">&gt;</span>.</li>
+</ul></li>
+<li>Is the feasible region convex?
+<ul>
+<li>If we can choose two points in the feasible region and draw a straight line between them that partially exits the feasible region, then the feasible region is not convex.</li>
+</ul></li>
+</ul>
+<p>For each of the above constraints, the answer to the first two of these three questions is yes: the constraints are linear (creating straight lines), and the inequality is either <span class="math inline">\leq</span> or <span class="math inline">\geq</span>.</p>
+<p>To determine convexity, the simplest method is to graph them using a tool like <a href="https://www.desmos.com/calculator">Desmos</a>.</p>
+<p>Here are the graphs for each:</p>
+<h3 id="maxxy-leq-10"><span class="math inline">\max(x,y) \leq 10</span></h3>
+<figure>
+<img src="images/max_leq.png" alt="Desmos graph for \max(x,y) \leq 10" /><figcaption aria-hidden="true">Desmos graph for <span class="math inline">\max(x,y) \leq 10</span></figcaption>
+</figure>
+<p>This feasible region is convex, so it is LP-modelable.</p>
+<h3 id="maxxy-geq-10"><span class="math inline">\max(x,y) \geq 10</span></h3>
+<figure>
+<img src="images/max_geq.png" alt="Desmos graph for \max(x,y) \geq 10" /><figcaption aria-hidden="true">Desmos graph for <span class="math inline">\max(x,y) \geq 10</span></figcaption>
+</figure>
+<p>As shown by the drawn points and line, the feasible region is not convex, so it is not LP-modelable.</p>
+<h3 id="minxy-geq-10"><span class="math inline">\min(x,y) \geq 10</span></h3>
+<figure>
+<img src="images/min_geq.png" alt="Desmos graph for \min(x,y) \geq 10" /><figcaption aria-hidden="true">Desmos graph for <span class="math inline">\min(x,y) \geq 10</span></figcaption>
+</figure>
+<p>This feasible region is convex, so it is LP-modelable.</p>
+<h3 id="minxy-leq-10"><span class="math inline">\min(x,y) \leq 10</span></h3>
+<figure>
+<img src="images/min_leq.png" alt="Desmos graph for \min(x,y) \leq 10" /><figcaption aria-hidden="true">Desmos graph for <span class="math inline">\min(x,y) \leq 10</span></figcaption>
+</figure>
+<p>As shown by the drawn points and line, the feasible region is not convex, so it is not LP-modelable.</p>
+</body>
+</html>
