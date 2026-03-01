@@ -1,0 +1,16 @@
+type,airport,flow
+source,TBN,41
+source,ONT,28
+source,INL,1
+source,DTW,28
+source,FLO,2
+sink,FOD,-9
+sink,LEB,-2
+sink,BMI,-13
+sink,BIF,-1
+sink,YUM,-19
+sink,RBD,-8
+sink,POC,-35
+sink,CXL,-3
+sink,TTN,-2
+sink,GCN,-8

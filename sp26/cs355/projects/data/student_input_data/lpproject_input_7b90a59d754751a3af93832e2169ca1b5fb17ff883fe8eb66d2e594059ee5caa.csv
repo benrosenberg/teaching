@@ -1,0 +1,16 @@
+type,airport,flow
+source,MLI,55
+source,IYK,10
+source,SUN,14
+source,GUS,6
+source,EWN,15
+sink,LEW,-5
+sink,MIE,-18
+sink,LWM,-26
+sink,MQT,-7
+sink,SFB,-8
+sink,CRG,-4
+sink,CHA,-8
+sink,ASE,-8
+sink,JFK,-10
+sink,SIT,-6

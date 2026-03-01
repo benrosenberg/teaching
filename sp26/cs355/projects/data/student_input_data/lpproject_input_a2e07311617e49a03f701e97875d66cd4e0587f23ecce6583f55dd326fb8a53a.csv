@@ -1,0 +1,16 @@
+type,airport,flow
+source,PAE,37
+source,UOX,4
+source,CPR,26
+source,BDR,12
+source,CEU,21
+sink,BVY,-5
+sink,BGR,-14
+sink,AOO,-12
+sink,FBS,-6
+sink,FLL,-13
+sink,LIT,-16
+sink,OKK,-2
+sink,ONH,-4
+sink,BIS,-7
+sink,ART,-21

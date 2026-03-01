@@ -1,0 +1,16 @@
+type,airport,flow
+source,DVL,16
+source,LWB,3
+source,PNE,25
+source,TSM,49
+source,HAR,7
+sink,SAN,-9
+sink,MCI,-7
+sink,ELD,-8
+sink,OLM,-14
+sink,LPS,-26
+sink,EVV,-16
+sink,LGB,-1
+sink,TUP,-1
+sink,CHS,-8
+sink,OCF,-10

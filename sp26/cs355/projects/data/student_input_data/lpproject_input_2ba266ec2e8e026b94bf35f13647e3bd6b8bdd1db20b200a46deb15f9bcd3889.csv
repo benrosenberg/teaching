@@ -1,0 +1,16 @@
+type,airport,flow
+source,SDY,50
+source,AAF,7
+source,BTM,3
+source,DEN,39
+source,MWH,1
+sink,LGB,-3
+sink,KTN,-9
+sink,JFK,-18
+sink,GEG,-8
+sink,MSS,-30
+sink,VCT,-2
+sink,LAR,-18
+sink,IFP,-1
+sink,RKS,-10
+sink,LNA,-1

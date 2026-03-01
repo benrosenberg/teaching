@@ -1,0 +1,16 @@
+type,airport,flow
+source,GGW,47
+source,ONH,32
+source,EKO,8
+source,ISP,12
+source,AUN,1
+sink,OTH,-1
+sink,CDR,-14
+sink,PWA,-19
+sink,APN,-1
+sink,PAE,-3
+sink,ACK,-1
+sink,MCK,-14
+sink,BOI,-12
+sink,ART,-22
+sink,CIU,-13

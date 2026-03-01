@@ -1,0 +1,16 @@
+type,airport,flow
+source,DYL,15
+source,OBE,42
+source,ODW,11
+source,GRR,19
+source,CLM,13
+sink,MYV,-10
+sink,AZO,-4
+sink,DRO,-10
+sink,HUF,-2
+sink,CNO,-26
+sink,DLH,-4
+sink,LCI,-4
+sink,YUM,-22
+sink,HFD,-3
+sink,SUX,-15

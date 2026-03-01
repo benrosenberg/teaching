@@ -1,0 +1,16 @@
+type,airport,flow
+source,LMT,5
+source,IDA,2
+source,JAX,23
+source,SSC,31
+source,LCI,39
+sink,PSG,-5
+sink,EWN,-42
+sink,CPS,-1
+sink,CYS,-16
+sink,VEL,-3
+sink,JST,-4
+sink,PDT,-11
+sink,IAB,-1
+sink,UKI,-7
+sink,PQI,-10

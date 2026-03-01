@@ -1,0 +1,16 @@
+type,airport,flow
+source,SAC,34
+source,SSC,8
+source,PQI,23
+source,OSU,25
+source,FOE,10
+sink,DEN,-3
+sink,FMY,-28
+sink,NFL,-28
+sink,HRO,-15
+sink,BID,-1
+sink,OAK,-4
+sink,CHO,-2
+sink,EEN,-10
+sink,IGM,-8
+sink,HFD,-1

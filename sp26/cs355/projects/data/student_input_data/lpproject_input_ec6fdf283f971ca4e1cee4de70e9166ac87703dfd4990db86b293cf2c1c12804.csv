@@ -1,0 +1,16 @@
+type,airport,flow
+source,MTN,57
+source,PPM,4
+source,BVY,24
+source,SSC,10
+source,DEN,5
+sink,MAF,-7
+sink,SWF,-6
+sink,BWG,-22
+sink,CPR,-11
+sink,SBM,-3
+sink,CEF,-8
+sink,JRF,-3
+sink,MYL,-24
+sink,STC,-10
+sink,HPN,-6

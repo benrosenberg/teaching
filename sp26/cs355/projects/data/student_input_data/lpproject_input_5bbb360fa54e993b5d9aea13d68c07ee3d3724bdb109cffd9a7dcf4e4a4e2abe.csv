@@ -1,0 +1,16 @@
+type,airport,flow
+source,DHN,1
+source,FNL,1
+source,YUM,67
+source,SWO,24
+source,SWW,7
+sink,BGM,-5
+sink,ARG,-5
+sink,PSK,-6
+sink,LEW,-2
+sink,SHD,-3
+sink,ITH,-34
+sink,TWD,-21
+sink,FTY,-3
+sink,MYF,-8
+sink,JFK,-13

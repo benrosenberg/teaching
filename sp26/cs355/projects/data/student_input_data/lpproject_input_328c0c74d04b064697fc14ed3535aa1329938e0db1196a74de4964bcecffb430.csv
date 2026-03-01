@@ -1,0 +1,16 @@
+type,airport,flow
+source,CFT,16
+source,LYH,16
+source,GCN,3
+source,BMG,53
+source,BFL,12
+sink,HSV,-6
+sink,FTW,-2
+sink,PBI,-10
+sink,BDR,-8
+sink,GFL,-3
+sink,MEO,-19
+sink,DAN,-13
+sink,CNY,-1
+sink,BYW,-20
+sink,BTP,-18

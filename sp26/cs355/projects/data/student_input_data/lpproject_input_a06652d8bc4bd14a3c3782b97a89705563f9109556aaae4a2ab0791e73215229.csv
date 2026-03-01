@@ -1,0 +1,16 @@
+type,airport,flow
+source,BKL,6
+source,IRK,42
+source,BBX,6
+source,GJT,5
+source,MEI,41
+sink,CCR,-5
+sink,ITO,-1
+sink,ILM,-13
+sink,JVL,-4
+sink,SAV,-48
+sink,MOB,-14
+sink,ISP,-2
+sink,BYW,-7
+sink,JMS,-5
+sink,PCT,-1

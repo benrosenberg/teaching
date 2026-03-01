@@ -1,0 +1,16 @@
+type,airport,flow
+source,HVR,2
+source,PGD,44
+source,SBD,7
+source,PGA,7
+source,LEB,40
+sink,TSS,-6
+sink,SHN,-16
+sink,SSI,-21
+sink,SMF,-4
+sink,ROA,-13
+sink,LIH,-18
+sink,CDW,-1
+sink,CHS,-4
+sink,OTH,-14
+sink,PDK,-3

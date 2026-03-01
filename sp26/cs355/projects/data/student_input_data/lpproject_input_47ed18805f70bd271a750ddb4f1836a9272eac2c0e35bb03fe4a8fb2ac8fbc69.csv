@@ -1,0 +1,16 @@
+type,airport,flow
+source,SYR,16
+source,LAF,7
+source,UOX,14
+source,LVK,46
+source,GON,17
+sink,DAY,-3
+sink,PWA,-16
+sink,HIO,-14
+sink,PUB,-6
+sink,CKB,-6
+sink,BZN,-5
+sink,BRL,-2
+sink,TEB,-13
+sink,MLB,-23
+sink,BED,-12

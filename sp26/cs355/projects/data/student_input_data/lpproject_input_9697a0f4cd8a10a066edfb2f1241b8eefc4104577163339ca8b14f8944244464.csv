@@ -1,0 +1,16 @@
+type,airport,flow
+source,GUC,3
+source,SUU,31
+source,VCV,5
+source,GDV,4
+source,ONH,57
+sink,AUN,-13
+sink,BTM,-2
+sink,ISM,-22
+sink,SLN,-2
+sink,CGI,-12
+sink,PUL,-1
+sink,OPF,-3
+sink,FRY,-2
+sink,CMX,-2
+sink,SAC,-41

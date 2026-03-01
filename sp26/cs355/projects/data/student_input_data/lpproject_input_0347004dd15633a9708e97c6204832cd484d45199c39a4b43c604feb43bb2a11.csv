@@ -1,0 +1,16 @@
+type,airport,flow
+source,JFK,10
+source,GPT,22
+source,BFL,7
+source,GYY,59
+source,HIO,2
+sink,PWK,-10
+sink,RIL,-15
+sink,EYW,-8
+sink,BKW,-1
+sink,AZA,-7
+sink,DVL,-1
+sink,OCE,-10
+sink,TPA,-23
+sink,FTW,-21
+sink,MDW,-4

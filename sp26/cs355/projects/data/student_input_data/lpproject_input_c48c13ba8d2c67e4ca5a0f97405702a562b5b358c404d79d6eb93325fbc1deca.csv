@@ -1,0 +1,16 @@
+type,airport,flow
+source,OSH,4
+source,MYV,4
+source,SPS,25
+source,FID,51
+source,SEA,16
+sink,DHN,-23
+sink,TIX,-5
+sink,OSU,-12
+sink,EEN,-15
+sink,MCW,-4
+sink,TTD,-4
+sink,BMI,-2
+sink,SVN,-25
+sink,LVK,-9
+sink,OGG,-1

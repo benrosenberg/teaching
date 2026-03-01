@@ -1,0 +1,16 @@
+type,airport,flow
+source,MMU,21
+source,HSH,19
+source,BFM,33
+source,GLR,19
+source,JAX,8
+sink,CLD,-6
+sink,LEW,-18
+sink,SCH,-9
+sink,PCT,-1
+sink,WRG,-2
+sink,XNA,-7
+sink,ONH,-1
+sink,ADW,-9
+sink,VQQ,-13
+sink,GTF,-34

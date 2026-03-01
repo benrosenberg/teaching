@@ -1,0 +1,16 @@
+type,airport,flow
+source,BRL,14
+source,JBR,13
+source,SAV,6
+source,CMI,51
+source,VPS,16
+sink,POC,-21
+sink,RBD,-8
+sink,TSS,-5
+sink,JRA,-15
+sink,TWF,-27
+sink,SUS,-8
+sink,STC,-1
+sink,GGE,-5
+sink,INT,-8
+sink,ITO,-2

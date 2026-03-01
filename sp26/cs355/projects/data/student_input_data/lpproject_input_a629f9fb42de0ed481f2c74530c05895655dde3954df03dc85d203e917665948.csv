@@ -1,0 +1,16 @@
+type,airport,flow
+source,ILN,8
+source,XWA,17
+source,SSI,16
+source,SHR,37
+source,BHM,22
+sink,MRK,-14
+sink,FMY,-7
+sink,STC,-1
+sink,MTJ,-13
+sink,BOS,-6
+sink,HMN,-1
+sink,SDF,-27
+sink,ALB,-1
+sink,HFD,-29
+sink,JST,-1

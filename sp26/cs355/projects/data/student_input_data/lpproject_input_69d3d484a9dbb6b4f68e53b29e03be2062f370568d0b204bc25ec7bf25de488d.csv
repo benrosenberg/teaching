@@ -1,0 +1,16 @@
+type,airport,flow
+source,RAP,9
+source,DHN,28
+source,BRO,26
+source,MIV,12
+source,FAR,25
+sink,RKD,-12
+sink,VJI,-14
+sink,SGR,-37
+sink,BWI,-3
+sink,JST,-1
+sink,TUP,-2
+sink,GPT,-6
+sink,LAL,-1
+sink,HHH,-18
+sink,IAB,-6

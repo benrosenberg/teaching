@@ -1,0 +1,16 @@
+type,airport,flow
+source,GYY,26
+source,EAU,3
+source,FHU,37
+source,LCK,30
+source,HON,4
+sink,VEL,-19
+sink,CEZ,-12
+sink,MKC,-14
+sink,JRF,-5
+sink,DVT,-1
+sink,EGV,-18
+sink,LWS,-6
+sink,CLE,-7
+sink,BWI,-4
+sink,HST,-14

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <meta name="author" content="Go to homepage" />
+    <title>CSCI 35500 SP 2026</title>
+    <style>
+        code {
+            white-space: pre-wrap;
+        }
+
+        span.smallcaps {
+            font-variant: small-caps;
+        }
+
+        span.underline {
+            text-decoration: underline;
+        }
+
+        div.column {
+            display: inline-block;
+            vertical-align: top;
+            width: 50%;
+        }
+
+        div.hanging-indent {
+            margin-left: 1.5em;
+            text-indent: -1.5em;
+        }
+
+        ul.task-list {
+            list-style: none;
+        }
+    </style>
+    <link rel="stylesheet" href="../../../style.css" />
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <header id="title-block-header">
+        <h1 class="title">CSCI 35500 SP 2026</h1>
+        <p class="author"><a href="https://benrosenberg.info/teaching/sp26/cs355/index.html">Go to homepage</a></p>
+        <p class="date">Last updated: 2026-03-01</p>
+    </header>
+
+    <body>
+
+        <script type="module">
+            /*
+            * Taken from https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest
+            */
+            async function sha256(message) {
+                // encode as UTF-8
+                const msgBuffer = new TextEncoder().encode(message);
+
+                // hash the message
+                const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+
+                // convert ArrayBuffer to Array
+                const hashArray = Array.from(new Uint8Array(hashBuffer));
+
+                // convert bytes to hex string                  
+                const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+                return hashHex;
+            }
+
+            document.querySelector('#message').oninput = function () {
+                sha256(this.value).then(
+                    function (hashedInput) {
+                        document.querySelector('#digest').value = hashedInput;
+                    }
+                );
+            };
+
+            document.querySelector('#message').focus();
+            document.querySelector('#message').select();
+            document.querySelector('#message').oninput(); // trigger initial hash
+        </script>
+
+        <h1>LP project student input download</h1>
+
+        <p>In the following text area, enter your EMPLID (you can find this on CUNYfirst).</p>
+
+        <p>Example: <span style="font-family: monospace;">12345678</span></p>
+
+        <textarea name="message" rows="1" cols="43" placeholder="Enter your EMPLID..." id="message"
+            onkeyup="search_item()"></textarea>
+
+        <div style="display: none;">
+            <label for="digest">Hash</label>
+            <input type="text" name="digest" id="digest" readonly>
+        </div>
+
+        <div id="name" class="center" style="text-align: left;">
+
+            <span class="items" style="display: none;">Your file is: <span style="color: green;"><a
+                        href="data/student_input_data/lpproject_input_7071954aec4283986e8bac03c5aef82cf6b6d2f8d43cd834f39a38423f4edec0.csv">lpproject_input_7071954aec4283986e8bac03c5aef82cf6b6d2f8d43cd834f39a38423f4edec0.csv</a></span>
+                <span
+                    style="display: none;">7071954aec4283986e8bac03c5aef82cf6b6d2f8d43cd834f39a38423f4edec0</span></span>
+
+            <span class="items" style="display: none;">Your file is: <span style="color: green;"><a
+                        href="data/student_input_data/lpproject_input_9697a0f4cd8a10a066edfb2f1241b8eefc4104577163339ca8b14f8944244464.csv">lpproject_input_9697a0f4cd8a10a066edfb2f1241b8eefc4104577163339ca8b14f8944244464.csv</a></span>
+                <span
+                    style="display: none;">9697a0f4cd8a10a066edfb2f1241b8eefc4104577163339ca8b14f8944244464</span></span>
+
+            <span class="items" style="display: none;">Your file is: <span style="color: green;"><a
+                        href="data/student_input_data/lpproject_input_c48c13ba8d2c67e4ca5a0f97405702a562b5b358c404d79d6eb93325fbc1deca.csv">lpproject_input_c48c13ba8d2c67e4ca5a0f97405702a562b5b358c404d79d6eb93325fbc1deca.csv</a></span>
+                <span
+                    style="display: none;">c48c13ba8d2c67e4ca5a0f97405702a562b5b358c404d79d6eb93325fbc1deca</span></span>
+
+            <span class="items" style="display: none;">Your file is: <span style="color: green;"><a
+                        href="data/student_input_data/lpproject_input_a629f9fb42de0ed481f2c74530c05895655dde3954df03dc85d203e917665948.csv">lpproject_input_a629f9fb42de0ed481f2c74530c05895655dde3954df03dc85d203e917665948.csv</a></span>
+                <span
+                    style="display: none;">a629f9fb42de0ed481f2c74530c05895655dde3954df03dc85d203e917665948</span></span>
+
+            <span class="items" style="display: none;">Your file is: <span style="color: green;"><a
+                        href="data/student_input_data/lpproject_input_a06652d8bc4bd14a3c3782b97a89705563f9109556aaae4a2ab0791e73215229.csv">lpproject_input_a06652d8bc4bd14a3c3782b97a89705563f9109556aaae4a2ab0791e73215229.csv</a></span>
+                <span
+                    style="display: none;">a06652d8bc4bd14a3c3782b97a89705563f9109556aaae4a2ab0791e73215229</span></span>
+
+            <span class="items" style="display: none;">Your file is: <span style="color: green;"><a
+                        href="data/student_input_data/lpproject_input_69d3d484a9dbb6b4f68e53b29e03be2062f370568d0b204bc25ec7bf25de488d.csv">lpproject_input_69d3d484a9dbb6b4f68e53b29e03be2062f370568d0b204bc25ec7bf25de488d.csv</a></span>
+                <span
+                    style="display: none;">69d3d484a9dbb6b4f68e53b29e03be2062f370568d0b204bc25ec7bf25de488d</span></span>
+
+            <span class="items" style="display: none;">Your file is: <span style="color: green;"><a
+                        href="data/student_input_data/lpproject_input_5bbb360fa54e993b5d9aea13d68c07ee3d3724bdb109cffd9a7dcf4e4a4e2abe.csv">lpproject_input_5bbb360fa54e993b5d9aea13d68c07ee3d3724bdb109cffd9a7dcf4e4a4e2abe.csv</a></span>
+                <span
+                    style="display: none;">5bbb360fa54e993b5d9aea13d68c07ee3d3724bdb109cffd9a7dcf4e4a4e2abe</span></span>
+
+            <span class="items" style="display: none;">Your file is: <span style="color: green;"><a
+                        href="data/student_input_data/lpproject_input_574402529f2bc581e3f53cca4243566e86c4b1f03242dee70a349bbf50d8faf0.csv">lpproject_input_574402529f2bc581e3f53cca4243566e86c4b1f03242dee70a349bbf50d8faf0.csv</a></span>
+                <span
+                    style="display: none;">574402529f2bc581e3f53cca4243566e86c4b1f03242dee70a349bbf50d8faf0</span></span>
+
+            <span class="items" style="display: none;">Your file is: <span style="color: green;"><a
+                        href="data/student_input_data/lpproject_input_c01bab03a48b24c28ade920d5cb52c2ab4816310c91eaf01c732e06162b2a797.csv">lpproject_input_c01bab03a48b24c28ade920d5cb52c2ab4816310c91eaf01c732e06162b2a797.csv</a></span>
+                <span
+                    style="display: none;">c01bab03a48b24c28ade920d5cb52c2ab4816310c91eaf01c732e06162b2a797</span></span>
+
+            <span class="items" style="display: none;">Your file is: <span style="color: green;"><a
+                        href="data/student_input_data/lpproject_input_59ee2a0fc304ca8799e020ecf04823d314661db367aba371ab978f6d5ad77ff5.csv">lpproject_input_59ee2a0fc304ca8799e020ecf04823d314661db367aba371ab978f6d5ad77ff5.csv</a></span>
+                <span
+                    style="display: none;">59ee2a0fc304ca8799e020ecf04823d314661db367aba371ab978f6d5ad77ff5</span></span>
+
+            <span class="items" style="display: none;">Your file is: <span style="color: green;"><a
+                        href="data/student_input_data/lpproject_input_2ba266ec2e8e026b94bf35f13647e3bd6b8bdd1db20b200a46deb15f9bcd3889.csv">lpproject_input_2ba266ec2e8e026b94bf35f13647e3bd6b8bdd1db20b200a46deb15f9bcd3889.csv</a></span>
+                <span
+                    style="display: none;">2ba266ec2e8e026b94bf35f13647e3bd6b8bdd1db20b200a46deb15f9bcd3889</span></span>
+
+            <span class="items" style="display: none;">Your file is: <span style="color: green;"><a
+                        href="data/student_input_data/lpproject_input_48047f181ee1f8a9cff2b032373fe8c5de57bd98298ee07fbe6bf18e451c529a.csv">lpproject_input_48047f181ee1f8a9cff2b032373fe8c5de57bd98298ee07fbe6bf18e451c529a.csv</a></span>
+                <span
+                    style="display: none;">48047f181ee1f8a9cff2b032373fe8c5de57bd98298ee07fbe6bf18e451c529a</span></span>
+
+            <span class="items" style="display: none;">Your file is: <span style="color: green;"><a
+                        href="data/student_input_data/lpproject_input_0347004dd15633a9708e97c6204832cd484d45199c39a4b43c604feb43bb2a11.csv">lpproject_input_0347004dd15633a9708e97c6204832cd484d45199c39a4b43c604feb43bb2a11.csv</a></span>
+                <span
+                    style="display: none;">0347004dd15633a9708e97c6204832cd484d45199c39a4b43c604feb43bb2a11</span></span>
+
+            <span class="items" style="display: none;">Your file is: <span style="color: green;"><a
+                        href="data/student_input_data/lpproject_input_1fbeddc5a152fd428c26db0fe184c41cc937844f6d52bcb107a8f2f1a194fcc2.csv">lpproject_input_1fbeddc5a152fd428c26db0fe184c41cc937844f6d52bcb107a8f2f1a194fcc2.csv</a></span>
+                <span
+                    style="display: none;">1fbeddc5a152fd428c26db0fe184c41cc937844f6d52bcb107a8f2f1a194fcc2</span></span>
+
+            <span class="items" style="display: none;">Your file is: <span style="color: green;"><a
+                        href="data/student_input_data/lpproject_input_846e2620d058c4521cee820fb6ccc2ffc89ce47e5d5c0f1654aceadd4673d382.csv">lpproject_input_846e2620d058c4521cee820fb6ccc2ffc89ce47e5d5c0f1654aceadd4673d382.csv</a></span>
+                <span
+                    style="display: none;">846e2620d058c4521cee820fb6ccc2ffc89ce47e5d5c0f1654aceadd4673d382</span></span>
+
+            <span class="items" style="display: none;">Your file is: <span style="color: green;"><a
+                        href="data/student_input_data/lpproject_input_0c970628e848878332320ef495dcf40bfeab5f644a3273c8f4732e7047b79fd7.csv">lpproject_input_0c970628e848878332320ef495dcf40bfeab5f644a3273c8f4732e7047b79fd7.csv</a></span>
+                <span
+                    style="display: none;">0c970628e848878332320ef495dcf40bfeab5f644a3273c8f4732e7047b79fd7</span></span>
+
+            <span class="items" style="display: none;">Your file is: <span style="color: green;"><a
+                        href="data/student_input_data/lpproject_input_47ed18805f70bd271a750ddb4f1836a9272eac2c0e35bb03fe4a8fb2ac8fbc69.csv">lpproject_input_47ed18805f70bd271a750ddb4f1836a9272eac2c0e35bb03fe4a8fb2ac8fbc69.csv</a></span>
+                <span
+                    style="display: none;">47ed18805f70bd271a750ddb4f1836a9272eac2c0e35bb03fe4a8fb2ac8fbc69</span></span>
+
+            <span class="items" style="display: none;">Your file is: <span style="color: green;"><a
+                        href="data/student_input_data/lpproject_input_4dfef0dc7e4dde8bc53c825c9860db46aeab4b3d69a91edd198643a598c52295.csv">lpproject_input_4dfef0dc7e4dde8bc53c825c9860db46aeab4b3d69a91edd198643a598c52295.csv</a></span>
+                <span
+                    style="display: none;">4dfef0dc7e4dde8bc53c825c9860db46aeab4b3d69a91edd198643a598c52295</span></span>
+
+            <span class="items" style="display: none;">Your file is: <span style="color: green;"><a
+                        href="data/student_input_data/lpproject_input_e9cefaba4095405ecccb870c13c0704ca0350c12a5b8c295ffec717012f78c5f.csv">lpproject_input_e9cefaba4095405ecccb870c13c0704ca0350c12a5b8c295ffec717012f78c5f.csv</a></span>
+                <span
+                    style="display: none;">e9cefaba4095405ecccb870c13c0704ca0350c12a5b8c295ffec717012f78c5f</span></span>
+
+            <span class="items" style="display: none;">Your file is: <span style="color: green;"><a
+                        href="data/student_input_data/lpproject_input_7b90a59d754751a3af93832e2169ca1b5fb17ff883fe8eb66d2e594059ee5caa.csv">lpproject_input_7b90a59d754751a3af93832e2169ca1b5fb17ff883fe8eb66d2e594059ee5caa.csv</a></span>
+                <span
+                    style="display: none;">7b90a59d754751a3af93832e2169ca1b5fb17ff883fe8eb66d2e594059ee5caa</span></span>
+
+            <span class="items" style="display: none;">Your file is: <span style="color: green;"><a
+                        href="data/student_input_data/lpproject_input_ec6fdf283f971ca4e1cee4de70e9166ac87703dfd4990db86b293cf2c1c12804.csv">lpproject_input_ec6fdf283f971ca4e1cee4de70e9166ac87703dfd4990db86b293cf2c1c12804.csv</a></span>
+                <span
+                    style="display: none;">ec6fdf283f971ca4e1cee4de70e9166ac87703dfd4990db86b293cf2c1c12804</span></span>
+
+            <span class="items" style="display: none;">Your file is: <span style="color: green;"><a
+                        href="data/student_input_data/lpproject_input_a2e07311617e49a03f701e97875d66cd4e0587f23ecce6583f55dd326fb8a53a.csv">lpproject_input_a2e07311617e49a03f701e97875d66cd4e0587f23ecce6583f55dd326fb8a53a.csv</a></span>
+                <span
+                    style="display: none;">a2e07311617e49a03f701e97875d66cd4e0587f23ecce6583f55dd326fb8a53a</span></span>
+
+            <span class="items" style="display: none;">Your file is: <span style="color: green;"><a
+                        href="data/student_input_data/lpproject_input_328c0c74d04b064697fc14ed3535aa1329938e0db1196a74de4964bcecffb430.csv">lpproject_input_328c0c74d04b064697fc14ed3535aa1329938e0db1196a74de4964bcecffb430.csv</a></span>
+                <span
+                    style="display: none;">328c0c74d04b064697fc14ed3535aa1329938e0db1196a74de4964bcecffb430</span></span>
+
+        </div>
+
+        <p id="errormessage" class="center" style="text-align: left; color: red;"></p>
+
+    </body>
+
+    <script>
+        function search_item() {
+            let input = document.getElementById('digest').value
+            input = input.toLowerCase();
+            let message = document.getElementById('message');
+            let errormessagetext = "";
+            let found = false;
+            let error = document.getElementById('errormessage');
+            if (!(message.textLength == 8)) {
+                errormessagetext = `Make sure you enter an 8-digit EMPLID. You have entered ${message.textLength} characters.`;
+            } else {
+
+                let x = document.getElementsByClassName('items');
+                for (i = 0; i < x.length; i++) {
+                    if (x[i].innerHTML.toLowerCase().includes(input)) {
+                        x[i].style.display = "";
+                        found = true;
+                    }
+                    else {
+                        x[i].style.display = "none";
+                    }
+                }
+                errormessagetext = "EMPLID not found. Make sure you type your EMPLID exactly in the above field.";
+
+            }
+
+            if (!found) {
+                error.textContent = errormessagetext;
+                error.style.display = "";
+            } else {
+                error.textContent = "";
+                error.style.display = "none";
+            }
+        }
+    </script>
+
+</html>

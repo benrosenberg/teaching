@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Go to homepage" />
+  <title>CSCI 35500 SP 2026</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="../../../style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+   var mathElements = document.getElementsByClassName("math");
+   var macros = [];
+   for (var i = 0; i < mathElements.length; i++) {
+    var texText = mathElements[i].firstChild;
+    if (mathElements[i].tagName == "SPAN") {
+     katex.render(texText.data, mathElements[i], {
+      displayMode: mathElements[i].classList.contains('display'),
+      throwOnError: false,
+      macros: macros,
+      fleqn: false
+     });
+  }}});
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">CSCI 35500 SP 2026</h1>
+<p class="author"><a href="https://benrosenberg.info/teaching/sp26/cs355/index.html">Go to homepage</a></p>
+<p class="date">Last updated: 2026-03-01</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#cs-355-lp-project-airport-mcf">CS 355 LP Project: Airport MCF</a>
+<ul>
+<li><a href="#problem-statement">Problem statement</a></li>
+<li><a href="#instructions">Instructions</a>
+<ul>
+<li><a href="#task">Task</a></li>
+<li><a href="#inputs">Inputs</a></li>
+<li><a href="#submission">Submission</a></li>
+</ul></li>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#submissiongrading">Submission/grading</a></li>
+<li><a href="#ai-toolsexternal-resources-reminder">AI tools/external resources reminder</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="cs-355-lp-project-airport-mcf">CS 355 LP Project: Airport MCF</h1>
+<figure>
+<img src="images/beautiful_plane.png" alt="A beautiful plane flying through the sky" /><figcaption aria-hidden="true">A beautiful plane flying through the sky</figcaption>
+</figure>
+<p>This is the first project we will have in CS 355, on linear programming and OR-Tools. Due dates and other information will be available on the course website. Please ask any questions you have about this project in class.</p>
+<h2 id="problem-statement">Problem statement</h2>
+<p>You are in charge of moving products from one set of US cities to another set of US cities. (All of these cities will have their own airports.) However, you are only allowed to use preexisting shipping routes.</p>
+<p>You are given a list of trips that can be taken between US airports. Each trip will have a capacity (in pounds) that the route can transfer, based on the largest amount that was transferred in a one month period, over the 9 months from January 2025 to September 2025. There is also a distance associated with each trip, given in miles. Lastly, you will be given the amounts of inventory that you have in each starting city, along with the amount of inventory that you need to send to each destination. (These amounts will tie out.)</p>
+<p>Your job is to determine how to move the inventory to the destinations as efficiently as possible.</p>
+<p>Here is some sample data (most important columns, first 5 rows):</p>
+<table>
+<thead>
+<tr class="header">
+<th>source</th>
+<th>target</th>
+<th>capacity</th>
+<th>dist</th>
+<th>src_lat</th>
+<th>src_lon</th>
+<th>dst_lat</th>
+<th>dst_lon</th>
+<th>src_city</th>
+<th>dst_city</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AAF</td>
+<td>OCF</td>
+<td>3450.0</td>
+<td>173.0</td>
+<td>29.7275</td>
+<td>-85.0274</td>
+<td>29.1725</td>
+<td>-82.2241</td>
+<td>Apalachicola</td>
+<td>Ocala</td>
+</tr>
+<tr class="even">
+<td>AAF</td>
+<td>SUA</td>
+<td>3450.0</td>
+<td>341.0</td>
+<td>29.7275</td>
+<td>-85.0274</td>
+<td>27.1816</td>
+<td>-80.2210</td>
+<td>Apalachicola</td>
+<td>Stuart</td>
+</tr>
+<tr class="odd">
+<td>ABE</td>
+<td>ACK</td>
+<td>3450.0</td>
+<td>285.0</td>
+<td>40.6517</td>
+<td>-75.4427</td>
+<td>41.2531</td>
+<td>-70.0602</td>
+<td>Allentown</td>
+<td>Nantucket</td>
+</tr>
+<tr class="even">
+<td>ABE</td>
+<td>ACY</td>
+<td>46051.0</td>
+<td>94.0</td>
+<td>40.6517</td>
+<td>-75.4427</td>
+<td>39.4575</td>
+<td>-74.5772</td>
+<td>Allentown</td>
+<td>Atlantic City</td>
+</tr>
+<tr class="odd">
+<td>ABE</td>
+<td>AFW</td>
+<td>3813000.0</td>
+<td>1318.0</td>
+<td>40.6517</td>
+<td>-75.4427</td>
+<td>32.9904</td>
+<td>-97.3194</td>
+<td>Allentown</td>
+<td>Fort Worth</td>
+</tr>
+</tbody>
+</table>
+<p>Latitude and longitude for both source and target cities are included if you want to plot your route.</p>
+<h2 id="instructions">Instructions</h2>
+<h3 id="task">Task</h3>
+<p>You must:</p>
+<ol type="1">
+<li>Model the minimum cost flow problem as a linear program.
+<ul>
+<li>Use one or more Markdown cells in the Jupyter notebook you submit to describe this model in mathematical notation as we have done in class.</li>
+</ul></li>
+<li>Use Python to implement your MCF model and solve it based on the inputs you were given and the route data provided.</li>
+</ol>
+<p>Some specifics on the task:</p>
+<ul>
+<li>“As efficiently as possible” means minimizing the total distance that each pound of inventory travels (i.e., <span class="math inline">\sum (\text{flow}\times\text{distance})</span>)</li>
+<li>You must respect the capacity limits of each route. However, it’s very likely that you won’t get anywhere near the capacity limits for some routes, as they are very high, and you are only shipping 100 pounds of inventory total (see below).</li>
+</ul>
+<h3 id="inputs">Inputs</h3>
+<p>You will be given a list of 5 source airports and 10 destination airports. These sets will not have any overlap, so you don’t need to worry about that edge case. Along with these source and destination airports, you will be given numbers for supply and demand for each of the source and destination airports respectively, which should each add to 100 for demand (or -100 for supply).</p>
+<p>This data will come as a CSV file with columns like this (this is just an example, your data will be different):</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">type</th>
+<th style="text-align: left;">airport</th>
+<th style="text-align: right;">flow</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">source</td>
+<td style="text-align: left;">RDU</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">source</td>
+<td style="text-align: left;">BLD</td>
+<td style="text-align: right;">38</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">…</td>
+<td style="text-align: left;">…</td>
+<td style="text-align: right;">…</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">sink</td>
+<td style="text-align: left;">FOD</td>
+<td style="text-align: right;">-10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">sink</td>
+<td style="text-align: left;">CEZ</td>
+<td style="text-align: right;">-22</td>
+</tr>
+</tbody>
+</table>
+<p>Notes on your input data:</p>
+<ul>
+<li>You will all get different problem instances (different source nodes/inventory amounts/sink nodes)</li>
+<li>Your problem instances should all be feasible, so if you get that they are infeasible you probably have an issue with your constraints</li>
+<li>You may want to use pandas to read and process the CSV</li>
+</ul>
+<p>You will also be given the full dataset as described above, with information on available routes, and the capacity and distance of each route. The only columns you really need to use are <code>source</code>, <code>target</code>, <code>capacity</code>, and <code>dist</code>.</p>
+<h3 id="submission">Submission</h3>
+<p>Submit a Jupyter notebook to Brightspace that has the following in it:</p>
+<ul>
+<li>In a Markdown cell (or multiple Markdown cells): your LP formulation for the MCF problem</li>
+<li>A brief description of how you chose to map the problem to the MCF model</li>
+<li>An OR-Tools implementation of the model, using the input data</li>
+<li>Clear indication of the objective value that you obtained for your problem</li>
+</ul>
+<h2 id="requirements">Requirements</h2>
+<p>For each of the following requirements that you do not follow, you will lose 5 points:</p>
+<ul>
+<li>You must model this as a min cost flow problem</li>
+<li>You must use OR-Tools with linear programming (not integer programming or any other solving method)</li>
+<li>You must submit a Jupyter notebook (.ipynb format)</li>
+<li>You must give the constraints as part of your submission, in the Markdown cells of the notebook</li>
+<li>I should not need to run your file on my end, it should have all the outputs “pre-run” and included in your file</li>
+<li>You must use Python in the Jupyter notebook, not R or Julia or any other language</li>
+</ul>
+<h2 id="submissiongrading">Submission/grading</h2>
+<p>Submit your Jupyter notebook file to Brightspace.</p>
+<p>Grading:</p>
+<ul>
+<li>20% MCF formulation
+<ul>
+<li>You must describe the MCF problem and how it can be modeled as a linear program, using the same formal notation as we did in class for similar linear program models.</li>
+</ul></li>
+<li>20% description of how you mapped this problem to the MCF
+<ul>
+<li>Describe your decision variables, constraints, and objective for this problem.</li>
+</ul></li>
+<li>40% OR-Tools implementation
+<ul>
+<li>You must have successfully run the code using OR-Tools to get these points, and obtained some solution to the problem that makes sense.</li>
+</ul></li>
+<li>10% correct solution
+<ul>
+<li>I have a solver, the output of which I will compare to your solution.</li>
+<li>If your objective value is within 5% of the objective value I calculated (e.g., my solver calculated 100 and your solution was in the range [95, 105]), you get these points.</li>
+</ul></li>
+</ul>
+<h2 id="ai-toolsexternal-resources-reminder">AI tools/external resources reminder</h2>
+<p>Use whatever resources you feel comfortable with.</p>
+<p>There are no restrictions.</p>
+</body>
+</html>
