@@ -1,7 +1,7 @@
 ---
 title: CSCI 35500 SP 2026
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp26/cs355/index.html)"
-date: "Last updated: 2026-03-01"
+date: "Last updated: 2026-03-04"
 css: "../../../style.css"
 toc: true
 ---
@@ -95,9 +95,9 @@ Submit your Jupyter notebook file to Brightspace.
 
 Grading:
 
-- 20% MCF formulation
+- 25% MCF formulation
   - You must describe the MCF problem and how it can be modeled as a linear program, using the same formal notation as we did in class for similar linear program models.
-- 20% description of how you mapped this problem to the MCF
+- 25% description of how you mapped this problem to the MCF
   - Describe your decision variables, constraints, and objective for this problem.
 - 40% OR-Tools implementation
   - You must have successfully run the code using OR-Tools to get these points, and obtained some solution to the problem that makes sense.
