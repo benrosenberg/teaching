@@ -1,14 +1,14 @@
 ---
 title: CSCI 35500 SP 2026
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp26/cs355/index.html)"
-date: "Last updated: 2026-03-06"
+date: "Last updated: 2026-03-12"
 css: "../../style.css"
 toc: false
 ---
 
 # Lecture notes and materials
 
-| Class # |  Date   |             Topic              |                                                                                                                                       Slides                                                                                                                                        |
+| Class # |  Date   |             Topic              |                                                                                                                                  Slides/Materials                                                                                                                                   |
 |:-------:|:-------:|:------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 |    1    | 1/28/26 |     Course intro/syllabus      |                                                                                                                     [Lecture slides](slides/01_intro.pdf) [PDF]                                                                                                                     |
 |    2    | 2/2/26  |     Linear algebra review      |                                                                                                                    [Lecture slides](slides/02_linalg.pdf) [PDF]                                                                                                                     |
@@ -22,3 +22,5 @@ toc: false
 |   10    | 3/4/26  | OR-Tools (part 2) & LP project |                                                                                                               [LP project/MCF slides](slides/08_lpproject.pdf) [PDF]                                                                                                                |
 |   11    | 3/9/26  |         Midterm review         |                                                                                                                                                                                                                                                                                     |
 |   12    | 3/11/26 |        **Midterm exam**        |                                                                                                                                                                                                                                                                                     |
+|   13    | 3/16/26 |      Midterm walkthrough       |                                                                                                                                                                                                                                                                                     |
+|   14    | 3/18/26 |          Intro to ILP          |                                                                                                                                                                                                                                                                                     |
