@@ -243,7 +243,7 @@ For each of the following constraints on the decision variable $x$, state whethe
 
 ---
 
-# HW 2 (due date TBD)
+## HW 2 (due date TBD)
 
 ### ILP basics
 
