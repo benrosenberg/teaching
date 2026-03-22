@@ -1,7 +1,7 @@
 ---
 title: CSCI 35500 SP 2026
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp26/cs355/index.html)"
-date: "Last updated: 2026-02-22"
+date: "Last updated: 2026-03-21"
 css: "../../style.css"
 toc: true
 ---
@@ -240,5 +240,66 @@ For each of the following constraints on the decision variable $x$, state whethe
 6. $x + x/2 + x/4 + x/8 + x/16 \leq 2x$
 
 **END OF HW 1**
+
+---
+
+# HW 2 (due date TBD)
+
+### ILP basics
+
+#### Problem 1
+
+What is an integer linear program (ILP), and how does its feasible region differ from a linear program (LP)?
+
+#### Problem 2
+
+For LPs, we saw that constraints could only be modeled if they were convex, because the feasible region of an LP needed to be convex.
+
+For ILPs, we discussed how there was more nuance: the inequality constraints that formed the feasible region of the **LP-relaxation** of an ILP (that is, the LP that is created if we remove the restriction that all decision variables need to have integer values) still needed to form a convex region, but by necessity any two or more ILP-feasible points would form a non-convex set.
+
+To cement your understanding of this nuance, please:
+
+- Give two examples of constraints that can be modeled in both LPs and ILPs
+- Give two examples of constraints that can be modeled in ILPs, but not LPs
+- Give two examples of constraints that can be modeled in neither ILPs nor LPs
+
+Make sure to use mathematical notation (write out the actual constraint) rather than stating the constraint in words.
+
+Do not use constraints from Problem 3 as your examples.
+
+#### Problem 3
+
+Let $x$ and $y$ be integer decision variables, and let $a$ and $b$ be binary decision variables.
+
+For each of the following constraints, state whether it can be modeled in an LP, an ILP, both, or neither. Explain your reasoning.
+
+1. Either $x \geq 4$ or $x \leq 2$.
+2. $x \geq 4$ and $x \leq 2$.
+3. $x$ is an integer.
+4. $xy \leq 4$.
+5. $\sin(x) = y$.
+6. If $a = 1$, then $b = 1$.
+7. $|a| \geq 3$.
+8. $|a| \leq 3$.
+
+#### Problem 4
+
+In Problem 2, we described the notion of an **LP-relaxation** for an ILP, as the corresponding LP that is created if we take an ILP and remove the restriction that all decision variables need to have integer values.
+
+Assume that the objective function is maximizing some (linear) function of the decision variables, and consider the objective values of the optimal solutions to an ILP and to its LP-relaxation. 
+
+Let $O_{ILP}$ be the objective value for the ILP, and let $O_{LP}$ be the objective value of its LP-relaxation. Which of the following is guaranteed to be true? State your choice, and explain your reasoning:
+
+1. $O_{ILP} \leq O_{LP}$
+2. $O_{ILP} \geq O_{LP}$
+3. $O_{ILP} = O_{LP}$
+
+#### Problem 5
+
+Suppose that an ILP has $N$ binary decision variables, i.e. integer variables $x_1, \dots, x_N$ with constraints $0\leq x_1, \dots, x_N \leq 1$. Assume that there are no constraints other than the binary constraints on $x_1, \dots, x_N$.
+
+How many feasible solutions does the ILP have?
+
+More problems will be posted...
 
 ---

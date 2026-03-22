@@ -102,7 +102,7 @@
 <header id="title-block-header">
 <h1 class="title">CSCI 35500 SP 2026</h1>
 <p class="author"><a href="https://benrosenberg.info/teaching/sp26/cs355/index.html">Go to homepage</a></p>
-<p class="date">Last updated: 2026-02-22</p>
+<p class="date">Last updated: 2026-03-21</p>
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
@@ -115,7 +115,12 @@
 <li><a href="#linear-programming-geometry">Linear programming geometry</a></li>
 <li><a href="#lp-solving-and-big-o-notation">LP solving and big-O notation</a></li>
 <li><a href="#discrete-math-review-and-modeling-max-flow-as-an-lp">Discrete math review and modeling max flow as an LP</a></li>
+<li><a href="#lp-modeling-capabilities">LP modeling capabilities</a></li>
 </ul></li>
+</ul></li>
+<li><a href="#hw-2-due-date-tbd">HW 2 (due date TBD)</a>
+<ul>
+<li><a href="#ilp-basics">ILP basics</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -281,6 +286,7 @@
 <li>What will the objective function be?</li>
 </ol>
 <p><strong>Integrality</strong>: In class, we saw that for max flow, if all capacities were integer then all flows would be integer in the solution to the LP. Does that hold for this formulation? If so, explain why. If not, provide a counterexample.</p>
+<h3 id="lp-modeling-capabilities">LP modeling capabilities</h3>
 <h4 id="problem-19">Problem 19</h4>
 <p>For each of the following constraints on the decision variable <span class="math inline">x</span>, state whether they can or cannot be modeled by a linear program:</p>
 <ol type="1">
@@ -300,6 +306,48 @@
 <li><span class="math inline">x + x/2 + x/4 + x/8 + x/16 \leq 2x</span></li>
 </ol>
 <p><strong>END OF HW 1</strong></p>
+<hr />
+<h1 id="hw-2-due-date-tbd">HW 2 (due date TBD)</h1>
+<h3 id="ilp-basics">ILP basics</h3>
+<h4 id="problem-1-1">Problem 1</h4>
+<p>What is an integer linear program (ILP), and how does its feasible region differ from a linear program (LP)?</p>
+<h4 id="problem-2-1">Problem 2</h4>
+<p>For LPs, we saw that constraints could only be modeled if they were convex, because the feasible region of an LP needed to be convex.</p>
+<p>For ILPs, we discussed how there was more nuance: the inequality constraints that formed the feasible region of the <strong>LP-relaxation</strong> of an ILP (that is, the LP that is created if we remove the restriction that all decision variables need to have integer values) still needed to form a convex region, but by necessity any two or more ILP-feasible points would form a non-convex set.</p>
+<p>To cement your understanding of this nuance, please:</p>
+<ul>
+<li>Give two examples of constraints that can be modeled in both LPs and ILPs</li>
+<li>Give two examples of constraints that can be modeled in ILPs, but not LPs</li>
+<li>Give two examples of constraints that can be modeled in neither ILPs nor LPs</li>
+</ul>
+<p>Make sure to use mathematical notation (write out the actual constraint) rather than stating the constraint in words.</p>
+<p>Do not use constraints from Problem 3 as your examples.</p>
+<h4 id="problem-3-1">Problem 3</h4>
+<p>Let <span class="math inline">x</span> and <span class="math inline">y</span> be integer decision variables, and let <span class="math inline">a</span> and <span class="math inline">b</span> be binary decision variables.</p>
+<p>For each of the following constraints, state whether it can be modeled in an LP, an ILP, both, or neither. Explain your reasoning.</p>
+<ol type="1">
+<li>Either <span class="math inline">x \geq 4</span> or <span class="math inline">x \leq 2</span>.</li>
+<li><span class="math inline">x \geq 4</span> and <span class="math inline">x \leq 2</span>.</li>
+<li><span class="math inline">x</span> is an integer.</li>
+<li><span class="math inline">xy \leq 4</span>.</li>
+<li><span class="math inline">\sin(x) = y</span>.</li>
+<li>If <span class="math inline">a = 1</span>, then <span class="math inline">b = 1</span>.</li>
+<li><span class="math inline">|a| \geq 3</span>.</li>
+<li><span class="math inline">|a| \leq 3</span>.</li>
+</ol>
+<h4 id="problem-4-1">Problem 4</h4>
+<p>In Problem 2, we described the notion of an <strong>LP-relaxation</strong> for an ILP, as the corresponding LP that is created if we take an ILP and remove the restriction that all decision variables need to have integer values.</p>
+<p>Assume that the objective function is maximizing some (linear) function of the decision variables, and consider the objective values of the optimal solutions to an ILP and to its LP-relaxation.</p>
+<p>Let <span class="math inline">O_{ILP}</span> be the objective value for the ILP, and let <span class="math inline">O_{LP}</span> be the objective value of its LP-relaxation. Which of the following is guaranteed to be true? State your choice, and explain your reasoning:</p>
+<ol type="1">
+<li><span class="math inline">O_{ILP} \leq O_{LP}</span></li>
+<li><span class="math inline">O_{ILP} \geq O_{LP}</span></li>
+<li><span class="math inline">O_{ILP} = O_{LP}</span></li>
+</ol>
+<h4 id="problem-5-1">Problem 5</h4>
+<p>Suppose that an ILP has <span class="math inline">N</span> binary decision variables, i.e. integer variables <span class="math inline">x_1, \dots, x_N</span> with constraints <span class="math inline">0\leq x_1, \dots, x_N \leq 1</span>. Assume that there are no constraints other than the binary constraints on <span class="math inline">x_1, \dots, x_N</span>.</p>
+<p>How many feasible solutions does the ILP have?</p>
+<p>More problems will be posted…</p>
 <hr />
 </body>
 </html>
