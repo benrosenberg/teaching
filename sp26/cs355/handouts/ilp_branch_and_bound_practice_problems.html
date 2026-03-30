@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Go to homepage" />
+  <title>CSCI 35500 SP 2026</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="../../../style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+   var mathElements = document.getElementsByClassName("math");
+   var macros = [];
+   for (var i = 0; i < mathElements.length; i++) {
+    var texText = mathElements[i].firstChild;
+    if (mathElements[i].tagName == "SPAN") {
+     katex.render(texText.data, mathElements[i], {
+      displayMode: mathElements[i].classList.contains('display'),
+      throwOnError: false,
+      macros: macros,
+      fleqn: false
+     });
+  }}});
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">CSCI 35500 SP 2026</h1>
+<p class="author"><a href="https://benrosenberg.info/teaching/sp26/cs355/index.html">Go to homepage</a></p>
+<p class="date">Last updated: 2026-03-29</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#problem-1">Problem 1</a></li>
+<li><a href="#problem-2">Problem 2</a></li>
+<li><a href="#problem-3">Problem 3</a></li>
+</ul>
+</nav>
+<p>Source of problem list: <a href="https://web.tecnico.ulisboa.pt/mcasquilho/compute/_linpro/TaylorB_module_c.pdf">https://web.tecnico.ulisboa.pt/mcasquilho/compute/_linpro/TaylorB_module_c.pdf</a></p>
+<h1 id="problem-1">Problem 1</h1>
+<p><span class="math display">\begin{aligned}
+\max \quad &amp; z = 5x_1 + 4x_2 \\
+s.t. \quad &amp; 3x_1 + 4x_2 \leq 10 \\
+\quad &amp; x_1, x_2 \geq 0, \text{integer}
+\end{aligned}</span></p>
+<h1 id="problem-2">Problem 2</h1>
+<p><span class="math display">\begin{aligned}
+\min \quad &amp; z = 3x_1 + 6x_2 \\
+s.t. \quad &amp; 7x_1 + 3x_2 \geq 40 \\
+\quad &amp; x_1, x_2 \geq 0, \text{integer}
+\end{aligned}</span></p>
+<h1 id="problem-3">Problem 3</h1>
+<p>Example solution in source: <a href="ilp_branch_and_bound_textbook_excerpt.pdf">ilp_branch_and_bound_textbook_excerpt.pdf</a> [PDF]</p>
+<p><span class="math display">\begin{aligned}
+\max \quad &amp; z = 100x_1 + 150x_2 \\
+s.t. \quad &amp; 8{,}000 x_1 + 4{,}000 x_2 \leq 40{,}000 \\
+\quad &amp; 15 x_1 + 30 x_2 \leq 200 \\
+\quad &amp; x_1, x_2 \geq 0, \text{integer}
+\end{aligned}</span></p>
+</body>
+</html>
