@@ -102,7 +102,7 @@
 <header id="title-block-header">
 <h1 class="title">CSCI 35500 SP 2026</h1>
 <p class="author"><a href="https://benrosenberg.info/teaching/sp26/cs355/index.html">Go to homepage</a></p>
-<p class="date">Last updated: 2026-03-21</p>
+<p class="date">Last updated: 2026-03-31</p>
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
@@ -120,6 +120,7 @@
 <li><a href="#hw-2-due-date-tbd">HW 2 (due date TBD)</a>
 <ul>
 <li><a href="#ilp-basics">ILP basics</a></li>
+<li><a href="#ilp-solving">ILP solving</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -348,6 +349,119 @@
 <p>Suppose that an ILP has <span class="math inline">N</span> binary decision variables, i.e. integer variables <span class="math inline">x_1, \dots, x_N</span> with constraints <span class="math inline">0\leq x_1, \dots, x_N \leq 1</span>. Assume that there are no constraints other than the binary constraints on <span class="math inline">x_1, \dots, x_N</span>.</p>
 <p>How many feasible solutions does the ILP have?</p>
 <p>More problems will be posted…</p>
+<h3 id="ilp-solving">ILP solving</h3>
+<p>For problems 6 and 7, a table is provided that maps from an LP-relaxation of the problem to its optimal solution’s objective value and the optimal values of its decision variables. Use the table when solving those problems, instead of solving the LP-relaxation by hand or using other tools.</p>
+<p>For problem 8, you will need to solve the LP-relaxations in each branch and bound node using OR-Tools, or a similar tool. Feel free to use this template Python notebook (<a href="notebooks/lp_solver.ipynb">lp_solver.ipynb</a>), as I did during lecture when we solved these problems: <a href="handouts/ilp_branch_and_bound_practice_problems.html">Branch and bound practice problems</a>.</p>
+<p>For each of problems 6, 7, and 8, make sure to draw the branch and bound tree and clearly indicate whether pruned/fathomed nodes are infeasible, integer, incumbent, and/or pruned by objective value.</p>
+<h4 id="problem-6">Problem 6</h4>
+<p>Using the branch and bound method to determine which LP-relaxations to solve, and using the provided table to determine the optimal solutions to the LP-relaxations of the problem, determine the optimal solution to the below ILP:</p>
+<p><span class="math display">\begin{aligned}
+\max \quad &amp; z = x_1 + x_2 \\
+s.t. \quad &amp; 4x_1 + x_2 \leq 10 \\
+\quad &amp; 9x_1 - x_2 \geq 1 \\
+\quad &amp; x_1, x_2 \geq 0, \text{integer}
+\end{aligned}</span></p>
+<p>LP-relaxation solution table:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Added constraints</th>
+<th>Objective value</th>
+<th>Decision variables</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>None</td>
+<td>7.46</td>
+<td><span class="math inline">x_1 = 0.85</span>, <span class="math inline">x_2 = 6.62</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">x_1 \leq 0</span></td>
+<td>Infeasible</td>
+<td>Infeasible</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">x_1 \geq 2</span></td>
+<td>4</td>
+<td><span class="math inline">x_1 = 2</span>, <span class="math inline">x_2 = 2</span></td>
+</tr>
+</tbody>
+</table>
+<h4 id="problem-7-1">Problem 7</h4>
+<p>Using the branch and bound method to determine which LP-relaxations to solve, and using the provided table to determine the optimal solutions to the LP-relaxations of the problem, determine the optimal solution to the below ILP:</p>
+<p><span class="math display">\begin{aligned}
+\max \quad &amp; z = x_1 + x_2 \\
+s.t. \quad &amp; 4x_1 + 3x_2 \leq 12 \\
+\quad &amp; 2x_1 + 4x_2 \leq 12 \\
+\quad &amp; x_1, x_2 \geq 0, \text{integer}
+\end{aligned}</span></p>
+<p>LP-relaxation solution table:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Added constraints</th>
+<th>Objective value</th>
+<th>Decision variables</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>None</td>
+<td>3.6</td>
+<td><span class="math inline">x_1 = 1.2</span>, <span class="math inline">x_2 = 2.4</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">x_1 \leq 1</span></td>
+<td>3.5</td>
+<td><span class="math inline">x_1 = 1</span>, <span class="math inline">x_2 = 2.5</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">x_1 \leq 1</span>, <span class="math inline">x_2 \leq 2</span></td>
+<td>3</td>
+<td><span class="math inline">x_1 = 1</span>, <span class="math inline">x_2 = 2</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">x_1 \leq 1</span>, <span class="math inline">x_2 \geq 2</span></td>
+<td>3</td>
+<td><span class="math inline">x_1 = 0</span>, <span class="math inline">x_2 = 3</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">x_1 \geq 2</span></td>
+<td>3.33</td>
+<td><span class="math inline">x_1 = 2</span>, <span class="math inline">x_2 = 1.33</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">x_1 \geq 2</span>, <span class="math inline">x_2 \leq 1</span></td>
+<td>3.25</td>
+<td><span class="math inline">x_1 = 2.25</span>, <span class="math inline">x_2 = 1</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">x_1 \geq 2</span>, <span class="math inline">x_2 \geq 2</span></td>
+<td>Infeasible</td>
+<td>Infeasible</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">x_1 \geq 2</span>, <span class="math inline">x_2 \leq 1</span>, <span class="math inline">x_1 \leq 2</span></td>
+<td>3</td>
+<td><span class="math inline">x_1 = 2</span>, <span class="math inline">x_2 = 1</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">x_1 \geq 2</span>, <span class="math inline">x_2 \leq 1</span>, <span class="math inline">x_1 \geq 3</span></td>
+<td>3</td>
+<td><span class="math inline">x_1 = 3</span>, <span class="math inline">x_2 = 0</span></td>
+</tr>
+</tbody>
+</table>
+<h4 id="problem-8-1">Problem 8</h4>
+<p>Using the branch and bound method to determine which LP-relaxations to solve, and using OR-Tools (or a similar LP-solving tool) to solve the LP-relaxations of the problem, determine the optimal solution to the below ILP:</p>
+<p><span class="math display">\begin{aligned}
+\max \quad &amp; z = 3x_1 + 2x_2 \\
+s.t. \quad &amp; 954x_1 - 23x_2 \geq 1345 \\
+\quad &amp; 274x_1 - 344x_2 \geq 3 \\
+\quad &amp; 2x_1 + 3x_2 \leq 12 \\
+\quad &amp; x_1, x_2 \geq 0, \text{integer}
+\end{aligned}</span></p>
 <hr />
 </body>
 </html>

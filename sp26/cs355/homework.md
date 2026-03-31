@@ -1,7 +1,7 @@
 ---
 title: CSCI 35500 SP 2026
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp26/cs355/index.html)"
-date: "Last updated: 2026-03-21"
+date: "Last updated: 2026-03-31"
 css: "../../style.css"
 toc: true
 ---
@@ -301,5 +301,69 @@ Suppose that an ILP has $N$ binary decision variables, i.e. integer variables $x
 How many feasible solutions does the ILP have?
 
 More problems will be posted...
+
+### ILP solving
+
+For problems 6 and 7, a table is provided that maps from an LP-relaxation of the problem to its optimal solution's objective value and the optimal values of its decision variables. Use the table when solving those problems, instead of solving the LP-relaxation by hand or using other tools.
+
+For problem 8, you will need to solve the LP-relaxations in each branch and bound node using OR-Tools, or a similar tool. Feel free to use this template Python notebook ([lp_solver.ipynb](notebooks/lp_solver.ipynb)), as I did during lecture when we solved these problems: [Branch and bound practice problems](handouts/ilp_branch_and_bound_practice_problems.html).
+
+For each of problems 6, 7, and 8, make sure to draw the branch and bound tree and clearly indicate whether pruned/fathomed nodes are infeasible, integer, incumbent, and/or pruned by objective value.
+
+#### Problem 6
+
+Using the branch and bound method to determine which LP-relaxations to solve, and using the provided table to determine the optimal solutions to the LP-relaxations of the problem, determine the optimal solution to the below ILP:
+
+$$\begin{aligned}
+\max \quad & z = x_1 + x_2 \\
+s.t. \quad & 4x_1 + x_2 \leq 10 \\
+\quad & 9x_1 - x_2 \geq 1 \\
+\quad & x_1, x_2 \geq 0, \text{integer}
+\end{aligned}$$
+
+LP-relaxation solution table:
+
+Added constraints | Objective value | Decision variables
+------------------|-----------------|---------------------------
+None              | 7.46            | $x_1 = 0.85$, $x_2 = 6.62$
+$x_1 \leq 0$      | Infeasible      | Infeasible
+$x_1 \geq 2$      | 4               | $x_1 = 2$, $x_2 = 2$
+
+#### Problem 7
+
+Using the branch and bound method to determine which LP-relaxations to solve, and using the provided table to determine the optimal solutions to the LP-relaxations of the problem, determine the optimal solution to the below ILP:
+
+$$\begin{aligned}
+\max \quad & z = x_1 + x_2 \\
+s.t. \quad & 4x_1 + 3x_2 \leq 12 \\
+\quad & 2x_1 + 4x_2 \leq 12 \\
+\quad & x_1, x_2 \geq 0, \text{integer}
+\end{aligned}$$
+
+LP-relaxation solution table:
+
+Added constraints                        | Objective value | Decision variables
+-----------------------------------------|-----------------|-------------------------
+None                                     | 3.6             | $x_1 = 1.2$, $x_2 = 2.4$
+$x_1 \leq 1$                             | 3.5             | $x_1 = 1$, $x_2 = 2.5$
+$x_1 \leq 1$, $x_2 \leq 2$               | 3               | $x_1 = 1$, $x_2 = 2$
+$x_1 \leq 1$, $x_2 \geq 2$               | 3               | $x_1 = 0$, $x_2 = 3$
+$x_1 \geq 2$                             | 3.33            | $x_1 = 2$, $x_2 = 1.33$
+$x_1 \geq 2$, $x_2 \leq 1$               | 3.25            | $x_1 = 2.25$, $x_2 = 1$
+$x_1 \geq 2$, $x_2 \geq 2$               | Infeasible      | Infeasible
+$x_1 \geq 2$, $x_2 \leq 1$, $x_1 \leq 2$ | 3               | $x_1 = 2$, $x_2 = 1$
+$x_1 \geq 2$, $x_2 \leq 1$, $x_1 \geq 3$ | 3               | $x_1 = 3$, $x_2 = 0$
+
+#### Problem 8
+
+Using the branch and bound method to determine which LP-relaxations to solve, and using OR-Tools (or a similar LP-solving tool) to solve the LP-relaxations of the problem, determine the optimal solution to the below ILP:
+
+$$\begin{aligned}
+\max \quad & z = 3x_1 + 2x_2 \\
+s.t. \quad & 954x_1 - 23x_2 \geq 1345 \\
+\quad & 274x_1 - 344x_2 \geq 3 \\
+\quad & 2x_1 + 3x_2 \leq 12 \\
+\quad & x_1, x_2 \geq 0, \text{integer}
+\end{aligned}$$
 
 ---

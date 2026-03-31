@@ -1,7 +1,7 @@
 ---
 title: CSCI 35500 SP 2026
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp26/cs355/index.html)"
-date: "Last updated: 2026-03-29"
+date: "Last updated: 2026-03-31"
 css: "../../style.css"
 toc: false
 ---
@@ -24,5 +24,5 @@ toc: false
 |   12    | 3/11/26 |        **Midterm exam**         |                                                                                                                                                                                                                                                                                     |
 |   13    | 3/16/26 |       Midterm walkthrough       |                                                                                                                           Solutions posted on Brightspace                                                                                                                           |
 |   14    | 3/18/26 |          Intro to ILP           |                                                                                                                   [Lecture slides](slides/10_ilpintro.pdf) [PDF]                                                                                                                    |
-|   15    | 3/23/26 | Solving integer linear programs |                                                                                                                                                                                                                                                                                     |
+|   15    | 3/23/26 | Solving integer linear programs |                                                                                                                  [Lecture slides](slides/11_ilpsolving.pdf) [PDF]                                                                                                                   |
 |   16    | 3/30/26 |   Branch and bound exercises    |                                                                                             [Branch and bound practice problems](handouts/ilp_branch_and_bound_practice_problems.html)                                                                                              |
