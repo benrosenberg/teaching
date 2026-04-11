@@ -1,7 +1,7 @@
 ---
 title: CSCI 35500 SP 2026
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp26/cs355/index.html)"
-date: "Last updated: 2026-03-31"
+date: "Last updated: 2026-04-11"
 css: "../../style.css"
 toc: false
 ---
@@ -26,3 +26,5 @@ toc: false
 |   14    | 3/18/26 |          Intro to ILP           |                                                                                                                   [Lecture slides](slides/10_ilpintro.pdf) [PDF]                                                                                                                    |
 |   15    | 3/23/26 | Solving integer linear programs |                                                                                                                  [Lecture slides](slides/11_ilpsolving.pdf) [PDF]                                                                                                                   |
 |   16    | 3/30/26 |   Branch and bound exercises    |                                                                                             [Branch and bound practice problems](handouts/ilp_branch_and_bound_practice_problems.html)                                                                                              |
+|   17    | 4/13/26 |       ILP modeling tricks       |                                                                                                                   [Lecture slides](slides/12_ilptricks.pdf) [PDF]                                                                                                                   |
+|   18    | 4/15/26 |     ILP modeling exercises      |                                                                                                          [ILP constraint problems](handouts/ilp_constraint_problems.html)                                                                                                           |
