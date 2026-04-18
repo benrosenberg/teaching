@@ -1,7 +1,7 @@
 ---
 title: CSCI 35500 SP 2026
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp26/cs355/index.html)"
-date: "Last updated: 2026-03-31"
+date: "Last updated: 2026-04-18"
 css: "../../style.css"
 toc: true
 ---
@@ -243,7 +243,7 @@ For each of the following constraints on the decision variable $x$, state whethe
 
 ---
 
-## HW 2 (due date TBD)
+## HW 2 (due 5/6/26 at 11:59 PM on Brightspace)
 
 ### ILP basics
 
@@ -300,8 +300,6 @@ Suppose that an ILP has $N$ binary decision variables, i.e. integer variables $x
 
 How many feasible solutions does the ILP have?
 
-More problems will be posted...
-
 ### ILP solving
 
 For problems 6 and 7, a table is provided that maps from an LP-relaxation of the problem to its optimal solution's objective value and the optimal values of its decision variables. Use the table when solving those problems, instead of solving the LP-relaxation by hand or using other tools.
@@ -327,7 +325,7 @@ Added constraints | Objective value | Decision variables
 ------------------|-----------------|---------------------------
 None              | 7.46            | $x_1 = 0.85$, $x_2 = 6.62$
 $x_1 \leq 0$      | Infeasible      | Infeasible
-$x_1 \geq 2$      | 4               | $x_1 = 2$, $x_2 = 2$
+$x_1 \geq 1$      | 7               | $x_1 = 1$, $x_2 = 6$
 
 #### Problem 7
 
@@ -366,4 +364,46 @@ s.t. \quad & 954x_1 - 23x_2 \geq 1345 \\
 \quad & x_1, x_2 \geq 0, \text{integer}
 \end{aligned}$$
 
+### ILP constraints
+
+#### Problem 10
+
+For each of the following statements, write the statement as an ILP constraint (or multiple constraints that model the statement), or say why it is not possible.
+
+Assume $x_1, x_2, x_3$ are integer variables. Feel free to define any integer or binary variables as needed.
+
+- $x_1 \in \{1,2\}$
+- Either $x_1 \leq 1$ or $x_1 \geq 3$.
+- Both $x_1 \geq 4$ and $x_1 \leq 2$.
+- The only feasible combinations of $x_1$ and $x_2$ are $(x_1,x_2) \in \{(0,1), (1,0), (0,0)\}$.
+
+#### Problem 11
+
+For each of the following constraint, write the constraint as an ILP constraint (or multiple constraints that model the constraint), or say why it is not possible.
+
+Assume $b_1, b_2$ are binary variables, where a value of 1 denotes "true" and a value of 0 denotes "false". Feel free to define any integer or binary variables as needed.
+
+In these statements, XOR (exclusive or) is denoted by $\oplus$, AND is denoted by $\land$, OR is denoted by $\lor$, NOT is denoted by $\neg$, and IMPLIES is denoted by $\to$.
+
+- $b_1 \land b_2$
+- $b_1 \oplus b_2$
+- $b_1 \lor b_2$
+- $\neg b_1$
+- $b_1 \to b_2$
+
+#### Problem 12
+
+For each of the following statements, write the statement as an ILP constraint (or multiple constraints that model the statement), or say why it is not possible.
+
+Assume $b_1, b_2, b_3$ are binary variables. Feel free to define any integer or binary variables as needed.
+
+- At most one of $b_1$, $b_2$, or $b_3$ is 1.
+- None of $b_1$, $b_2$, or $b_3$ is 1.
+- At least one of $b_1$, $b_2$, or $b_3$ is 1.
+- The product of $b_1$, $b_2$, and $b_3$ is 0.
+- The product of $b_1$, $b_2$, and $b_3$ is 1.
+- The sum of the squares of $b_1$, $b_2$, and $b_3$ is 2.
+
 ---
+
+More problems will be posted...

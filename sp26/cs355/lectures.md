@@ -1,7 +1,7 @@
 ---
 title: CSCI 35500 SP 2026
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp26/cs355/index.html)"
-date: "Last updated: 2026-04-11"
+date: "Last updated: 2026-04-18"
 css: "../../style.css"
 toc: false
 ---
@@ -28,3 +28,5 @@ toc: false
 |   16    | 3/30/26 |   Branch and bound exercises    |                                                                                             [Branch and bound practice problems](handouts/ilp_branch_and_bound_practice_problems.html)                                                                                              |
 |   17    | 4/13/26 |       ILP modeling tricks       |                                                                                                                   [Lecture slides](slides/12_ilptricks.pdf) [PDF]                                                                                                                   |
 |   18    | 4/15/26 |     ILP modeling exercises      |                                                                                                          [ILP constraint problems](handouts/ilp_constraint_problems.html)                                                                                                           |
+|   19    | 4/20/26 |          ILP examples           |                                                                                                                  [Lecture notes](slides/13_ilpexamples.pdf) [PDF]                                                                                                                   |
+|   20    | 4/22/26 |      ILP examples (cont.)       |                                                                                                                                Same slides as above                                                                                                                                 |

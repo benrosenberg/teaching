@@ -1,7 +1,7 @@
 ---
 title: CSCI 35500 SP 2026
 author: Course homepage
-date: "Last updated: 2026-02-22"
+date: "Last updated: 2026-04-18"
 css: "../../style.css"
 ---
 
@@ -38,14 +38,14 @@ If you need to contact me, please reach out via email. Please put "CSCI 355" in 
 
 # Course description
 
-- **Course Description**: This course provides an introduction to linear, integer linear, and quadratic programming, focusing on optimization techniques and their applications. Students will learn to formulate, analyze, and solve optimization problems using both theoretical and computational approaches.
+- **Course Description**: This course provides an introduction to linear and integer linear programming, focusing on optimization techniques and their applications. Students will learn to formulate, analyze, and solve optimization problems using both theoretical and computational approaches.
 - **Learning Goals**: By the end of the course, students will:
-  -  Develop the ability to formulate linear, integer linear, and quadratic programming models for optimization problems.
+  -  Develop the ability to formulate linear and integer linear programming models for optimization problems.
   -  Gain a solid understanding of the theoretical foundations, including:
-     -  Algorithms for solving linear, integer linear, and quadratic programs.
-     -  Matrix and vector representations of linear, integer linear, and quadratic programs.
-     -  The importance of convexity in optimization and the expressive power of linear, integer linear, and quadratic programming.
-  -  Implement and solve linear, integer linear, and quadratic programming models using the OR-Tools Python library.
+     -  Algorithms for solving linear and integer linear programs.
+     -  Matrix and vector representations of linear and integer linear programs.
+     -  The importance of convexity in optimization and the expressive power of linear and integer linear programming.
+  -  Implement and solve linear and integer linear programming models using the OR-Tools Python library.
 
 # Course calendar
 
@@ -59,8 +59,7 @@ Relevant dates:
 - 2026-04-06: No class (spring break)
 - 2026-04-08: No class (spring break)
 - 2026-05-13: Last day of class for CSCI 35500
-
-Exam dates will be added here when available.
+- **2026-05-20: Final exam** (6:20-8:20 PM)
 
 Assignment due dates will be posted on their respective pages.
 
@@ -82,8 +81,6 @@ Expected lecture topics (mostly in order):
 - SAT reduction to ILP, demonstration of NP-completeness
 - Modeling general discrete problems as ILPs
 - Common ILP models, including the Traveling Salesman Problem
-- Quadratic programming, QP modeling requirements
-- QP solving methods and tools
 - Convex programming hierarchy
 
 Lecture material is subject to change. Lectures may not align with classes.

@@ -102,7 +102,7 @@
 <header id="title-block-header">
 <h1 class="title">CSCI 35500 SP 2026</h1>
 <p class="author"><a href="https://benrosenberg.info/teaching/sp26/cs355/index.html">Go to homepage</a></p>
-<p class="date">Last updated: 2026-03-31</p>
+<p class="date">Last updated: 2026-04-18</p>
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
@@ -117,10 +117,11 @@
 <li><a href="#discrete-math-review-and-modeling-max-flow-as-an-lp">Discrete math review and modeling max flow as an LP</a></li>
 <li><a href="#lp-modeling-capabilities">LP modeling capabilities</a></li>
 </ul></li>
-<li><a href="#hw-2-due-date-tbd">HW 2 (due date TBD)</a>
+<li><a href="#hw-2-due-5626-at-1159-pm-on-brightspace">HW 2 (due 5/6/26 at 11:59 PM on Brightspace)</a>
 <ul>
 <li><a href="#ilp-basics">ILP basics</a></li>
 <li><a href="#ilp-solving">ILP solving</a></li>
+<li><a href="#ilp-constraints">ILP constraints</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -308,7 +309,7 @@
 </ol>
 <p><strong>END OF HW 1</strong></p>
 <hr />
-<h2 id="hw-2-due-date-tbd">HW 2 (due date TBD)</h2>
+<h2 id="hw-2-due-5626-at-1159-pm-on-brightspace">HW 2 (due 5/6/26 at 11:59 PM on Brightspace)</h2>
 <h3 id="ilp-basics">ILP basics</h3>
 <h4 id="problem-1-1">Problem 1</h4>
 <p>What is an integer linear program (ILP), and how does its feasible region differ from a linear program (LP)?</p>
@@ -348,7 +349,6 @@
 <h4 id="problem-5-1">Problem 5</h4>
 <p>Suppose that an ILP has <span class="math inline">N</span> binary decision variables, i.e. integer variables <span class="math inline">x_1, \dots, x_N</span> with constraints <span class="math inline">0\leq x_1, \dots, x_N \leq 1</span>. Assume that there are no constraints other than the binary constraints on <span class="math inline">x_1, \dots, x_N</span>.</p>
 <p>How many feasible solutions does the ILP have?</p>
-<p>More problems will be posted…</p>
 <h3 id="ilp-solving">ILP solving</h3>
 <p>For problems 6 and 7, a table is provided that maps from an LP-relaxation of the problem to its optimal solution’s objective value and the optimal values of its decision variables. Use the table when solving those problems, instead of solving the LP-relaxation by hand or using other tools.</p>
 <p>For problem 8, you will need to solve the LP-relaxations in each branch and bound node using OR-Tools, or a similar tool. Feel free to use this template Python notebook (<a href="notebooks/lp_solver.ipynb">lp_solver.ipynb</a>), as I did during lecture when we solved these problems: <a href="handouts/ilp_branch_and_bound_practice_problems.html">Branch and bound practice problems</a>.</p>
@@ -382,9 +382,9 @@ s.t. \quad &amp; 4x_1 + x_2 \leq 10 \\
 <td>Infeasible</td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">x_1 \geq 2</span></td>
-<td>4</td>
-<td><span class="math inline">x_1 = 2</span>, <span class="math inline">x_2 = 2</span></td>
+<td><span class="math inline">x_1 \geq 1</span></td>
+<td>7</td>
+<td><span class="math inline">x_1 = 1</span>, <span class="math inline">x_2 = 6</span></td>
 </tr>
 </tbody>
 </table>
@@ -462,6 +462,39 @@ s.t. \quad &amp; 954x_1 - 23x_2 \geq 1345 \\
 \quad &amp; 2x_1 + 3x_2 \leq 12 \\
 \quad &amp; x_1, x_2 \geq 0, \text{integer}
 \end{aligned}</span></p>
+<h3 id="ilp-constraints">ILP constraints</h3>
+<h4 id="problem-10-1">Problem 10</h4>
+<p>For each of the following statements, write the statement as an ILP constraint (or multiple constraints that model the statement), or say why it is not possible.</p>
+<p>Assume <span class="math inline">x_1, x_2, x_3</span> are integer variables. Feel free to define any integer or binary variables as needed.</p>
+<ul>
+<li><span class="math inline">x_1 \in \{1,2\}</span></li>
+<li>Either <span class="math inline">x_1 \leq 1</span> or <span class="math inline">x_1 \geq 3</span>.</li>
+<li>Both <span class="math inline">x_1 \geq 4</span> and <span class="math inline">x_1 \leq 2</span>.</li>
+<li>The only feasible combinations of <span class="math inline">x_1</span> and <span class="math inline">x_2</span> are <span class="math inline">(x_1,x_2) \in \{(0,1), (1,0), (0,0)\}</span>.</li>
+</ul>
+<h4 id="problem-11-1">Problem 11</h4>
+<p>For each of the following constraint, write the constraint as an ILP constraint (or multiple constraints that model the constraint), or say why it is not possible.</p>
+<p>Assume <span class="math inline">b_1, b_2</span> are binary variables, where a value of 1 denotes “true” and a value of 0 denotes “false”. Feel free to define any integer or binary variables as needed.</p>
+<p>In these statements, XOR (exclusive or) is denoted by <span class="math inline">\oplus</span>, AND is denoted by <span class="math inline">\land</span>, OR is denoted by <span class="math inline">\lor</span>, NOT is denoted by <span class="math inline">\neg</span>, and IMPLIES is denoted by <span class="math inline">\to</span>.</p>
+<ul>
+<li><span class="math inline">b_1 \land b_2</span></li>
+<li><span class="math inline">b_1 \oplus b_2</span></li>
+<li><span class="math inline">b_1 \lor b_2</span></li>
+<li><span class="math inline">\neg b_1</span></li>
+<li><span class="math inline">b_1 \to b_2</span></li>
+</ul>
+<h4 id="problem-12-1">Problem 12</h4>
+<p>For each of the following statements, write the statement as an ILP constraint (or multiple constraints that model the statement), or say why it is not possible.</p>
+<p>Assume <span class="math inline">b_1, b_2, b_3</span> are binary variables. Feel free to define any integer or binary variables as needed.</p>
+<ul>
+<li>At most one of <span class="math inline">b_1</span>, <span class="math inline">b_2</span>, or <span class="math inline">b_3</span> is 1.</li>
+<li>None of <span class="math inline">b_1</span>, <span class="math inline">b_2</span>, or <span class="math inline">b_3</span> is 1.</li>
+<li>At least one of <span class="math inline">b_1</span>, <span class="math inline">b_2</span>, or <span class="math inline">b_3</span> is 1.</li>
+<li>The product of <span class="math inline">b_1</span>, <span class="math inline">b_2</span>, and <span class="math inline">b_3</span> is 0.</li>
+<li>The product of <span class="math inline">b_1</span>, <span class="math inline">b_2</span>, and <span class="math inline">b_3</span> is 1.</li>
+<li>The sum of the squares of <span class="math inline">b_1</span>, <span class="math inline">b_2</span>, and <span class="math inline">b_3</span> is 2.</li>
+</ul>
 <hr />
+<p>More problems will be posted…</p>
 </body>
 </html>
