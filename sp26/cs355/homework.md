@@ -1,7 +1,7 @@
 ---
 title: CSCI 35500 SP 2026
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp26/cs355/index.html)"
-date: "Last updated: 2026-04-18"
+date: "Last updated: 2026-04-24"
 css: "../../style.css"
 toc: true
 ---
@@ -20,6 +20,8 @@ Homework instructions/advice:
 ---
 
 ## HW 1 (due 3/4/26 at 11:59 PM on Brightspace)
+
+There is no problem 6 due to manual error. You will get a free point for that question.
 
 ### Linear algebra review
 
@@ -245,6 +247,8 @@ For each of the following constraints on the decision variable $x$, state whethe
 
 ## HW 2 (due 5/6/26 at 11:59 PM on Brightspace)
 
+There is no problem 9 due to manual error. You will get a free point for that question.
+
 ### ILP basics
 
 #### Problem 1
@@ -403,6 +407,39 @@ Assume $b_1, b_2, b_3$ are binary variables. Feel free to define any integer or 
 - The product of $b_1$, $b_2$, and $b_3$ is 0.
 - The product of $b_1$, $b_2$, and $b_3$ is 1.
 - The sum of the squares of $b_1$, $b_2$, and $b_3$ is 2.
+
+### ILP formulations for combinatorial problems
+
+#### Problem 13
+
+Recall the knapsack problem we discussed in class on 4/20 and 4/22. Consider the modification to the problem where instead of maximizing the benefit of items included in the knapsack, you instead attempt to maximize the number of items in the knapsack. Describe how the formulation will change and provide the complete modified formulation in your answer (decision variables, constraints, objective function).
+
+#### Problem 14
+
+Recall the set cover problem we discussed in class on 4/22. Consider the modification to the problem in which we require that each vertex is covered by at least two subsets instead of just one. Describe how the formulation will change and provide the complete modified formulation in your answer (decision variables, constraints, objective function).
+
+#### Problem 15
+
+Recall the assignment problem we discussed in class on 4/22. Consider the modification to the problem in which there are exactly twice as many tasks as people, and each person must complete exactly 2 tasks. Describe how the formulation will change and provide the complete modified formulation in your answer (decision variables, constraints, objective function).
+
+#### Problem 16
+
+Recall the vertex cover problem we discussed in lecture on 4/27. Describe how to extend the model if each vertex has a cost associated with it, given by some cost function $C: V \to \mathbb R$, and the objective is to minimize the total weight of the chosen vertices instead of minimizing the total number of vertices chosen. Include the full vertex cover formulation in your answer (decision variables, constraints, objective function).
+
+### ILP scheduling
+
+#### Problem 17
+
+Recall the scheduling formulation we discussed in class on 4/20 and 4/22. Let the set of tasks be $T = \{A,B,C,D,E\}$, with the following prerequisite relationship:
+$$\begin{gathered}
+  A \prec B \\
+  B \prec D \\
+  C \prec D \\
+  C \prec E
+\end{gathered}$$
+
+What constraints need to be added to the scheduling formulation discussed in class to ensure these precedence relationships are respected? Remember that the binary decision variables $p_{t_1, t_2}$ are for use by the model, and are not for you to use. You should instead use the start and end times of each task. Write the entire modified formulation (decision variables, constraints, objective function) and explain what you added.
+
 
 ---
 
