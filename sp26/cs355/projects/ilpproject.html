@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Go to homepage" />
+  <title>CSCI 35500 SP 2026</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="../../../style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">CSCI 35500 SP 2026</h1>
+<p class="author"><a href="https://benrosenberg.info/teaching/sp26/cs355/index.html">Go to homepage</a></p>
+<p class="date">Last updated: 2026-04-26</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#cs-355-ilp-project-sudoku">CS 355 ILP Project: Sudoku</a>
+<ul>
+<li><a href="#problem-statement">Problem statement</a></li>
+<li><a href="#instructions">Instructions</a>
+<ul>
+<li><a href="#task">Task</a></li>
+<li><a href="#inputs">Inputs</a></li>
+<li><a href="#submission">Submission</a></li>
+</ul></li>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#submissiongrading">Submission/grading</a></li>
+<li><a href="#ai-toolsexternal-resources-reminder">AI tools/external resources reminder</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="cs-355-ilp-project-sudoku">CS 355 ILP Project: Sudoku</h1>
+<p>This is the second (and last) project we will have in CS 355, on integer linear programming and OR-Tools. Due dates and other information will be available on the course website. Please ask any questions you have about this project in class.</p>
+<h2 id="problem-statement">Problem statement</h2>
+<p>In this project you will solve a Sudoku puzzle using integer linear programming. You will be given a specific puzzle to solve, and you will need to define an ILP formulation to model Sudoku and pass your problem in to verify that it works.</p>
+<p>If you are unfamiliar with Sudoku, you can read about the puzzle on Wikipedia: <a href="https://en.wikipedia.org/wiki/Sudoku">Wikipedia page for Sudoku</a></p>
+<p>The goal of Sudoku is to fill in every empty box with numbers, so that for every row, column, and (outlined) 3x3 box, each number from 1 to 9 is used exactly once.</p>
+<p>For an example, try out the Sudoku generator and solver linked under the section on Inputs below.</p>
+<h2 id="instructions">Instructions</h2>
+<h3 id="task">Task</h3>
+<p>You must:</p>
+<ol type="1">
+<li>Model the general Sudoku problem as a linear program.
+<ul>
+<li>Use one or more Markdown cells in the Jupyter notebook you submit to describe this model in mathematical notation as we have done in class.</li>
+<li><strong>DO NOT ONLY MODEL YOUR INPUT.</strong> If I generate another Sudoku problem, I should be able to pass it into your model without any changes to your formulation. Make your model sufficiently generic that this is possible, if you hardcode your input problem you will receive no credit for the formulation component.
+<ul>
+<li>A good benchmark for whether you have hardcoded your input or not is the ability to make a Python function that I can pass the list format of any given Sudoku puzzle to and receive an output without making any changes to your model code. Something like <code>solve_sudoku(puzzle)</code> should work.</li>
+</ul></li>
+</ul></li>
+<li>Use Python to implement your model and solve the Sudoku puzzle you were given as an input.</li>
+</ol>
+<h3 id="inputs">Inputs</h3>
+<p>You can get your input data here: <a href="utils/sudoku.html">Sudoku generator</a></p>
+<p>To get your input, type your EMPLID into the Seed field and hit “Generate New”. Make sure you double check that you have typed your EMPLID correctly, as I will be grading based on whether your solution matches the expected result - a typo in your EMPLID could result in a completely different Sudoku puzzle.</p>
+<p>This will generate a new Sudoku puzzle for you to use. You will probably want to pass the Python list format to your solver because it’s easier to work with.</p>
+<p>You can (and should) check your puzzle solution by comparing it to the output given by the “Solve an ASCII puzzle” utility.</p>
+<h3 id="submission">Submission</h3>
+<p>Submit a Jupyter notebook to Brightspace that has the following in it:</p>
+<ul>
+<li>In a Markdown cell (or multiple Markdown cells): your ILP formulation for the Sudoku problem</li>
+<li>A brief description of how your formulation models each of the Sudoku constraints</li>
+<li>An OR-Tools implementation of the model, run against your input data</li>
+<li>Clear indication of the solution that you obtained for your puzzle, so that I can compare it against the expected result</li>
+</ul>
+<h2 id="requirements">Requirements</h2>
+<p>For each of the following requirements that you do not follow, you will lose 5 points:</p>
+<ul>
+<li>You must model this as an ILP</li>
+<li>You must use OR-Tools with integer linear programming (not linear programming or any other solving method)</li>
+<li>You must submit a Jupyter notebook (.ipynb format)</li>
+<li>You must give the constraints as part of your submission, in the Markdown cells of the notebook</li>
+<li>I should not need to run your file on my end, it should have all the outputs “pre-run” and included in your file</li>
+<li>You must use Python in the Jupyter notebook, not R or Julia or any other language</li>
+</ul>
+<h2 id="submissiongrading">Submission/grading</h2>
+<p>Submit your Jupyter notebook file to Brightspace.</p>
+<p>Grading:</p>
+<ul>
+<li>50% Sudoku formulation/description of your problem model
+<ul>
+<li>You must describe the Sudoku problem and how it can be modeled as an integer linear program, using the same formal notation as we did in class for similar integer linear program models.</li>
+<li>Describe your decision variables, constraints, and objective for this problem.</li>
+</ul></li>
+<li>40% OR-Tools implementation
+<ul>
+<li>You must have successfully run the code using OR-Tools to get these points, and obtained some solution to the problem that makes sense.</li>
+</ul></li>
+<li>10% correct solution
+<ul>
+<li>I will compare your solution to the one given by the “Solve an ASCII puzzle” utility.</li>
+<li>If your solution is exactly the same, you get these points. (You can and should check to make sure this is the case, using the same utility.)</li>
+</ul></li>
+</ul>
+<h2 id="ai-toolsexternal-resources-reminder">AI tools/external resources reminder</h2>
+<p>Use whatever resources you feel comfortable with.</p>
+<p>There are no restrictions.</p>
+</body>
+</html>

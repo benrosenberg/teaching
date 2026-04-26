@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Generator & Solver</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            margin: 0;
+        }
+
+        h3 {
+            margin-top: 0;
+            padding-bottom: 10px;
+            font-size: 1.25rem;
+        }
+
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        input[type="number"] {
+            width: 100px;
+            font-size: 1rem;
+        }
+
+        button {
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-solve {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .outputs {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .output-group {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        textarea {
+            font-size: 0.9rem;
+            width: 100%;
+            margin-top: 8px;
+            background: #fff;
+            resize: vertical;
+        }
+
+        #asciiOutput,
+        #solveInput,
+        #solveOutput {
+            height: 240px;
+            line-height: 1.2;
+        }
+
+        #pythonOutput {
+            height: 240px;
+            font-size: 0.8rem;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .timer-text {
+            font-size: 0.85rem;
+        }
+
+        .error {
+            color: #ff0000;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-top: 8px;
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            input[type="number"] {
+                width: 100%;
+            }
+
+            textarea {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="section">
+            <h3>1. Generate seeded puzzle</h3>
+            <div class="controls">
+                <div>
+                    <label for="seedInput">Seed:</label>
+                    <input type="number" id="seedInput" value="42">
+                </div>
+                <button onclick="generate()">Generate New</button>
+                <span id="genTimer" class="timer-text">Time: 0ms</span>
+            </div>
+
+            <div class="outputs">
+                <div class="output-group">
+                    <strong>ASCII Format</strong>
+                    <textarea id="asciiOutput" readonly spellcheck="false"></textarea>
+                </div>
+                <div class="output-group">
+                    <strong>Python List Format</strong>
+                    <textarea id="pythonOutput" readonly spellcheck="false"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>2. Solve an ASCII puzzle</h3>
+            <p style="font-size: 0.85rem; color: #666; margin-bottom: 10px;">
+                Paste a puzzle below. Use the same ASCII format as above.
+                You can omit |, -, and +.
+            </p>
+            <div class="outputs">
+                <div class="output-group">
+                    <strong>Input</strong>
+                    <textarea id="solveInput" placeholder="Paste ASCII here..." spellcheck="false"></textarea>
+                    <button onclick="solveExternal()" class="btn-solve">Solve Puzzle</button>
+                    <span id="solveError" class="error"></span>
+                </div>
+                <div class="output-group">
+                    <strong>Solution</strong>
+                    <textarea id="solveOutput" readonly spellcheck="false" style="background: #fcfcfc;"></textarea>
+                    <div id="solveTimer" class="timer-text" style="margin-top:5px;">Time: 0ms</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class SudokuEngine {
+            constructor(seed = null) {
+                if (seed !== null) {
+                    this.rng = (function (a) {
+                        return function () {
+                            var t = a += 0x6D2B79F5;
+                            t = Math.imul(t ^ t >>> 15, t | 1);
+                            t ^= t + Math.imul(t ^ t >>> 7, t | 61);
+                            return ((t ^ t >>> 14) >>> 0) / 4294967296;
+                        }
+                    })(seed);
+                }
+                this.reset();
+            }
+
+            reset() {
+                this.grid = new Uint8Array(81);
+                this.rows = new Uint16Array(9);
+                this.cols = new Uint16Array(9);
+                this.boxes = new Uint16Array(9);
+            }
+
+            getBox(r, c) { return Math.floor(r / 3) * 3 + Math.floor(c / 3); }
+
+            updateMasks(r, c, val, set) {
+                const bit = 1 << val;
+                const box = this.getBox(r, c);
+                if (set) {
+                    this.rows[r] |= bit; this.cols[c] |= bit; this.boxes[box] |= bit;
+                } else {
+                    this.rows[r] &= ~bit; this.cols[c] &= ~bit; this.boxes[box] &= ~bit;
+                }
+            }
+
+            isValid(r, c, val) {
+                const bit = 1 << val;
+                return !(this.rows[r] & bit || this.cols[c] & bit || this.boxes[this.getBox(r, c)] & bit);
+            }
+
+            solve(grid, countOnly = false) {
+                let solutions = 0;
+                let solvedGrid = new Uint8Array(81);
+                const self = this;
+
+                this.rows.fill(0); this.cols.fill(0); this.boxes.fill(0);
+                for (let i = 0; i < 81; i++) if (grid[i] !== 0) this.updateMasks(Math.floor(i / 9), i % 9, grid[i], true);
+
+                function backtrack() {
+                    let bestR = -1, bestC = -1, minChoices = 10;
+                    for (let r = 0; r < 9; r++) {
+                        for (let c = 0; c < 9; c++) {
+                            if (grid[r * 9 + c] === 0) {
+                                let choices = 0;
+                                for (let v = 1; v <= 9; v++) if (self.isValid(r, c, v)) choices++;
+                                if (choices < minChoices) { minChoices = choices; bestR = r; bestC = c; }
+                            }
+                        }
+                    }
+                    if (bestR === -1) { solutions++; solvedGrid.set(grid); return true; }
+                    if (minChoices === 0) return false;
+
+                    for (let v = 1; v <= 9; v++) {
+                        if (self.isValid(bestR, bestC, v)) {
+                            grid[bestR * 9 + bestC] = v;
+                            self.updateMasks(bestR, bestC, v, true);
+                            backtrack();
+                            self.updateMasks(bestR, bestC, v, false);
+                            grid[bestR * 9 + bestC] = 0;
+                            if (countOnly && solutions > 1) return true;
+                        }
+                    }
+                    return solutions > 0;
+                }
+                backtrack();
+                return countOnly ? solutions : (solutions > 0 ? solvedGrid : null);
+            }
+
+            generate(clues = 26) {
+                const fill = (pos) => {
+                    if (pos === 81) return true;
+                    const r = Math.floor(pos / 9), c = pos % 9;
+                    const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9].sort(() => this.rng() - 0.5);
+                    for (let v of nums) {
+                        if (this.isValid(r, c, v)) {
+                            this.grid[pos] = v; this.updateMasks(r, c, v, true);
+                            if (fill(pos + 1)) return true;
+                            this.updateMasks(r, c, v, false); this.grid[pos] = 0;
+                        }
+                    }
+                    return false;
+                };
+                fill(0);
+                const indices = Array.from({ length: 81 }, (_, i) => i).sort(() => this.rng() - 0.5);
+                for (let idx of indices) {
+                    const r = Math.floor(idx / 9), c = idx % 9, temp = this.grid[idx];
+                    this.grid[idx] = 0;
+                    if (this.solve(new Uint8Array(this.grid), true) !== 1) {
+                        this.grid[idx] = temp;
+                    } else {
+                        this.updateMasks(r, c, temp, false);
+                    }
+                    if (this.grid.filter(x => x !== 0).length <= clues) break;
+                }
+                return this.grid;
+            }
+        }
+
+        function renderAscii(grid) {
+            let out = "";
+            for (let i = 0; i < 81; i++) {
+                out += (grid[i] === 0 ? "." : grid[i]) + " ";
+                if ((i + 1) % 9 === 0) out += "\n";
+                if ((i + 1) % 27 === 0 && i < 80) out += "------+-------+------\n";
+                else if ((i + 1) % 3 === 0 && (i + 1) % 9 !== 0) out += "| ";
+            }
+            return out;
+        }
+
+        function parseAscii(text) {
+            const clean = text.replace(/[^1-9.]/g, '');
+            if (clean.length !== 81) return null;
+            const grid = new Uint8Array(81);
+            for (let i = 0; i < 81; i++) grid[i] = clean[i] === '.' ? 0 : parseInt(clean[i]);
+            return grid;
+        }
+
+        function solveExternal() {
+            const input = document.getElementById('solveInput').value;
+            const errorEl = document.getElementById('solveError');
+            const outputEl = document.getElementById('solveOutput');
+            errorEl.innerText = "";
+            const grid = parseAscii(input);
+            if (!grid) { errorEl.innerText = "Error: Need exactly 81 numbers/dots."; return; }
+            const solver = new SudokuEngine();
+            const t0 = performance.now();
+            const result = solver.solve(grid);
+            const t1 = performance.now();
+            if (result) {
+                outputEl.value = renderAscii(result);
+                document.getElementById('solveTimer').innerText = `Time: ${(t1 - t0).toFixed(2)}ms`;
+            } else {
+                errorEl.innerText = "No solution found.";
+                outputEl.value = "";
+            }
+        }
+
+        function generate() {
+            const seed = parseInt(document.getElementById('seedInput').value) || 0;
+            const t0 = performance.now();
+            const engine = new SudokuEngine(seed);
+            const puzzle = engine.generate(26);
+            const t1 = performance.now();
+            document.getElementById('genTimer').innerText = `Time: ${(t1 - t0).toFixed(2)}ms`;
+            document.getElementById('asciiOutput').value = renderAscii(puzzle);
+            const pyRows = [];
+            for (let i = 0; i < 81; i += 9) pyRows.push("[" + Array.from(puzzle.slice(i, i + 9)).join(", ") + "]");
+            document.getElementById('pythonOutput').value = "puzzle = [\n  " + pyRows.join(",\n  ") + "\n]";
+        }
+
+        generate();
+    </script>
+</body>
+
+</html>
