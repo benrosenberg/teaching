@@ -39,7 +39,7 @@
 <header id="title-block-header">
 <h1 class="title">CSCI 35500 SP 2026</h1>
 <p class="author"><a href="https://benrosenberg.info/teaching/sp26/cs355/index.html">Go to homepage</a></p>
-<p class="date">Last updated: 2026-02-22</p>
+<p class="date">Last updated: 2026-04-26</p>
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
@@ -51,6 +51,16 @@
 <li><a href="#lp-integrality">LP integrality</a></li>
 <li><a href="#runtime-complexity-analysis">Runtime complexity analysis</a></li>
 </ul></li>
+<li><a href="#final-exam-topics">Final exam topics</a>
+<ul>
+<li><a href="#ilp-solving">ILP solving</a></li>
+<li><a href="#ilp-theory">ILP theory</a></li>
+<li><a href="#ilp-formulations">ILP formulations</a></li>
+<li><a href="#ilp-constraints-and-variable-relationships">ILP constraints and variable relationships</a></li>
+<li><a href="#ilp-formulation-tricks">ILP formulation tricks</a></li>
+<li><a href="#miscellaneous-topics">Miscellaneous topics</a></li>
+</ul></li>
+<li><a href="#final-exam-point-breakdown">Final exam point breakdown</a></li>
 </ul>
 </nav>
 <p>Here are lists of topics to study for the exams.</p>
@@ -86,6 +96,50 @@
 <li>Being able to determine big-O time complexity for a Python function</li>
 </ul>
 <hr />
-<p>Final exam topics will be posted later.</p>
+<h1 id="final-exam-topics">Final exam topics</h1>
+<h2 id="ilp-solving">ILP solving</h2>
+<ul>
+<li>Familiarity with branch and bound</li>
+<li>Knowing how to create a branch and bound tree, using a table for the LP-relaxation solutions (see homework 2 problems for examples of table-oriented approach)</li>
+<li>Understanding the relationship between an ILP and its LP-relaxation</li>
+</ul>
+<h2 id="ilp-theory">ILP theory</h2>
+<ul>
+<li>Knowing what the feasible regions of an ILP look like</li>
+<li>Knowing how many ILP-feasible points there are based on the number of and types of decision variables in a problem</li>
+<li>Having the geometric intuition to understand when the number of ILP-feasible solutions will be large or small, and how that changes with problem coefficients</li>
+</ul>
+<h2 id="ilp-formulations">ILP formulations</h2>
+<ul>
+<li>Being able to formulate an ILP for combinatorial problems (similar to those discussed as examples in lecture, and the ILP project)</li>
+<li>Being able to do small proofs (by induction or otherwise) for certain problem characteristics</li>
+<li>Understanding how to modify formulations to remove or add dimensions to decision variables, and how that changes the variables’ domain</li>
+<li>Knowing how to determine the number of constraints and variables there are in a model formulation to get an idea of model size</li>
+</ul>
+<h2 id="ilp-constraints-and-variable-relationships">ILP constraints and variable relationships</h2>
+<ul>
+<li>Knowing how to represent relationships between variables in an ILP formulation</li>
+<li>Knowing which relationships are representable and which are not</li>
+<li>Familiarity with binary relationships between variables (AND, OR, NOT, IMPLIES, etc.) and how they can be represented in an ILP</li>
+<li>Understanding which types of optimization problems can be formulated as ILPs and which cannot</li>
+</ul>
+<h2 id="ilp-formulation-tricks">ILP formulation tricks</h2>
+<ul>
+<li>Understanding how the big-<span class="math inline">M</span> method works</li>
+<li>Understanding what the tradeoff is in the size of the big-<span class="math inline">M</span> constant</li>
+</ul>
+<h2 id="miscellaneous-topics">Miscellaneous topics</h2>
+<ul>
+<li>Understanding of the TSP formulation we discussed in class</li>
+<li>(A small number of) questions may be asked about topics discussed briefly in person during class and not listed above, making up no more than 3% of the total exam by point value</li>
+</ul>
+<h1 id="final-exam-point-breakdown">Final exam point breakdown</h1>
+<p>Not finalized, but to give an idea of what the exam will look like:</p>
+<ul>
+<li>Roughly a quarter multiple-choice questions</li>
+<li>Roughly 1/8 will be computational questions</li>
+<li>Roughly 3/8 will be coming up with ILP formulations</li>
+<li>Roughly a quarter will be theory/thinking questions</li>
+</ul>
 </body>
 </html>
