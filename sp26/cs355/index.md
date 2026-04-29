@@ -1,7 +1,7 @@
 ---
 title: CSCI 35500 SP 2026
 author: Course homepage
-date: "Last updated: 2026-04-18"
+date: "Last updated: 2026-04-28"
 css: "../../style.css"
 ---
 
@@ -85,7 +85,7 @@ Expected lecture topics (mostly in order):
 
 Lecture material is subject to change. Lectures may not align with classes.
 
-There will probably be around 3 or 4 homework assignments, and 2 or 3 projects.
+There will be 2 homework assignments and 2 projects.
 
 # Grading
 
