@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
@@ -7,24 +7,12 @@
   <meta name="author" content="Go to homepage" />
   <title>CSCI 35500 SP 2026</title>
   <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
+    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
+    ul.task-list{list-style: none;}
     pre > code.sourceCode { white-space: pre; position: relative; }
     pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -63,7 +51,7 @@
     code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
     code span.at { color: #7d9029; } /* Attribute */
     code span.bn { color: #40a070; } /* BaseN */
-    code span.bu { color: #008000; } /* BuiltIn */
+    code span.bu { } /* BuiltIn */
     code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
     code span.ch { color: #4070a0; } /* Char */
     code span.cn { color: #880000; } /* Constant */
@@ -76,7 +64,7 @@
     code span.ex { } /* Extension */
     code span.fl { color: #40a070; } /* Float */
     code span.fu { color: #06287e; } /* Function */
-    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.im { } /* Import */
     code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
     code span.kw { color: #007020; font-weight: bold; } /* Keyword */
     code span.op { color: #666666; } /* Operator */
@@ -90,128 +78,103 @@
     code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../style.css" />
-  <script defer=""
-  src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
+   var mathElements = document.getElementsByClassName("math");
+   var macros = [];
+   for (var i = 0; i < mathElements.length; i++) {
+    var texText = mathElements[i].firstChild;
+    if (mathElements[i].tagName == "SPAN") {
+     katex.render(texText.data, mathElements[i], {
+      displayMode: mathElements[i].classList.contains('display'),
+      throwOnError: false,
+      macros: macros,
+      fleqn: false
+     });
+  }}});
   </script>
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
 </head>
 <body>
 <header id="title-block-header">
 <h1 class="title">CSCI 35500 SP 2026</h1>
-<p class="author"><a
-href="https://benrosenberg.info/teaching/sp26/cs355/index.html">Go to
-homepage</a></p>
-<p class="date">Last updated: 2026-04-24</p>
+<p class="author"><a href="https://benrosenberg.info/teaching/sp26/cs355/index.html">Go to homepage</a></p>
+<p class="date">Last updated: 2026-04-28</p>
 </header>
 <nav id="TOC" role="doc-toc">
-
+<ul>
+<li><a href="#homeworks">Homeworks</a>
+<ul>
+<li><a href="#hw-1-due-3426-at-1159-pm-on-brightspace">HW 1 (due 3/4/26 at 11:59 PM on Brightspace)</a>
+<ul>
+<li><a href="#linear-algebra-review">Linear algebra review</a></li>
+<li><a href="#linear-programming-basics">Linear programming basics</a></li>
+<li><a href="#linear-programming-geometry">Linear programming geometry</a></li>
+<li><a href="#lp-solving-and-big-o-notation">LP solving and big-O notation</a></li>
+<li><a href="#discrete-math-review-and-modeling-max-flow-as-an-lp">Discrete math review and modeling max flow as an LP</a></li>
+<li><a href="#lp-modeling-capabilities">LP modeling capabilities</a></li>
+</ul></li>
+<li><a href="#hw-2-due-5626-at-1159-pm-on-brightspace">HW 2 (due 5/6/26 at 11:59 PM on Brightspace)</a>
+<ul>
+<li><a href="#ilp-basics">ILP basics</a></li>
+<li><a href="#ilp-solving">ILP solving</a></li>
+<li><a href="#ilp-constraints">ILP constraints</a></li>
+<li><a href="#ilp-formulations-for-combinatorial-problems">ILP formulations for combinatorial problems</a></li>
+<li><a href="#ilp-scheduling">ILP scheduling</a></li>
+<li><a href="#ilp-formulation-creation">ILP formulation creation</a></li>
+</ul></li>
+</ul></li>
+</ul>
 </nav>
 <h1 id="homeworks">Homeworks</h1>
 <p>Homework instructions/advice:</p>
 <ul>
-<li><strong>Problems will be posted here periodically, until the
-homework is due.</strong> What is posted here is not necessarily the
-full homework assigment.</li>
-<li><strong>Show your work</strong> for all homework problems. Check
-your work with WolframAlpha, ChatGPT, your calculator, Python, MATLAB,
-or whatever other resource you want to use.</li>
+<li><strong>Problems will be posted here periodically, until the homework is due.</strong> What is posted here is not necessarily the full homework assigment.</li>
+<li><strong>Show your work</strong> for all homework problems. Check your work with WolframAlpha, ChatGPT, your calculator, Python, MATLAB, or whatever other resource you want to use.</li>
 <li>All questions on the homework are weighted equally.</li>
-<li>If you wait until the full homework is due to start, you may have
-more difficulty completing it on time.</li>
-<li>If you have questions on the homework, please ask them in
-class.</li>
-<li>If you think we didn’t cover something in class, feel free to look
-it up, or ask a question in class.</li>
+<li>If you wait until the full homework is due to start, you may have more difficulty completing it on time.</li>
+<li>If you have questions on the homework, please ask them in class.</li>
+<li>If you think we didn’t cover something in class, feel free to look it up, or ask a question in class.</li>
 </ul>
 <hr />
-<h2 id="hw-1-due-3426-at-1159-pm-on-brightspace">HW 1 (due 3/4/26 at
-11:59 PM on Brightspace)</h2>
-<p>There is no problem 6 due to manual error. You will get a free point
-for that question.</p>
+<h2 id="hw-1-due-3426-at-1159-pm-on-brightspace">HW 1 (due 3/4/26 at 11:59 PM on Brightspace)</h2>
+<p>There is no problem 6 due to manual error. You will get a free point for that question.</p>
 <h3 id="linear-algebra-review">Linear algebra review</h3>
 <h4 id="problem-1">Problem 1</h4>
-<p>Define <span class="math inline">A</span> and <span
-class="math inline">b</span> as follows: <span class="math display">A =
-\begin{bmatrix}
+<p>Define <span class="math inline">A</span> and <span class="math inline">b</span> as follows: <span class="math display">A = \begin{bmatrix}
 3 &amp; 7 &amp; 6 \\ 4 &amp; 1 &amp; 4 \\ 3 &amp; 8 &amp; 7
 \end{bmatrix}, b = \begin{bmatrix}
 2 \\ 4 \\ 6
 \end{bmatrix}</span></p>
-<p>Solve the matrix-vector equation <span class="math inline">Ax =
-b</span> using row-reduction. You should get integer results.</p>
+<p>Solve the matrix-vector equation <span class="math inline">Ax = b</span> using row-reduction. You should get integer results.</p>
 <h4 id="problem-2">Problem 2</h4>
-<p>Define <span class="math inline">A</span> as follows: <span
-class="math display">A = \begin{bmatrix} 1 &amp; 4 &amp; 1 \\ 7 &amp; 5
-&amp; 7 \\ 8 &amp; 4 &amp; 8 \end{bmatrix}</span></p>
-<p>Show that <span class="math inline">A</span> is not invertible, and
-give a nontrivial solution to <span class="math inline">Ax =
-0</span>.</p>
+<p>Define <span class="math inline">A</span> as follows: <span class="math display">A = \begin{bmatrix} 1 &amp; 4 &amp; 1 \\ 7 &amp; 5 &amp; 7 \\ 8 &amp; 4 &amp; 8 \end{bmatrix}</span></p>
+<p>Show that <span class="math inline">A</span> is not invertible, and give a nontrivial solution to <span class="math inline">Ax = 0</span>.</p>
 <h4 id="problem-3">Problem 3</h4>
-<p>Define <span class="math inline">A</span> as follows: <span
-class="math display">A = \begin{bmatrix} 1 &amp; 4 \\ 7 &amp; 5
-\end{bmatrix}</span></p>
+<p>Define <span class="math inline">A</span> as follows: <span class="math display">A = \begin{bmatrix} 1 &amp; 4 \\ 7 &amp; 5 \end{bmatrix}</span></p>
 <p>Find <span class="math inline">AA^\intercal</span>.</p>
 <h4 id="problem-4">Problem 4</h4>
-<p>Give a counterexample that shows matrix multiplication is not
-commutative for <span class="math inline">2\times 2</span> matrices.</p>
+<p>Give a counterexample that shows matrix multiplication is not commutative for <span class="math inline">2\times 2</span> matrices.</p>
 <h4 id="problem-5">Problem 5</h4>
-<p>Show that <span class="math inline">I_2A = A</span> for all matrices
-<span class="math inline">A</span> with dimension <span
-class="math inline">2\times 2</span>.</p>
+<p>Show that <span class="math inline">I_2A = A</span> for all matrices <span class="math inline">A</span> with dimension <span class="math inline">2\times 2</span>.</p>
 <h3 id="linear-programming-basics">Linear programming basics</h3>
 <h4 id="problem-7">Problem 7</h4>
-<p>A small bakery makes two types of muffins: blueberry and chocolate
-chip. Each blueberry muffin requires 0.5 cups of flour and 0.25 cups of
-sugar. Each chocolate chip muffin requires 0.5 cups of flour and 0.5
-cups of sugar. The bakery has 20 cups of flour and 15 cups of sugar
-available each day. The profit from each blueberry muffin is $2, and the
-profit from each chocolate chip muffin is $3. The bakery wants to
-maximize its daily profit.</p>
-<p>You will create and solve a linear program that models the above
-scenario:</p>
+<p>A small bakery makes two types of muffins: blueberry and chocolate chip. Each blueberry muffin requires 0.5 cups of flour and 0.25 cups of sugar. Each chocolate chip muffin requires 0.5 cups of flour and 0.5 cups of sugar. The bakery has 20 cups of flour and 15 cups of sugar available each day. The profit from each blueberry muffin is $2, and the profit from each chocolate chip muffin is $3. The bakery wants to maximize its daily profit.</p>
+<p>You will create and solve a linear program that models the above scenario:</p>
 <ul>
-<li>Define the decision variables you will use in your LP model, and
-state what they represent. (You should have two decision
-variables.)</li>
-<li>List the constraints in your LP model in terms of the decision
-variables you created.</li>
-<li>State the objective function of your LP model in terms of the
-decision variables.</li>
-<li>Convert the LP to canonical form (if necessary), and state the
-contents of <span class="math inline">A</span>, <span
-class="math inline">c</span>, and <span class="math inline">b</span>, as
-they correspond respectively to the matrix and vectors in the canonical
-<span class="math inline">\max c^\intercal x</span> s.t. <span
-class="math inline">Ax\leq b</span>, <span class="math inline">x\geq
-0</span> format.</li>
-<li>Graph the feasible region of your LP model (since you should have 2
-decision variables, you should be able to graph this in 2 dimensions)
-and determine the solution.</li>
+<li>Define the decision variables you will use in your LP model, and state what they represent. (You should have two decision variables.)</li>
+<li>List the constraints in your LP model in terms of the decision variables you created.</li>
+<li>State the objective function of your LP model in terms of the decision variables.</li>
+<li>Convert the LP to canonical form (if necessary), and state the contents of <span class="math inline">A</span>, <span class="math inline">c</span>, and <span class="math inline">b</span>, as they correspond respectively to the matrix and vectors in the canonical <span class="math inline">\max c^\intercal x</span> s.t. <span class="math inline">Ax\leq b</span>, <span class="math inline">x\geq 0</span> format.</li>
+<li>Graph the feasible region of your LP model (since you should have 2 decision variables, you should be able to graph this in 2 dimensions) and determine the solution.</li>
 </ul>
 <h4 id="problem-8">Problem 8</h4>
-<p>Note: this problem is a little more complex than the above problem,
-but is still possible to model using 3 decision variables (for the
-obvious quantities).</p>
-<p>A furniture company produces three types of chairs: basic, deluxe,
-and executive. The production of each chair requires different amounts
-of wood, labor, and fabric. The company wants to maximize its profit
-given its limited daily resources.</p>
-<p>The company’s goal is to maximize profit. The profit for each chair
-type, along with its material cost, is as follows:</p>
+<p>Note: this problem is a little more complex than the above problem, but is still possible to model using 3 decision variables (for the obvious quantities).</p>
+<p>A furniture company produces three types of chairs: basic, deluxe, and executive. The production of each chair requires different amounts of wood, labor, and fabric. The company wants to maximize its profit given its limited daily resources.</p>
+<p>The company’s goal is to maximize profit. The profit for each chair type, along with its material cost, is as follows:</p>
 <ul>
 <li>Basic chair: $100
 <ul>
@@ -234,54 +197,31 @@ type, along with its material cost, is as follows:</p>
 </ul>
 <p>The company has these additional constraints:</p>
 <ul>
-<li>The amount of wood used must be less than or equal to the amount of
-fabric used.</li>
+<li>The amount of wood used must be less than or equal to the amount of fabric used.</li>
 <li>The total number of labor used cannot exceed 20 units.</li>
-<li>Any unused labor (under the 20-unit limit) costs the company $20 per
-unit, due to the additional upkeep on the company ping-pong tables that
-the employees use when not working.</li>
+<li>Any unused labor (under the 20-unit limit) costs the company $20 per unit, due to the additional upkeep on the company ping-pong tables that the employees use when not working.</li>
 </ul>
-<p>You will create (but not solve) a linear program that models the
-above problem:</p>
+<p>You will create (but not solve) a linear program that models the above problem:</p>
 <ul>
-<li>Define the decision variables you will use in your LP model, and
-state what they represent. (You should have three decision
-variables.)</li>
-<li>List the constraints in your LP model in terms of the decision
-variables you created.</li>
-<li>State the objective function of your LP model in terms of the
-decision variables.</li>
-<li>Convert the LP to canonical form (if necessary), and state the
-contents of <span class="math inline">A</span>, <span
-class="math inline">c</span>, and <span class="math inline">b</span>, as
-they correspond respectively to the matrix and vectors in the canonical
-<span class="math inline">\max c^\intercal x</span> s.t. <span
-class="math inline">Ax\leq b</span>, <span class="math inline">x\geq
-0</span> format.</li>
+<li>Define the decision variables you will use in your LP model, and state what they represent. (You should have three decision variables.)</li>
+<li>List the constraints in your LP model in terms of the decision variables you created.</li>
+<li>State the objective function of your LP model in terms of the decision variables.</li>
+<li>Convert the LP to canonical form (if necessary), and state the contents of <span class="math inline">A</span>, <span class="math inline">c</span>, and <span class="math inline">b</span>, as they correspond respectively to the matrix and vectors in the canonical <span class="math inline">\max c^\intercal x</span> s.t. <span class="math inline">Ax\leq b</span>, <span class="math inline">x\geq 0</span> format.</li>
 </ul>
 <h3 id="linear-programming-geometry">Linear programming geometry</h3>
 <h4 id="problem-9">Problem 9</h4>
-<p>Give an example for each of the following types of linear
-programs:</p>
+<p>Give an example for each of the following types of linear programs:</p>
 <ul>
 <li>An unbounded LP with 4 decision variables</li>
 <li>An infeasible LP with 3 decision variables</li>
-<li>An LP with one decision variable that is unbounded in one direction,
-but still has an optimal solution because our objective points the
-opposite way</li>
+<li>An LP with one decision variable that is unbounded in one direction, but still has an optimal solution because our objective points the opposite way</li>
 </ul>
 <h4 id="problem-10">Problem 10</h4>
-<p>In class, we saw that the intersection of convex sets was convex. Is
-the union of convex sets convex? If so, explain. If not, provide a
-counterexample.</p>
-<h3 id="lp-solving-and-big-o-notation">LP solving and big-O
-notation</h3>
+<p>In class, we saw that the intersection of convex sets was convex. Is the union of convex sets convex? If so, explain. If not, provide a counterexample.</p>
+<h3 id="lp-solving-and-big-o-notation">LP solving and big-O notation</h3>
 <h4 id="problem-11">Problem 11</h4>
-<p>Determine the big-O time complexity of the function <code>f</code> in
-the below piece of code, in terms of the length of the array
-<code>A</code>.</p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(A, target):</span>
+<p>Determine the big-O time complexity of the function <code>f</code> in the below piece of code, in terms of the length of the array <code>A</code>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(A, target):</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># A is a sorted list of integers</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    lo <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    hi <span class="op">=</span> <span class="bu">len</span>(A) <span class="op">-</span> <span class="dv">1</span></span>
@@ -296,10 +236,8 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a hr
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>            hi <span class="op">=</span> mid <span class="op">-</span> <span class="dv">1</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span><span class="dv">1</span> </span></code></pre></div>
 <h4 id="problem-12">Problem 12</h4>
-<p>Determine the big-O time complexity of the function <code>g</code> in
-the below piece of code, in terms of <code>n</code>.</p>
-<div class="sourceCode" id="cb2"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> g(n):</span>
+<p>Determine the big-O time complexity of the function <code>g</code> in the below piece of code, in terms of <code>n</code>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> g(n):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    j <span class="op">=</span> <span class="dv">1</span></span>
@@ -309,8 +247,7 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a hr
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        j <span class="op">+=</span> <span class="dv">1</span></span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x</span></code></pre></div>
 <h4 id="problem-13">Problem 13</h4>
-<p>State the time complexities for each of the following operations, in
-big-O notation. (Disregard amortized vs. non-amortized time.)</p>
+<p>State the time complexities for each of the following operations, in big-O notation. (Disregard amortized vs. non-amortized time.)</p>
 <ul>
 <li>Checking whether an integer is in a hashset</li>
 <li>Finding an item in an unsorted list</li>
@@ -318,208 +255,111 @@ big-O notation. (Disregard amortized vs. non-amortized time.)</p>
 <li>Sorting a list with merge sort</li>
 </ul>
 <h4 id="problem-14">Problem 14</h4>
-<p>What does it mean for something to run in polynomial time? Why is it
-important?</p>
-<h3 id="discrete-math-review-and-modeling-max-flow-as-an-lp">Discrete
-math review and modeling max flow as an LP</h3>
+<p>What does it mean for something to run in polynomial time? Why is it important?</p>
+<h3 id="discrete-math-review-and-modeling-max-flow-as-an-lp">Discrete math review and modeling max flow as an LP</h3>
 <h4 id="problem-15">Problem 15</h4>
 <p>Evaluate this expression:</p>
-<p><span class="math display">\sum x \quad \forall x, 0\leq x\leq 100,
-x\equiv 0 \bmod 6</span></p>
+<p><span class="math display">\sum x \quad \forall x, 0\leq x\leq 100, x\equiv 0 \bmod 6</span></p>
 <h4 id="problem-16">Problem 16</h4>
 <p>Evaluate this expression:</p>
 <p><span class="math display">\prod_{i=1}^5 i^2</span></p>
 <h4 id="problem-17">Problem 17</h4>
-<p>Formalize as a linear constraint each of the following statements,
-given a graph <span class="math inline">G = (V,E)</span> and cost
-function <span class="math inline">C: E\to \mathbb N</span>.</p>
-<p>Use the “<span class="math inline">\forall</span>” and “<span
-class="math inline">\sum</span>” notation we covered in class, and use a
-decision variable <span class="math inline">x_{i,j}</span> to denote the
-flow from vertex <span class="math inline">i</span> to vertex <span
-class="math inline">j</span>.</p>
-<p>Note that <span class="math inline">C</span> is <em>cost</em>, not
-capacity. To determine the cost of an edge <span
-class="math inline">(i,j)\in E</span> in an LP solution, you must
-multiply the cost of the edge <span class="math inline">C((i,j))</span>
-by the amount of flow through <span class="math inline">(i,j)</span>,
-given by <span class="math inline">x_{i,j}</span>.</p>
+<p>Formalize as a linear constraint each of the following statements, given a graph <span class="math inline">G = (V,E)</span> and cost function <span class="math inline">C: E\to \mathbb N</span>.</p>
+<p>Use the “<span class="math inline">\forall</span>” and “<span class="math inline">\sum</span>” notation we covered in class, and use a decision variable <span class="math inline">x_{i,j}</span> to denote the flow from vertex <span class="math inline">i</span> to vertex <span class="math inline">j</span>.</p>
+<p>Note that <span class="math inline">C</span> is <em>cost</em>, not capacity. To determine the cost of an edge <span class="math inline">(i,j)\in E</span> in an LP solution, you must multiply the cost of the edge <span class="math inline">C((i,j))</span> by the amount of flow through <span class="math inline">(i,j)</span>, given by <span class="math inline">x_{i,j}</span>.</p>
 <p>Constraints to model:</p>
 <ul>
 <li>The flow of every edge is at least 1.</li>
-<li>The cost of the flow on each path of length 2 in the graph is at
-most 5.
+<li>The cost of the flow on each path of length 2 in the graph is at most 5.
 <ul>
-<li>Note: a path of length <span class="math inline">n</span> is an
-<span class="math inline">n</span>-tuple of vertices <span
-class="math inline">(v_1, v_2, \dots, v_n)</span>, where <span
-class="math inline">\{(v_1, v_2), (v_2, v_3), \dots, (v_{n-1},
-v_n)\}\subseteq E</span>.</li>
+<li>Note: a path of length <span class="math inline">n</span> is an <span class="math inline">n</span>-tuple of vertices <span class="math inline">(v_1, v_2, \dots, v_n)</span>, where <span class="math inline">\{(v_1, v_2), (v_2, v_3), \dots, (v_{n-1}, v_n)\}\subseteq E</span>.</li>
 </ul></li>
-<li>The amount of flow going into each vertex is twice the amount of
-flow leaving that vertex.</li>
+<li>The amount of flow going into each vertex is twice the amount of flow leaving that vertex.</li>
 </ul>
 <h4 id="problem-18">Problem 18</h4>
-<p>Suppose you are given a graph <span class="math inline">G =
-(V,E)</span> and vertices <span class="math inline">s,t\in V</span>, and
-you are asked to model the maximum flow problem for <span
-class="math inline">G</span>. However, you are also given a new type of
-vertex called a <strong>combiner</strong>, which requires two units of
-input flow for each unit of output flow, as seen in the below examples.
-A combiner can have any number of inputs or outputs, but the totals have
-to have a 2:1 ratio.</p>
+<p>Suppose you are given a graph <span class="math inline">G = (V,E)</span> and vertices <span class="math inline">s,t\in V</span>, and you are asked to model the maximum flow problem for <span class="math inline">G</span>. However, you are also given a new type of vertex called a <strong>combiner</strong>, which requires two units of input flow for each unit of output flow, as seen in the below examples. A combiner can have any number of inputs or outputs, but the totals have to have a 2:1 ratio.</p>
 <figure>
-<img src="images/combiner_1.png" width="350"
-alt="Combiner example (1)" />
-<figcaption aria-hidden="true">Combiner example (1)</figcaption>
+<img src="images/combiner_1.png" width="350" alt="Combiner example (1)" /><figcaption aria-hidden="true">Combiner example (1)</figcaption>
 </figure>
 <figure>
-<img src="images/combiner_2.png" width="350"
-alt="Combiner example (2)" />
-<figcaption aria-hidden="true">Combiner example (2)</figcaption>
+<img src="images/combiner_2.png" width="350" alt="Combiner example (2)" /><figcaption aria-hidden="true">Combiner example (2)</figcaption>
 </figure>
-<p>Combiners are also vertices, in the set <span
-class="math inline">C\subset V</span>.</p>
-<p><strong>LP Model</strong>: Describe how you will model max flow on
-<span class="math inline">G</span> as an LP with this modification:</p>
+<p>Combiners are also vertices, in the set <span class="math inline">C\subset V</span>.</p>
+<p><strong>LP Model</strong>: Describe how you will model max flow on <span class="math inline">G</span> as an LP with this modification:</p>
 <ol type="1">
 <li>What are your decision variables?</li>
 <li>What are your constraints?</li>
 <li>What will the objective function be?</li>
 </ol>
-<p><strong>Integrality</strong>: In class, we saw that for max flow, if
-all capacities were integer then all flows would be integer in the
-solution to the LP. Does that hold for this formulation? If so, explain
-why. If not, provide a counterexample.</p>
+<p><strong>Integrality</strong>: In class, we saw that for max flow, if all capacities were integer then all flows would be integer in the solution to the LP. Does that hold for this formulation? If so, explain why. If not, provide a counterexample.</p>
 <h3 id="lp-modeling-capabilities">LP modeling capabilities</h3>
 <h4 id="problem-19">Problem 19</h4>
-<p>For each of the following constraints on the decision variable <span
-class="math inline">x</span>, state whether they can or cannot be
-modeled by a linear program:</p>
+<p>For each of the following constraints on the decision variable <span class="math inline">x</span>, state whether they can or cannot be modeled by a linear program:</p>
 <ol type="1">
 <li><span class="math inline">x</span> is an integer.</li>
-<li>The values <span class="math inline">x</span> can take on are within
-the range <span class="math inline">[3, 7]</span>.</li>
-<li>The values <span class="math inline">x</span> can take on are within
-the range <span class="math inline">(3, 7)</span>.</li>
-<li>The values <span class="math inline">x</span> can take on are in the
-set <span class="math inline">\{0.5, 1.2\}</span>.</li>
+<li>The values <span class="math inline">x</span> can take on are within the range <span class="math inline">[3, 7]</span>.</li>
+<li>The values <span class="math inline">x</span> can take on are within the range <span class="math inline">(3, 7)</span>.</li>
+<li>The values <span class="math inline">x</span> can take on are in the set <span class="math inline">\{0.5, 1.2\}</span>.</li>
 </ol>
 <h4 id="problem-20">Problem 20</h4>
-<p>For each of the following constraints on the decision variable <span
-class="math inline">x</span>, state whether they can or cannot be
-modeled by a linear program:</p>
+<p>For each of the following constraints on the decision variable <span class="math inline">x</span>, state whether they can or cannot be modeled by a linear program:</p>
 <ol type="1">
-<li>Either <span class="math inline">x \leq 1</span> or <span
-class="math inline">x \geq 3</span>.</li>
-<li>The absolute value of <span class="math inline">x</span>, <span
-class="math inline">|x|</span>, is greater than or equal to 3.</li>
-<li>The absolute value of <span class="math inline">x</span>, <span
-class="math inline">|x|</span>, is less than or equal to 1.</li>
+<li>Either <span class="math inline">x \leq 1</span> or <span class="math inline">x \geq 3</span>.</li>
+<li>The absolute value of <span class="math inline">x</span>, <span class="math inline">|x|</span>, is greater than or equal to 3.</li>
+<li>The absolute value of <span class="math inline">x</span>, <span class="math inline">|x|</span>, is less than or equal to 1.</li>
 <li><span class="math inline">x^2 \leq 5</span></li>
 <li><span class="math inline">\sqrt x \leq 9</span></li>
-<li><span class="math inline">x + x/2 + x/4 + x/8 + x/16 \leq
-2x</span></li>
+<li><span class="math inline">x + x/2 + x/4 + x/8 + x/16 \leq 2x</span></li>
 </ol>
 <p><strong>END OF HW 1</strong></p>
 <hr />
-<h2 id="hw-2-due-5626-at-1159-pm-on-brightspace">HW 2 (due 5/6/26 at
-11:59 PM on Brightspace)</h2>
-<p>There is no problem 9 due to manual error. You will get a free point
-for that question.</p>
+<h2 id="hw-2-due-5626-at-1159-pm-on-brightspace">HW 2 (due 5/6/26 at 11:59 PM on Brightspace)</h2>
+<p>There is no problem 9 due to manual error. You will get a free point for that question.</p>
 <h3 id="ilp-basics">ILP basics</h3>
 <h4 id="problem-1-1">Problem 1</h4>
-<p>What is an integer linear program (ILP), and how does its feasible
-region differ from a linear program (LP)?</p>
+<p>What is an integer linear program (ILP), and how does its feasible region differ from a linear program (LP)?</p>
 <h4 id="problem-2-1">Problem 2</h4>
-<p>For LPs, we saw that constraints could only be modeled if they were
-convex, because the feasible region of an LP needed to be convex.</p>
-<p>For ILPs, we discussed how there was more nuance: the inequality
-constraints that formed the feasible region of the
-<strong>LP-relaxation</strong> of an ILP (that is, the LP that is
-created if we remove the restriction that all decision variables need to
-have integer values) still needed to form a convex region, but by
-necessity any two or more ILP-feasible points would form a non-convex
-set.</p>
+<p>For LPs, we saw that constraints could only be modeled if they were convex, because the feasible region of an LP needed to be convex.</p>
+<p>For ILPs, we discussed how there was more nuance: the inequality constraints that formed the feasible region of the <strong>LP-relaxation</strong> of an ILP (that is, the LP that is created if we remove the restriction that all decision variables need to have integer values) still needed to form a convex region, but by necessity any two or more ILP-feasible points would form a non-convex set.</p>
 <p>To cement your understanding of this nuance, please:</p>
 <ul>
-<li>Give two examples of constraints that can be modeled in both LPs and
-ILPs</li>
-<li>Give two examples of constraints that can be modeled in ILPs, but
-not LPs</li>
-<li>Give two examples of constraints that can be modeled in neither ILPs
-nor LPs</li>
+<li>Give two examples of constraints that can be modeled in both LPs and ILPs</li>
+<li>Give two examples of constraints that can be modeled in ILPs, but not LPs</li>
+<li>Give two examples of constraints that can be modeled in neither ILPs nor LPs</li>
 </ul>
-<p>Make sure to use mathematical notation (write out the actual
-constraint) rather than stating the constraint in words.</p>
+<p>Make sure to use mathematical notation (write out the actual constraint) rather than stating the constraint in words.</p>
 <p>Do not use constraints from Problem 3 as your examples.</p>
 <h4 id="problem-3-1">Problem 3</h4>
-<p>Let <span class="math inline">x</span> and <span
-class="math inline">y</span> be integer decision variables, and let
-<span class="math inline">a</span> and <span
-class="math inline">b</span> be binary decision variables.</p>
-<p>For each of the following constraints, state whether it can be
-modeled in an LP, an ILP, both, or neither. Explain your reasoning.</p>
+<p>Let <span class="math inline">x</span> and <span class="math inline">y</span> be integer decision variables, and let <span class="math inline">a</span> and <span class="math inline">b</span> be binary decision variables.</p>
+<p>For each of the following constraints, state whether it can be modeled in an LP, an ILP, both, or neither. Explain your reasoning.</p>
 <ol type="1">
-<li>Either <span class="math inline">x \geq 4</span> or <span
-class="math inline">x \leq 2</span>.</li>
-<li><span class="math inline">x \geq 4</span> and <span
-class="math inline">x \leq 2</span>.</li>
+<li>Either <span class="math inline">x \geq 4</span> or <span class="math inline">x \leq 2</span>.</li>
+<li><span class="math inline">x \geq 4</span> and <span class="math inline">x \leq 2</span>.</li>
 <li><span class="math inline">x</span> is an integer.</li>
 <li><span class="math inline">xy \leq 4</span>.</li>
 <li><span class="math inline">\sin(x) = y</span>.</li>
-<li>If <span class="math inline">a = 1</span>, then <span
-class="math inline">b = 1</span>.</li>
+<li>If <span class="math inline">a = 1</span>, then <span class="math inline">b = 1</span>.</li>
 <li><span class="math inline">|a| \geq 3</span>.</li>
 <li><span class="math inline">|a| \leq 3</span>.</li>
 </ol>
 <h4 id="problem-4-1">Problem 4</h4>
-<p>In Problem 2, we described the notion of an
-<strong>LP-relaxation</strong> for an ILP, as the corresponding LP that
-is created if we take an ILP and remove the restriction that all
-decision variables need to have integer values.</p>
-<p>Assume that the objective function is maximizing some (linear)
-function of the decision variables, and consider the objective values of
-the optimal solutions to an ILP and to its LP-relaxation.</p>
-<p>Let <span class="math inline">O_{ILP}</span> be the objective value
-for the ILP, and let <span class="math inline">O_{LP}</span> be the
-objective value of its LP-relaxation. Which of the following is
-guaranteed to be true? State your choice, and explain your
-reasoning:</p>
+<p>In Problem 2, we described the notion of an <strong>LP-relaxation</strong> for an ILP, as the corresponding LP that is created if we take an ILP and remove the restriction that all decision variables need to have integer values.</p>
+<p>Assume that the objective function is maximizing some (linear) function of the decision variables, and consider the objective values of the optimal solutions to an ILP and to its LP-relaxation.</p>
+<p>Let <span class="math inline">O_{ILP}</span> be the objective value for the ILP, and let <span class="math inline">O_{LP}</span> be the objective value of its LP-relaxation. Which of the following is guaranteed to be true? State your choice, and explain your reasoning:</p>
 <ol type="1">
 <li><span class="math inline">O_{ILP} \leq O_{LP}</span></li>
 <li><span class="math inline">O_{ILP} \geq O_{LP}</span></li>
 <li><span class="math inline">O_{ILP} = O_{LP}</span></li>
 </ol>
 <h4 id="problem-5-1">Problem 5</h4>
-<p>Suppose that an ILP has <span class="math inline">N</span> binary
-decision variables, i.e. integer variables <span
-class="math inline">x_1, \dots, x_N</span> with constraints <span
-class="math inline">0\leq x_1, \dots, x_N \leq 1</span>. Assume that
-there are no constraints other than the binary constraints on <span
-class="math inline">x_1, \dots, x_N</span>.</p>
+<p>Suppose that an ILP has <span class="math inline">N</span> binary decision variables, i.e. integer variables <span class="math inline">x_1, \dots, x_N</span> with constraints <span class="math inline">0\leq x_1, \dots, x_N \leq 1</span>. Assume that there are no constraints other than the binary constraints on <span class="math inline">x_1, \dots, x_N</span>.</p>
 <p>How many feasible solutions does the ILP have?</p>
 <h3 id="ilp-solving">ILP solving</h3>
-<p>For problems 6 and 7, a table is provided that maps from an
-LP-relaxation of the problem to its optimal solution’s objective value
-and the optimal values of its decision variables. Use the table when
-solving those problems, instead of solving the LP-relaxation by hand or
-using other tools.</p>
-<p>For problem 8, you will need to solve the LP-relaxations in each
-branch and bound node using OR-Tools, or a similar tool. Feel free to
-use this template Python notebook (<a
-href="notebooks/lp_solver.ipynb">lp_solver.ipynb</a>), as I did during
-lecture when we solved these problems: <a
-href="handouts/ilp_branch_and_bound_practice_problems.html">Branch and
-bound practice problems</a>.</p>
-<p>For each of problems 6, 7, and 8, make sure to draw the branch and
-bound tree and clearly indicate whether pruned/fathomed nodes are
-infeasible, integer, incumbent, and/or pruned by objective value.</p>
+<p>For problems 6 and 7, a table is provided that maps from an LP-relaxation of the problem to its optimal solution’s objective value and the optimal values of its decision variables. Use the table when solving those problems, instead of solving the LP-relaxation by hand or using other tools.</p>
+<p>For problem 8, you will need to solve the LP-relaxations in each branch and bound node using OR-Tools, or a similar tool. Feel free to use this template Python notebook (<a href="notebooks/lp_solver.ipynb">lp_solver.ipynb</a>), as I did during lecture when we solved these problems: <a href="handouts/ilp_branch_and_bound_practice_problems.html">Branch and bound practice problems</a>.</p>
+<p>For each of problems 6, 7, and 8, make sure to draw the branch and bound tree and clearly indicate whether pruned/fathomed nodes are infeasible, integer, incumbent, and/or pruned by objective value.</p>
 <h4 id="problem-6">Problem 6</h4>
-<p>Using the branch and bound method to determine which LP-relaxations
-to solve, and using the provided table to determine the optimal
-solutions to the LP-relaxations of the problem, determine the optimal
-solution to the below ILP:</p>
+<p>Using the branch and bound method to determine which LP-relaxations to solve, and using the provided table to determine the optimal solutions to the LP-relaxations of the problem, determine the optimal solution to the below ILP:</p>
 <p><span class="math display">\begin{aligned}
 \max \quad &amp; z = x_1 + x_2 \\
 s.t. \quad &amp; 4x_1 + x_2 \leq 10 \\
@@ -529,37 +369,32 @@ s.t. \quad &amp; 4x_1 + x_2 \leq 10 \\
 <p>LP-relaxation solution table:</p>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>Added constraints</th>
 <th>Objective value</th>
 <th>Decision variables</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>None</td>
 <td>7.46</td>
-<td><span class="math inline">x_1 = 0.85</span>, <span
-class="math inline">x_2 = 6.62</span></td>
+<td><span class="math inline">x_1 = 0.85</span>, <span class="math inline">x_2 = 6.62</span></td>
 </tr>
-<tr>
+<tr class="even">
 <td><span class="math inline">x_1 \leq 0</span></td>
 <td>Infeasible</td>
 <td>Infeasible</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><span class="math inline">x_1 \geq 1</span></td>
 <td>7</td>
-<td><span class="math inline">x_1 = 1</span>, <span
-class="math inline">x_2 = 6</span></td>
+<td><span class="math inline">x_1 = 1</span>, <span class="math inline">x_2 = 6</span></td>
 </tr>
 </tbody>
 </table>
 <h4 id="problem-7-1">Problem 7</h4>
-<p>Using the branch and bound method to determine which LP-relaxations
-to solve, and using the provided table to determine the optimal
-solutions to the LP-relaxations of the problem, determine the optimal
-solution to the below ILP:</p>
+<p>Using the branch and bound method to determine which LP-relaxations to solve, and using the provided table to determine the optimal solutions to the LP-relaxations of the problem, determine the optimal solution to the below ILP:</p>
 <p><span class="math display">\begin{aligned}
 \max \quad &amp; z = x_1 + x_2 \\
 s.t. \quad &amp; 4x_1 + 3x_2 \leq 12 \\
@@ -568,87 +403,63 @@ s.t. \quad &amp; 4x_1 + 3x_2 \leq 12 \\
 \end{aligned}</span></p>
 <p>LP-relaxation solution table:</p>
 <table>
-<colgroup>
-<col style="width: 49%" />
-<col style="width: 20%" />
-<col style="width: 30%" />
-</colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>Added constraints</th>
 <th>Objective value</th>
 <th>Decision variables</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>None</td>
 <td>3.6</td>
-<td><span class="math inline">x_1 = 1.2</span>, <span
-class="math inline">x_2 = 2.4</span></td>
+<td><span class="math inline">x_1 = 1.2</span>, <span class="math inline">x_2 = 2.4</span></td>
 </tr>
-<tr>
+<tr class="even">
 <td><span class="math inline">x_1 \leq 1</span></td>
 <td>3.5</td>
-<td><span class="math inline">x_1 = 1</span>, <span
-class="math inline">x_2 = 2.5</span></td>
+<td><span class="math inline">x_1 = 1</span>, <span class="math inline">x_2 = 2.5</span></td>
 </tr>
-<tr>
-<td><span class="math inline">x_1 \leq 1</span>, <span
-class="math inline">x_2 \leq 2</span></td>
+<tr class="odd">
+<td><span class="math inline">x_1 \leq 1</span>, <span class="math inline">x_2 \leq 2</span></td>
 <td>3</td>
-<td><span class="math inline">x_1 = 1</span>, <span
-class="math inline">x_2 = 2</span></td>
+<td><span class="math inline">x_1 = 1</span>, <span class="math inline">x_2 = 2</span></td>
 </tr>
-<tr>
-<td><span class="math inline">x_1 \leq 1</span>, <span
-class="math inline">x_2 \geq 2</span></td>
+<tr class="even">
+<td><span class="math inline">x_1 \leq 1</span>, <span class="math inline">x_2 \geq 2</span></td>
 <td>3</td>
-<td><span class="math inline">x_1 = 0</span>, <span
-class="math inline">x_2 = 3</span></td>
+<td><span class="math inline">x_1 = 0</span>, <span class="math inline">x_2 = 3</span></td>
 </tr>
-<tr>
+<tr class="odd">
 <td><span class="math inline">x_1 \geq 2</span></td>
 <td>3.33</td>
-<td><span class="math inline">x_1 = 2</span>, <span
-class="math inline">x_2 = 1.33</span></td>
+<td><span class="math inline">x_1 = 2</span>, <span class="math inline">x_2 = 1.33</span></td>
 </tr>
-<tr>
-<td><span class="math inline">x_1 \geq 2</span>, <span
-class="math inline">x_2 \leq 1</span></td>
+<tr class="even">
+<td><span class="math inline">x_1 \geq 2</span>, <span class="math inline">x_2 \leq 1</span></td>
 <td>3.25</td>
-<td><span class="math inline">x_1 = 2.25</span>, <span
-class="math inline">x_2 = 1</span></td>
+<td><span class="math inline">x_1 = 2.25</span>, <span class="math inline">x_2 = 1</span></td>
 </tr>
-<tr>
-<td><span class="math inline">x_1 \geq 2</span>, <span
-class="math inline">x_2 \geq 2</span></td>
+<tr class="odd">
+<td><span class="math inline">x_1 \geq 2</span>, <span class="math inline">x_2 \geq 2</span></td>
 <td>Infeasible</td>
 <td>Infeasible</td>
 </tr>
-<tr>
-<td><span class="math inline">x_1 \geq 2</span>, <span
-class="math inline">x_2 \leq 1</span>, <span class="math inline">x_1
-\leq 2</span></td>
+<tr class="even">
+<td><span class="math inline">x_1 \geq 2</span>, <span class="math inline">x_2 \leq 1</span>, <span class="math inline">x_1 \leq 2</span></td>
 <td>3</td>
-<td><span class="math inline">x_1 = 2</span>, <span
-class="math inline">x_2 = 1</span></td>
+<td><span class="math inline">x_1 = 2</span>, <span class="math inline">x_2 = 1</span></td>
 </tr>
-<tr>
-<td><span class="math inline">x_1 \geq 2</span>, <span
-class="math inline">x_2 \leq 1</span>, <span class="math inline">x_1
-\geq 3</span></td>
+<tr class="odd">
+<td><span class="math inline">x_1 \geq 2</span>, <span class="math inline">x_2 \leq 1</span>, <span class="math inline">x_1 \geq 3</span></td>
 <td>3</td>
-<td><span class="math inline">x_1 = 3</span>, <span
-class="math inline">x_2 = 0</span></td>
+<td><span class="math inline">x_1 = 3</span>, <span class="math inline">x_2 = 0</span></td>
 </tr>
 </tbody>
 </table>
 <h4 id="problem-8-1">Problem 8</h4>
-<p>Using the branch and bound method to determine which LP-relaxations
-to solve, and using OR-Tools (or a similar LP-solving tool) to solve the
-LP-relaxations of the problem, determine the optimal solution to the
-below ILP:</p>
+<p>Using the branch and bound method to determine which LP-relaxations to solve, and using OR-Tools (or a similar LP-solving tool) to solve the LP-relaxations of the problem, determine the optimal solution to the below ILP:</p>
 <p><span class="math display">\begin{aligned}
 \max \quad &amp; z = 3x_1 + 2x_2 \\
 s.t. \quad &amp; 954x_1 - 23x_2 \geq 1345 \\
@@ -658,37 +469,18 @@ s.t. \quad &amp; 954x_1 - 23x_2 \geq 1345 \\
 \end{aligned}</span></p>
 <h3 id="ilp-constraints">ILP constraints</h3>
 <h4 id="problem-10-1">Problem 10</h4>
-<p>For each of the following statements, write the statement as an ILP
-constraint (or multiple constraints that model the statement), or say
-why it is not possible.</p>
-<p>Assume <span class="math inline">x_1, x_2, x_3</span> are integer
-variables. Feel free to define any integer or binary variables as
-needed.</p>
+<p>For each of the following statements, write the statement as an ILP constraint (or multiple constraints that model the statement), or say why it is not possible.</p>
+<p>Assume <span class="math inline">x_1, x_2, x_3</span> are integer variables. Feel free to define any integer or binary variables as needed.</p>
 <ul>
 <li><span class="math inline">x_1 \in \{1,2\}</span></li>
-<li>Either <span class="math inline">x_1 \leq 1</span> or <span
-class="math inline">x_1 \geq 3</span>.</li>
-<li>Both <span class="math inline">x_1 \geq 4</span> and <span
-class="math inline">x_1 \leq 2</span>.</li>
-<li>The only feasible combinations of <span
-class="math inline">x_1</span> and <span class="math inline">x_2</span>
-are <span class="math inline">(x_1,x_2) \in \{(0,1), (1,0),
-(0,0)\}</span>.</li>
+<li>Either <span class="math inline">x_1 \leq 1</span> or <span class="math inline">x_1 \geq 3</span>.</li>
+<li>Both <span class="math inline">x_1 \geq 4</span> and <span class="math inline">x_1 \leq 2</span>.</li>
+<li>The only feasible combinations of <span class="math inline">x_1</span> and <span class="math inline">x_2</span> are <span class="math inline">(x_1,x_2) \in \{(0,1), (1,0), (0,0)\}</span>.</li>
 </ul>
 <h4 id="problem-11-1">Problem 11</h4>
-<p>For each of the following constraint, write the constraint as an ILP
-constraint (or multiple constraints that model the constraint), or say
-why it is not possible.</p>
-<p>Assume <span class="math inline">b_1, b_2</span> are binary
-variables, where a value of 1 denotes “true” and a value of 0 denotes
-“false”. Feel free to define any integer or binary variables as
-needed.</p>
-<p>In these statements, XOR (exclusive or) is denoted by <span
-class="math inline">\oplus</span>, AND is denoted by <span
-class="math inline">\land</span>, OR is denoted by <span
-class="math inline">\lor</span>, NOT is denoted by <span
-class="math inline">\neg</span>, and IMPLIES is denoted by <span
-class="math inline">\to</span>.</p>
+<p>For each of the following constraint, write the constraint as an ILP constraint (or multiple constraints that model the constraint), or say why it is not possible.</p>
+<p>Assume <span class="math inline">b_1, b_2</span> are binary variables, where a value of 1 denotes “true” and a value of 0 denotes “false”. Feel free to define any integer or binary variables as needed.</p>
+<p>In these statements, XOR (exclusive or) is denoted by <span class="math inline">\oplus</span>, AND is denoted by <span class="math inline">\land</span>, OR is denoted by <span class="math inline">\lor</span>, NOT is denoted by <span class="math inline">\neg</span>, and IMPLIES is denoted by <span class="math inline">\to</span>.</p>
 <ul>
 <li><span class="math inline">b_1 \land b_2</span></li>
 <li><span class="math inline">b_1 \oplus b_2</span></li>
@@ -697,81 +489,70 @@ class="math inline">\to</span>.</p>
 <li><span class="math inline">b_1 \to b_2</span></li>
 </ul>
 <h4 id="problem-12-1">Problem 12</h4>
-<p>For each of the following statements, write the statement as an ILP
-constraint (or multiple constraints that model the statement), or say
-why it is not possible.</p>
-<p>Assume <span class="math inline">b_1, b_2, b_3</span> are binary
-variables. Feel free to define any integer or binary variables as
-needed.</p>
+<p>For each of the following statements, write the statement as an ILP constraint (or multiple constraints that model the statement), or say why it is not possible.</p>
+<p>Assume <span class="math inline">b_1, b_2, b_3</span> are binary variables. Feel free to define any integer or binary variables as needed.</p>
 <ul>
-<li>At most one of <span class="math inline">b_1</span>, <span
-class="math inline">b_2</span>, or <span class="math inline">b_3</span>
-is 1.</li>
-<li>None of <span class="math inline">b_1</span>, <span
-class="math inline">b_2</span>, or <span class="math inline">b_3</span>
-is 1.</li>
-<li>At least one of <span class="math inline">b_1</span>, <span
-class="math inline">b_2</span>, or <span class="math inline">b_3</span>
-is 1.</li>
-<li>The product of <span class="math inline">b_1</span>, <span
-class="math inline">b_2</span>, and <span class="math inline">b_3</span>
-is 0.</li>
-<li>The product of <span class="math inline">b_1</span>, <span
-class="math inline">b_2</span>, and <span class="math inline">b_3</span>
-is 1.</li>
-<li>The sum of the squares of <span class="math inline">b_1</span>,
-<span class="math inline">b_2</span>, and <span
-class="math inline">b_3</span> is 2.</li>
+<li>At most one of <span class="math inline">b_1</span>, <span class="math inline">b_2</span>, or <span class="math inline">b_3</span> is 1.</li>
+<li>None of <span class="math inline">b_1</span>, <span class="math inline">b_2</span>, or <span class="math inline">b_3</span> is 1.</li>
+<li>At least one of <span class="math inline">b_1</span>, <span class="math inline">b_2</span>, or <span class="math inline">b_3</span> is 1.</li>
+<li>The product of <span class="math inline">b_1</span>, <span class="math inline">b_2</span>, and <span class="math inline">b_3</span> is 0.</li>
+<li>The product of <span class="math inline">b_1</span>, <span class="math inline">b_2</span>, and <span class="math inline">b_3</span> is 1.</li>
+<li>The sum of the squares of <span class="math inline">b_1</span>, <span class="math inline">b_2</span>, and <span class="math inline">b_3</span> is 2.</li>
 </ul>
-<h3 id="ilp-formulations-for-combinatorial-problems">ILP formulations
-for combinatorial problems</h3>
+<h3 id="ilp-formulations-for-combinatorial-problems">ILP formulations for combinatorial problems</h3>
 <h4 id="problem-13-1">Problem 13</h4>
-<p>Recall the knapsack problem we discussed in class on 4/20 and 4/22.
-Consider the modification to the problem where instead of maximizing the
-benefit of items included in the knapsack, you instead attempt to
-maximize the number of items in the knapsack. Describe how the
-formulation will change and provide the complete modified formulation in
-your answer (decision variables, constraints, objective function).</p>
+<p>Recall the knapsack problem we discussed in class on 4/20 and 4/22. Consider the modification to the problem where instead of maximizing the benefit of items included in the knapsack, you instead attempt to maximize the number of items in the knapsack. Describe how the formulation will change and provide the complete modified formulation in your answer (decision variables, constraints, objective function).</p>
 <h4 id="problem-14-1">Problem 14</h4>
-<p>Recall the set cover problem we discussed in class on 4/22. Consider
-the modification to the problem in which we require that each vertex is
-covered by at least two subsets instead of just one. Describe how the
-formulation will change and provide the complete modified formulation in
-your answer (decision variables, constraints, objective function).</p>
+<p>Recall the set cover problem we discussed in class on 4/22. Consider the modification to the problem in which we require that each vertex is covered by at least two subsets instead of just one. Describe how the formulation will change and provide the complete modified formulation in your answer (decision variables, constraints, objective function).</p>
 <h4 id="problem-15-1">Problem 15</h4>
-<p>Recall the assignment problem we discussed in class on 4/22. Consider
-the modification to the problem in which there are exactly twice as many
-tasks as people, and each person must complete exactly 2 tasks. Describe
-how the formulation will change and provide the complete modified
-formulation in your answer (decision variables, constraints, objective
-function).</p>
+<p>Recall the assignment problem we discussed in class on 4/22. Consider the modification to the problem in which there are exactly twice as many tasks as people, and each person must complete exactly 2 tasks. Describe how the formulation will change and provide the complete modified formulation in your answer (decision variables, constraints, objective function).</p>
 <h4 id="problem-16-1">Problem 16</h4>
-<p>Recall the vertex cover problem we discussed in lecture on 4/27.
-Describe how to extend the model if each vertex has a cost associated
-with it, given by some cost function <span class="math inline">C: V \to
-\mathbb R</span>, and the objective is to minimize the total weight of
-the chosen vertices instead of minimizing the total number of vertices
-chosen. Include the full vertex cover formulation in your answer
-(decision variables, constraints, objective function).</p>
+<p>Recall the vertex cover problem we discussed in lecture on 4/27. Describe how to extend the model if each vertex has a cost associated with it, given by some cost function <span class="math inline">C: V \to \mathbb R</span>, and the objective is to minimize the total weight of the chosen vertices instead of minimizing the total number of vertices chosen. Include the full vertex cover formulation in your answer (decision variables, constraints, objective function).</p>
 <h3 id="ilp-scheduling">ILP scheduling</h3>
 <h4 id="problem-17-1">Problem 17</h4>
-<p>Recall the scheduling formulation we discussed in class on 4/20 and
-4/22. Let the set of tasks be <span class="math inline">T =
-\{A,B,C,D,E\}</span>, with the following prerequisite relationship:
-<span class="math display">\begin{gathered}
+<p>Recall the scheduling formulation we discussed in class on 4/20 and 4/22. Let the set of tasks be <span class="math inline">T = \{A,B,C,D,E\}</span>, with the following prerequisite relationship: <span class="math display">\begin{gathered}
   A \prec B \\
   B \prec D \\
   C \prec D \\
   C \prec E
 \end{gathered}</span></p>
-<p>What constraints need to be added to the scheduling formulation
-discussed in class to ensure these precedence relationships are
-respected? Remember that the binary decision variables <span
-class="math inline">p_{t_1, t_2}</span> are for use by the model, and
-are not for you to use. You should instead use the start and end times
-of each task. Write the entire modified formulation (decision variables,
-constraints, objective function) and explain what you added.</p>
-<hr />
-<p>More problems will be posted…</p>
+<p>What constraints need to be added to the scheduling formulation discussed in class to ensure these precedence relationships are respected? Remember that the binary decision variables <span class="math inline">p_{t_1, t_2}</span> are for use by the model, and are not for you to use. You should instead use the start and end times of each task. Write the entire modified formulation (decision variables, constraints, objective function) and explain what you added.</p>
+<h3 id="ilp-formulation-creation">ILP formulation creation</h3>
+<p>These problems will be similar to the ones you will have on your final exam.</p>
+<h4 id="problem-18-1">Problem 18</h4>
+<p>In this problem you will create an ILP formulation for the <span class="math inline">N</span>-queens problem.</p>
+<p>In chess, a queen is a piece that can move any number of spaces diagonally, horizontally, or vertically, in any direction. Your task is to create a formulation to place <span class="math inline">N</span> queens on an <span class="math inline">N\times N</span> chessboard such that no two queens attack each other.</p>
+<p>For more information on this problem feel free to consult the <a href="https://en.wikipedia.org/wiki/Eight_queens_puzzle">Wikipedia page</a>. (Note this Wikipedia page is for the 8 queens puzzle, but your formulation should work for arbitrary <span class="math inline">N</span>, do not hardcode <span class="math inline">N = 8</span>.)</p>
+<p>Your tasks:</p>
+<ul>
+<li>Come up with decision variables for this problem. What are you solving for?</li>
+<li>Determine constraints for the problem, in terms of the decision variables you created. What restrictions are there on the choices you can make?</li>
+<li>Come up with an objective function. Do we need one here? If we do, give one and explain why it is necessary. If not, explain why.</li>
+</ul>
+<p>Hint: for any cell <span class="math inline">(i,j)</span>, all cells on the same “upward sloping” diagonal have the same value for <span class="math inline">i-j</span>, while all cells on the same “downward sloping” diagonal have the same value of <span class="math inline">i+j</span>. This may be useful in determining whether two queens are attacking each other (or forcing there to be exactly one queen on each diagonal).</p>
+<h4 id="problem-19-1">Problem 19</h4>
+<p>In this problem you will formulate an ILP to place radio towers on an <span class="math inline">n\times n</span> grid, and then describe what changes as you increase the dimensions to an <span class="math inline">n\times n\times n</span> cube.</p>
+<p>You have an <span class="math inline">n\times n</span> grid of potential locations for radio towers. No two towers can be placed in adjacent cells (up, down, left, right) because their signals interfere. (Towers are permitted to be placed diagonally from each other.)</p>
+<p>Your goal is to maximize the number of towers that are placed in the region.</p>
+<p>Your tasks:</p>
+<ul>
+<li>Come up with decision variables for this problem. What are you solving for?</li>
+<li>Determine constraints for the problem, in terms of the decision variables you created. What restrictions are there on the choices you can make?</li>
+<li>Come up with an objective function. Do we need one here? If we do, give one and explain why it is necessary. If not, explain why.</li>
+</ul>
+<p>Once you have completed that, answer the following:</p>
+<p>Suppose that your <span class="math inline">n\times n</span> grid is now a <span class="math inline">n\times n\times n</span> cube, and that the interference includes the cells above and below each placed radio tower - so now, instead of just interfering up/down/left/right, the interference emits from each of the 6 sides of the cell/cube that the radio tower is placed in.</p>
+<p>Describe how you would modify your decision variables and the rest of your formulation to account for this change. You should add a dimension to your decision variables, making them 3-dimensional, but figure out the rest on your own: What does the new dimension in your decision variables correspond to, and how will your constraints and objective function (if you have one) change?</p>
+<h4 id="problem-20-1">Problem 20</h4>
+<p>In this problem you will formulate an ILP to select as few vertices in a graph as possible, such that all vertices are either selected or next to one of the vertices you selected.</p>
+<p>You have an undirected graph <span class="math inline">G = (V,E)</span>. You need to select a subset of vertices <span class="math inline">S\subseteq V</span> such that every vertex in the graph is either in <span class="math inline">S</span> or is adjacent to (next to) a vertex in <span class="math inline">S</span>. Your goal is to minimize the number of chosen vertices (that is, minimize the size of <span class="math inline">S</span>).</p>
+<p>Your tasks:</p>
+<ul>
+<li>Come up with decision variables for this problem. What are you solving for?</li>
+<li>Determine constraints for the problem, in terms of the decision variables you created. What restrictions are there on the choices you can make?</li>
+<li>Come up with an objective function. Do we need one here? If we do, give one and explain why it is necessary. If not, explain why.</li>
+</ul>
+<p>You can get the list of vertices adjacent to some vertex <span class="math inline">v</span> by enumerating the edges that have <span class="math inline">v</span> as one of the endpoints. For example, you can specify the set of vertices adjacent to vertex <span class="math inline">v</span> like so: <span class="math display">u : \{u,v\}\in E</span></p>
+<p><strong>END OF HW 2</strong></p>
 </body>
 </html>

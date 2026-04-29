@@ -1,7 +1,7 @@
 ---
 title: CSCI 35500 SP 2026
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp26/cs355/index.html)"
-date: "Last updated: 2026-04-24"
+date: "Last updated: 2026-04-28"
 css: "../../style.css"
 toc: true
 ---
@@ -440,7 +440,60 @@ $$\begin{gathered}
 
 What constraints need to be added to the scheduling formulation discussed in class to ensure these precedence relationships are respected? Remember that the binary decision variables $p_{t_1, t_2}$ are for use by the model, and are not for you to use. You should instead use the start and end times of each task. Write the entire modified formulation (decision variables, constraints, objective function) and explain what you added.
 
+### ILP formulation creation
 
----
+These problems will be similar to the ones you will have on your final exam.
 
-More problems will be posted...
+#### Problem 18
+
+In this problem you will create an ILP formulation for the $N$-queens problem.
+
+In chess, a queen is a piece that can move any number of spaces diagonally, horizontally, or vertically, in any direction. Your task is to create a formulation to place $N$ queens on an $N\times N$ chessboard such that no two queens attack each other.
+
+For more information on this problem feel free to consult the [Wikipedia page](https://en.wikipedia.org/wiki/Eight_queens_puzzle). (Note this Wikipedia page is for the 8 queens puzzle, but your formulation should work for arbitrary $N$, do not hardcode $N = 8$.)
+
+Your tasks:
+
+- Come up with decision variables for this problem. What are you solving for?
+- Determine constraints for the problem, in terms of the decision variables you created. What restrictions are there on the choices you can make?
+- Come up with an objective function. Do we need one here? If we do, give one and explain why it is necessary. If not, explain why.
+
+Hint: for any cell $(i,j)$, all cells on the same "upward sloping" diagonal have the same value for $i-j$, while all cells on the same "downward sloping" diagonal have the same value of $i+j$. This may be useful in determining whether two queens are attacking each other (or forcing there to be exactly one queen on each diagonal).
+
+#### Problem 19
+
+In this problem you will formulate an ILP to place radio towers on an $n\times n$ grid, and then describe what changes as you increase the dimensions to an $n\times n\times n$ cube.
+
+You have an $n\times n$ grid of potential locations for radio towers. No two towers can be placed in adjacent cells (up, down, left, right) because their signals interfere. (Towers are permitted to be placed diagonally from each other.)
+
+Your goal is to maximize the number of towers that are placed in the region.
+
+Your tasks:
+
+- Come up with decision variables for this problem. What are you solving for?
+- Determine constraints for the problem, in terms of the decision variables you created. What restrictions are there on the choices you can make?
+- Come up with an objective function. Do we need one here? If we do, give one and explain why it is necessary. If not, explain why.
+
+Once you have completed that, answer the following:
+
+Suppose that your $n\times n$ grid is now a $n\times n\times n$ cube, and that the interference includes the cells above and below each placed radio tower - so now, instead of just interfering up/down/left/right, the interference emits from each of the 6 sides of the cell/cube that the radio tower is placed in.
+
+Describe how you would modify your decision variables and the rest of your formulation to account for this change. You should add a dimension to your decision variables, making them 3-dimensional, but figure out the rest on your own: What does the new dimension in your decision variables correspond to, and how will your constraints and objective function (if you have one) change?
+
+#### Problem 20
+
+In this problem you will formulate an ILP to select as few vertices in a graph as possible, such that all vertices are either selected or next to one of the vertices you selected.
+
+You have an undirected graph $G = (V,E)$. You need to select a subset of vertices $S\subseteq V$ such that every vertex in the graph is either in $S$ or is adjacent to (next to) a vertex in $S$. Your goal is to minimize the number of chosen vertices (that is, minimize the size of $S$).
+
+Your tasks:
+
+- Come up with decision variables for this problem. What are you solving for?
+- Determine constraints for the problem, in terms of the decision variables you created. What restrictions are there on the choices you can make?
+- Come up with an objective function. Do we need one here? If we do, give one and explain why it is necessary. If not, explain why.
+
+You can get the list of vertices adjacent to some vertex $v$ by enumerating the edges that have $v$ as one of the endpoints. For example, you can specify the set of vertices adjacent to vertex $v$ like so:
+$$u : \{u,v\}\in E$$
+
+
+**END OF HW 2**
