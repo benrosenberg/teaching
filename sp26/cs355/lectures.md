@@ -1,7 +1,7 @@
 ---
 title: CSCI 35500 SP 2026
 author: "[Go to homepage](https://benrosenberg.info/teaching/sp26/cs355/index.html)"
-date: "Last updated: 2026-04-26"
+date: "Last updated: 2026-05-02"
 css: "../../style.css"
 toc: false
 ---
@@ -33,7 +33,7 @@ toc: false
 |   21    | 4/27/26 |  OR-Tools for ILP, ILP project  |                                                                [OR-Tools resources](resources/ortools_resources.html), [Lecture notes](slides/14_ilpproject.pdf) [PDF], [ILP project page](projects/ilpproject.html)                                                                |
 |   22    | 4/29/26 |               TSP               |                                                                                  [Lecture notes](slides/15_ilptsp.pdf) [PDF], [TSP solving methods writeup](handouts/tsp_methods_report.pdf) [PDF]                                                                                  |
 |   23    | 5/4/26  |           TSP (cont.)           |                                                                                                                               Same materials as above                                                                                                                               |
-|   24    | 5/6/26  |           Intro to QP           |                                                                                                                    [Lecture notes](slides/16_qpintro.pdf) [PDF]                                                                                                                     |
+|   24    | 5/6/26  |  Intro to QP (class canceled)   |                                                                                                     [Lecture notes](slides/16_qpintro.pdf) [PDF] (not in scope for final exam)                                                                                                      |
 |   25    | 5/11/26 |          Guest lecture          |                                                                                                                                                                                                                                                                                     |
 |   26    | 5/13/26 |        Final exam review        |                                                                                                                           [Exam topics](examtopics.html)                                                                                                                            |
 |   27    | 5/20/26 |         **Final exam**          |                                                                                                                                                                                                                                                                                     |
